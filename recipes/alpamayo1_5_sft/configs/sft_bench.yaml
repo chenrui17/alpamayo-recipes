@@ -1,0 +1,29 @@
+defaults:
+  - sft_stage1_nav
+  - _self_
+
+benchmark:
+  run_name: baseline
+  max_steps: 15
+  stable_tail: 10
+  result_path: benchmark/results/baseline.json
+  optimizations:
+    zip_cache: false
+    collate_cache: false
+    tf32: false
+    cudnn_benchmark: false
+    matmul_precision: null
+    channels_last: false
+    preload_dataset_cache: false
+    no_deepspeed: false
+
+trainer:
+  max_steps: 15
+  num_train_epochs: 1
+  warmup_steps: 0
+  logging_steps: 999
+  save_steps: 999
+  report_to: none
+
+paths:
+  output_dir: benchmark/runs/${benchmark.run_name}
