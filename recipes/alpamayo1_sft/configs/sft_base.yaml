@@ -4,8 +4,9 @@ defaults:
   - /vla_processor@data.val_dataset.vla_preprocess_args: default
 data:
   collate_fn:
-    _target_: alpamayo_r1.processor.qwen_processor.collate_fn_from_model_config
+    _target_: alpamayo.processor.qwen_processor.collate_fn_from_model_config
     _partial_: true
+    chat_template_version: r1
   train_dataset:
     _recursive_: false
     _target_: alpamayo.data.pai.PAIDataset
@@ -51,7 +52,9 @@ trainer:
   num_train_epochs: 3
   bf16: True
   dataloader_pin_memory: True
-  dataloader_num_workers: 2
+  dataloader_num_workers: 16
+  dataloader_persistent_workers: true
+  dataloader_prefetch_factor: 4
   remove_unused_columns: False
   report_to: none # change to "wandb" when enabling W&B
   lr_scheduler_type: cosine_warmup_with_min_lr
@@ -65,3 +68,11 @@ trainer:
     use_reentrant: false # recommended by PyTorch for performance
 task_name: alpamayo_r1_sft
 run_name: ${task_name}_${now:%Y%m%d}_${now:%H%M%S}
+
+# Production-safe data-pipeline optimizations (see benchmark/OPTIMIZATION.md).
+# Disable zip_cache if CPU RAM is tight on large chunk ranges (e.g. chunks 0-99).
+performance:
+  zip_cache: true
+  collate_cache: true
+  tf32: true
+  cudnn_benchmark: true

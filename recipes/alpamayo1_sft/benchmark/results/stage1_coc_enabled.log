@@ -1,0 +1,30 @@
+    run(args)
+  File "/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+alpamayo1_sft.bench_hf FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-06-10_11:46:42
+  host      : H20-GPU-01.cm.cluster
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 2639237)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-06-10_11:46:42
+  host      : H20-GPU-01.cm.cluster
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 2639235)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

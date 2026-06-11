@@ -1,0 +1,171 @@
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+W0610 11:18:32.396000 2230574 torch/distributed/run.py:774] 
+W0610 11:18:32.396000 2230574 torch/distributed/run.py:774] *****************************************
+W0610 11:18:32.396000 2230574 torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0610 11:18:32.396000 2230574 torch/distributed/run.py:774] *****************************************
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/a1_sft/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2525: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+[2026-06-10 11:18:47,472][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpqw_8igj9/test.c -o /tmp/tmpqw_8igj9/test.o
+[2026-06-10 11:18:47,472][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpo83q3r9b/test.c -o /tmp/tmpo83q3r9b/test.o
+[2026-06-10 11:18:47,486][root][INFO] - cc -pthread /tmp/tmpo83q3r9b/test.o -laio -o /tmp/tmpo83q3r9b/a.out
+[2026-06-10 11:18:47,486][root][INFO] - cc -pthread /tmp/tmpqw_8igj9/test.o -laio -o /tmp/tmpqw_8igj9/a.out
+[2026-06-10 11:18:47,589][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp0ptjxfut/test.c -o /tmp/tmp0ptjxfut/test.o
+[2026-06-10 11:18:47,596][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp6j8lzfry/test.c -o /tmp/tmp6j8lzfry/test.o
+[2026-06-10 11:18:47,602][root][INFO] - cc -pthread /tmp/tmp0ptjxfut/test.o -laio -o /tmp/tmp0ptjxfut/a.out
+[2026-06-10 11:18:47,605][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmptazri9o9/test.c -o /tmp/tmptazri9o9/test.o
+[2026-06-10 11:18:47,607][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpdhxjojp3/test.c -o /tmp/tmpdhxjojp3/test.o
+[2026-06-10 11:18:47,609][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp86lgr_2c/test.c -o /tmp/tmp86lgr_2c/test.o
+[2026-06-10 11:18:47,610][root][INFO] - cc -pthread /tmp/tmp6j8lzfry/test.o -laio -o /tmp/tmp6j8lzfry/a.out
+[2026-06-10 11:18:47,619][root][INFO] - cc -pthread /tmp/tmptazri9o9/test.o -laio -o /tmp/tmptazri9o9/a.out
+[2026-06-10 11:18:47,621][root][INFO] - cc -pthread /tmp/tmpdhxjojp3/test.o -laio -o /tmp/tmpdhxjojp3/a.out
+[2026-06-10 11:18:47,623][root][INFO] - cc -pthread /tmp/tmp86lgr_2c/test.o -laio -o /tmp/tmp86lgr_2c/a.out
+[2026-06-10 11:18:47,635][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmppkfa5ip7/test.c -o /tmp/tmppkfa5ip7/test.o
+[2026-06-10 11:18:47,648][root][INFO] - cc -pthread /tmp/tmppkfa5ip7/test.o -laio -o /tmp/tmppkfa5ip7/a.out
+[2026-06-10 11:18:47,991][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmptapffun3/test.c -o /tmp/tmptapffun3/test.o
+[2026-06-10 11:18:48,003][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpyj052kyv/test.c -o /tmp/tmpyj052kyv/test.o
+[2026-06-10 11:18:48,003][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp5gfqm0_c/test.c -o /tmp/tmp5gfqm0_c/test.o
+[2026-06-10 11:18:48,004][root][INFO] - cc -pthread /tmp/tmptapffun3/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmptapffun3/a.out
+[2026-06-10 11:18:48,005][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpxgwp4js4/test.c -o /tmp/tmpxgwp4js4/test.o
+[2026-06-10 11:18:48,010][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpncoyqg_8/test.c -o /tmp/tmpncoyqg_8/test.o
+[2026-06-10 11:18:48,017][root][INFO] - cc -pthread /tmp/tmpyj052kyv/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpyj052kyv/a.out
+[2026-06-10 11:18:48,017][root][INFO] - cc -pthread /tmp/tmp5gfqm0_c/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmp5gfqm0_c/a.out
+[2026-06-10 11:18:48,018][root][INFO] - cc -pthread /tmp/tmpxgwp4js4/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpxgwp4js4/a.out
+[2026-06-10 11:18:48,022][root][INFO] - cc -pthread /tmp/tmpncoyqg_8/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpncoyqg_8/a.out
+[2026-06-10 11:18:48,024][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpqfm5f_9z/test.c -o /tmp/tmpqfm5f_9z/test.o
+[2026-06-10 11:18:48,038][root][INFO] - cc -pthread /tmp/tmpqfm5f_9z/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpqfm5f_9z/a.out
+[2026-06-10 11:18:48,042][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp3i8rfvtf/test.c -o /tmp/tmp3i8rfvtf/test.o
+[2026-06-10 11:18:48,054][root][INFO] - cc -pthread /tmp/tmp3i8rfvtf/test.o -laio -o /tmp/tmp3i8rfvtf/a.out
+[2026-06-10 11:18:48,056][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp1dno6elu/test.c -o /tmp/tmp1dno6elu/test.o
+[2026-06-10 11:18:48,056][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp1or9oscj/test.c -o /tmp/tmp1or9oscj/test.o
+[2026-06-10 11:18:48,057][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp9fw_wsp8/test.c -o /tmp/tmp9fw_wsp8/test.o
+[2026-06-10 11:18:48,060][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmphf2x59i1/test.c -o /tmp/tmphf2x59i1/test.o
+[2026-06-10 11:18:48,069][root][INFO] - cc -pthread /tmp/tmp9fw_wsp8/test.o -laio -o /tmp/tmp9fw_wsp8/a.out
+[2026-06-10 11:18:48,070][root][INFO] - cc -pthread /tmp/tmp1dno6elu/test.o -laio -o /tmp/tmp1dno6elu/a.out
+[2026-06-10 11:18:48,070][root][INFO] - cc -pthread /tmp/tmp1or9oscj/test.o -laio -o /tmp/tmp1or9oscj/a.out
+[2026-06-10 11:18:48,072][root][INFO] - cc -pthread /tmp/tmphf2x59i1/test.o -laio -o /tmp/tmphf2x59i1/a.out
+[2026-06-10 11:18:48,076][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmptihct98n/test.c -o /tmp/tmptihct98n/test.o
+[2026-06-10 11:18:48,090][root][INFO] - cc -pthread /tmp/tmptihct98n/test.o -laio -o /tmp/tmptihct98n/a.out
+[2026-06-10 11:18:48,115][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpp63zcvwd/test.c -o /tmp/tmpp63zcvwd/test.o
+[2026-06-10 11:18:48,127][root][INFO] - cc -pthread /tmp/tmpp63zcvwd/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpp63zcvwd/a.out
+[2026-06-10 11:18:48,164][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmppqwja585/test.c -o /tmp/tmppqwja585/test.o
+[2026-06-10 11:18:48,165][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpwzzteq3k/test.c -o /tmp/tmpwzzteq3k/test.o
+[2026-06-10 11:18:48,176][root][INFO] - cc -pthread /tmp/tmppqwja585/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmppqwja585/a.out
+[2026-06-10 11:18:48,177][root][INFO] - cc -pthread /tmp/tmpwzzteq3k/test.o -laio -o /tmp/tmpwzzteq3k/a.out
+[2026-06-10 11:18:48,212][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpjkt33shm/test.c -o /tmp/tmpjkt33shm/test.o
+[2026-06-10 11:18:48,224][root][INFO] - cc -pthread /tmp/tmpjkt33shm/test.o -laio -o /tmp/tmpjkt33shm/a.out
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+[2026-06-10 11:23:11,664][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:11,664][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:11,954][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:11,954][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:11,955][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:11,956][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:12,337][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:12,338][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:12,391][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:12,391][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:12,392][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:12,392][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:12,679][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:12,679][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:12,693][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
+[2026-06-10 11:23:12,693][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
+[2026-06-10 11:23:12,744][alpamayo.data.pai_utils][INFO] - [rank: 5] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:12,745][alpamayo.data.pai_utils][INFO] - [rank: 6] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:12,893][alpamayo1_sft.models.sft_base_model][INFO] - [rank: 0] Loaded 750 VLM tensors from /raid/charlie/Alpamayo-R1-10B (missing=0, unexpected=0)
+[2026-06-10 11:23:12,935][alpamayo.data.pai_utils][INFO] - [rank: 0] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:13,338][alpamayo.data.pai_utils][INFO] - [rank: 7] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:13,399][alpamayo.data.pai_utils][INFO] - [rank: 4] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:13,716][alpamayo.data.pai_utils][INFO] - [rank: 1] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:13,903][alpamayo.data.pai_utils][INFO] - [rank: 2] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:14,021][alpamayo.data.pai_utils][INFO] - [rank: 3] Loading from /raid/charlie/pai_dataset with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+[2026-06-10 11:23:19,481][alpamayo.data.pai_utils][INFO] - [rank: 6] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:19,930][alpamayo.data.pai_utils][INFO] - [rank: 0] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:20,115][alpamayo.data.pai_utils][INFO] - [rank: 5] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:20,406][alpamayo.data.pai_utils][INFO] - [rank: 1] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:20,485][alpamayo.data.pai_utils][INFO] - [rank: 4] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:20,550][alpamayo.data.pai_utils][INFO] - [rank: 2] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:20,619][alpamayo.data.pai_utils][INFO] - [rank: 7] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:20,923][alpamayo.data.pai_utils][INFO] - [rank: 3] Loading from /raid/charlie/pai_dataset with chunk_ids: [2868]
+[2026-06-10 11:23:26,805][accelerate.accelerator][WARNING] - [RANK 0] Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 4. Using DeepSpeed's value.
+  0%|          | 0/50 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  2%|▏         | 1/50 [00:46<37:49, 46.31s/it]  4%|▍         | 2/50 [01:03<23:13, 29.03s/it]  6%|▌         | 3/50 [01:23<19:35, 25.02s/it]  8%|▊         | 4/50 [01:44<17:53, 23.34s/it] 10%|█         | 5/50 [02:02<16:12, 21.62s/it] 12%|█▏        | 6/50 [02:22<15:20, 20.93s/it] 14%|█▍        | 7/50 [02:43<15:03, 21.00s/it] 16%|█▌        | 8/50 [03:04<14:45, 21.08s/it] 18%|█▊        | 9/50 [03:23<13:59, 20.47s/it] 20%|██        | 10/50 [03:43<13:30, 20.27s/it] 22%|██▏       | 11/50 [04:05<13:23, 20.60s/it] 24%|██▍       | 12/50 [04:25<13:00, 20.54s/it] 26%|██▌       | 13/50 [04:43<12:13, 19.81s/it] 28%|██▊       | 14/50 [05:03<11:49, 19.71s/it] 30%|███       | 15/50 [05:22<11:24, 19.57s/it] 32%|███▏      | 16/50 [05:40<10:50, 19.14s/it] 34%|███▍      | 17/50 [05:59<10:34, 19.23s/it] 36%|███▌      | 18/50 [06:18<10:08, 19.03s/it] 38%|███▊      | 19/50 [06:36<09:44, 18.86s/it] 40%|████      | 20/50 [06:55<09:25, 18.84s/it] 42%|████▏     | 21/50 [07:14<09:01, 18.66s/it] 44%|████▍     | 22/50 [07:34<08:56, 19.14s/it] 46%|████▌     | 23/50 [07:53<08:37, 19.15s/it] 48%|████▊     | 24/50 [08:13<08:21, 19.29s/it] 50%|█████     | 25/50 [08:33<08:12, 19.70s/it] 52%|█████▏    | 26/50 [08:53<07:55, 19.79s/it] 54%|█████▍    | 27/50 [09:13<07:37, 19.89s/it] 56%|█████▌    | 28/50 [09:33<07:13, 19.71s/it] 58%|█████▊    | 29/50 [09:50<06:40, 19.09s/it] 60%|██████    | 30/50 [10:10<06:28, 19.43s/it] 62%|██████▏   | 31/50 [10:27<05:55, 18.69s/it] 64%|██████▍   | 32/50 [10:46<05:35, 18.66s/it] 66%|██████▌   | 33/50 [11:03<05:09, 18.19s/it] 68%|██████▊   | 34/50 [11:22<04:56, 18.53s/it] 70%|███████   | 35/50 [11:40<04:34, 18.30s/it] 72%|███████▏  | 36/50 [11:58<04:14, 18.21s/it] 74%|███████▍  | 37/50 [12:19<04:07, 19.03s/it] 76%|███████▌  | 38/50 [12:39<03:51, 19.31s/it] 78%|███████▊  | 39/50 [12:59<03:34, 19.49s/it] 80%|████████  | 40/50 [13:21<03:21, 20.14s/it] 82%|████████▏ | 41/50 [13:40<02:59, 19.94s/it] 84%|████████▍ | 42/50 [14:01<02:41, 20.13s/it] 86%|████████▌ | 43/50 [14:21<02:20, 20.10s/it] 88%|████████▊ | 44/50 [14:39<01:56, 19.45s/it] 90%|█████████ | 45/50 [14:55<01:32, 18.53s/it] 92%|█████████▏| 46/50 [15:13<01:13, 18.34s/it] 94%|█████████▍| 47/50 [15:30<00:53, 17.98s/it] 96%|█████████▌| 48/50 [15:48<00:36, 18.04s/it] 98%|█████████▊| 49/50 [16:06<00:18, 18.02s/it]100%|██████████| 50/50 [16:24<00:00, 17.92s/it]                                               {'train_runtime': 1071.2797, 'train_samples_per_second': 1.494, 'train_steps_per_second': 0.047, 'train_loss': 1.6059817504882812, 'epoch': 0.85}
+100%|██████████| 50/50 [17:51<00:00, 17.92s/it][BENCHMARK] run=stage1_no_coc avg_stable=19.018s (40 steps) avg_all=19.690s (50 steps) -> benchmark/results/stage1_no_coc.json
+100%|██████████| 50/50 [17:51<00:00, 21.43s/it]

@@ -1,0 +1,12 @@
+
+>>> Running no_coc_dl_workers8: DataLoader parallelism only
+
+>>> Running no_coc_production_opt: Production-safe stack: workers + zip + collate + TF32
+
+>>> Running coc_dl_workers8: DataLoader parallelism only
+
+>>> Running coc_production_opt: Production-safe stack: workers + zip + collate + TF32
+Wrote /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/RESULTS.md
+
+>>> Running no_coc_production_opt: Production-safe stack: workers + zip + collate + TF32
+Wrote /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/RESULTS.md

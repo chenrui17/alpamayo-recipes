@@ -1,0 +1,36 @@
+defaults:
+  - sft_stage1
+  - override /vla_processor@data.train_dataset.vla_preprocess_args: coc
+  - override /vla_processor@data.val_dataset.vla_preprocess_args: coc
+  - _self_
+
+data:
+  train_dataset:
+    local_dir: /raid/charlie/pai_dataset
+    chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982,
+                1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+    reasoning_metadata: reasoning/ood_reasoning.parquet
+    clip_index_metadata: clip_index_reasoning_mini.parquet
+    use_default_keyframe: false
+  val_dataset:
+    local_dir: /raid/charlie/pai_dataset
+    chunk_ids: [2868]
+    reasoning_metadata: reasoning/ood_reasoning.parquet
+    clip_index_metadata: clip_index_reasoning_mini.parquet
+    use_default_keyframe: false
+
+model:
+  checkpoint_path: /raid/charlie/Alpamayo-R1-10B
+
+trainer:
+  deepspeed: /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/configs/deepspeed/zero2.json
+
+benchmark:
+  run_name: stage1_coc_enabled
+  max_steps: 50
+  stable_tail: 40
+  result_path: benchmark/results/stage1_coc_enabled.json
+  optimizations: {}
+
+paths:
+  output_dir: benchmark/runs/stage1_coc_enabled

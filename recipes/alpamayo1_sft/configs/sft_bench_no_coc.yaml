@@ -1,0 +1,28 @@
+defaults:
+  - sft_stage1
+  - _self_
+
+data:
+  train_dataset:
+    local_dir: /raid/charlie/pai_dataset
+    chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982,
+                1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
+  val_dataset:
+    local_dir: /raid/charlie/pai_dataset
+    chunk_ids: [2868]
+
+model:
+  checkpoint_path: /raid/charlie/Alpamayo-R1-10B
+
+trainer:
+  deepspeed: /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/configs/deepspeed/zero2.json
+
+benchmark:
+  run_name: stage1_no_coc
+  max_steps: 50
+  stable_tail: 40
+  result_path: benchmark/results/stage1_no_coc.json
+  optimizations: {}
+
+paths:
+  output_dir: benchmark/runs/stage1_no_coc
