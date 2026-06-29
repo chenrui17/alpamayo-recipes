@@ -1,372 +1,0 @@
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-W0528 22:59:21.429000 1105012 torch/distributed/run.py:774] 
-W0528 22:59:21.429000 1105012 torch/distributed/run.py:774] *****************************************
-W0528 22:59:21.429000 1105012 torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0528 22:59:21.429000 1105012 torch/distributed/run.py:774] *****************************************
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
-  import pynvml  # type: ignore[import]
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
-[2026-05-28 22:59:32,658][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpvcimm7cf/test.c -o /tmp/tmpvcimm7cf/test.o
-[2026-05-28 22:59:32,671][root][INFO] - cc -pthread /tmp/tmpvcimm7cf/test.o -laio -o /tmp/tmpvcimm7cf/a.out
-[2026-05-28 22:59:32,686][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp9wfx_gr5/test.c -o /tmp/tmp9wfx_gr5/test.o
-[2026-05-28 22:59:32,699][root][INFO] - cc -pthread /tmp/tmp9wfx_gr5/test.o -laio -o /tmp/tmp9wfx_gr5/a.out
-[2026-05-28 22:59:32,733][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp8y18y4pt/test.c -o /tmp/tmp8y18y4pt/test.o
-[2026-05-28 22:59:32,733][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpk1_py44_/test.c -o /tmp/tmpk1_py44_/test.o
-[2026-05-28 22:59:32,745][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp00kof88q/test.c -o /tmp/tmp00kof88q/test.o
-[2026-05-28 22:59:32,745][root][INFO] - cc -pthread /tmp/tmp8y18y4pt/test.o -laio -o /tmp/tmp8y18y4pt/a.out
-[2026-05-28 22:59:32,745][root][INFO] - cc -pthread /tmp/tmpk1_py44_/test.o -laio -o /tmp/tmpk1_py44_/a.out
-[2026-05-28 22:59:32,747][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmptq9rt36s/test.c -o /tmp/tmptq9rt36s/test.o
-[2026-05-28 22:59:32,757][root][INFO] - cc -pthread /tmp/tmp00kof88q/test.o -laio -o /tmp/tmp00kof88q/a.out
-[2026-05-28 22:59:32,760][root][INFO] - cc -pthread /tmp/tmptq9rt36s/test.o -laio -o /tmp/tmptq9rt36s/a.out
-[2026-05-28 22:59:32,828][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpd89kng0l/test.c -o /tmp/tmpd89kng0l/test.o
-[2026-05-28 22:59:32,841][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpmppw05f0/test.c -o /tmp/tmpmppw05f0/test.o
-[2026-05-28 22:59:32,841][root][INFO] - cc -pthread /tmp/tmpd89kng0l/test.o -laio -o /tmp/tmpd89kng0l/a.out
-[2026-05-28 22:59:32,853][root][INFO] - cc -pthread /tmp/tmpmppw05f0/test.o -laio -o /tmp/tmpmppw05f0/a.out
-[2026-05-28 22:59:33,035][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpx7zpmqib/test.c -o /tmp/tmpx7zpmqib/test.o
-[2026-05-28 22:59:33,048][root][INFO] - cc -pthread /tmp/tmpx7zpmqib/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpx7zpmqib/a.out
-[2026-05-28 22:59:33,059][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpjm3dq58w/test.c -o /tmp/tmpjm3dq58w/test.o
-[2026-05-28 22:59:33,072][root][INFO] - cc -pthread /tmp/tmpjm3dq58w/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpjm3dq58w/a.out
-[2026-05-28 22:59:33,086][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpya8x0jxw/test.c -o /tmp/tmpya8x0jxw/test.o
-[2026-05-28 22:59:33,099][root][INFO] - cc -pthread /tmp/tmpya8x0jxw/test.o -laio -o /tmp/tmpya8x0jxw/a.out
-[2026-05-28 22:59:33,109][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpybdxjtyd/test.c -o /tmp/tmpybdxjtyd/test.o
-[2026-05-28 22:59:33,117][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp1qoahzt4/test.c -o /tmp/tmp1qoahzt4/test.o
-[2026-05-28 22:59:33,121][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpp53ngim6/test.c -o /tmp/tmpp53ngim6/test.o
-[2026-05-28 22:59:33,122][root][INFO] - cc -pthread /tmp/tmpybdxjtyd/test.o -laio -o /tmp/tmpybdxjtyd/a.out
-[2026-05-28 22:59:33,122][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpg2vi10nx/test.c -o /tmp/tmpg2vi10nx/test.o
-[2026-05-28 22:59:33,129][root][INFO] - cc -pthread /tmp/tmp1qoahzt4/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmp1qoahzt4/a.out
-[2026-05-28 22:59:33,133][root][INFO] - cc -pthread /tmp/tmpp53ngim6/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpp53ngim6/a.out
-[2026-05-28 22:59:33,134][root][INFO] - cc -pthread /tmp/tmpg2vi10nx/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpg2vi10nx/a.out
-[2026-05-28 22:59:33,146][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp6prgvsbr/test.c -o /tmp/tmp6prgvsbr/test.o
-[2026-05-28 22:59:33,157][root][INFO] - cc -pthread /tmp/tmp6prgvsbr/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmp6prgvsbr/a.out
-[2026-05-28 22:59:33,167][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpbyx38ijy/test.c -o /tmp/tmpbyx38ijy/test.o
-[2026-05-28 22:59:33,170][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpo9hivqj_/test.c -o /tmp/tmpo9hivqj_/test.o
-[2026-05-28 22:59:33,171][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpvebxruj2/test.c -o /tmp/tmpvebxruj2/test.o
-[2026-05-28 22:59:33,180][root][INFO] - cc -pthread /tmp/tmpbyx38ijy/test.o -laio -o /tmp/tmpbyx38ijy/a.out
-[2026-05-28 22:59:33,183][root][INFO] - cc -pthread /tmp/tmpo9hivqj_/test.o -laio -o /tmp/tmpo9hivqj_/a.out
-[2026-05-28 22:59:33,183][root][INFO] - cc -pthread /tmp/tmpvebxruj2/test.o -laio -o /tmp/tmpvebxruj2/a.out
-[2026-05-28 22:59:33,194][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpb3mf8b6v/test.c -o /tmp/tmpb3mf8b6v/test.o
-[2026-05-28 22:59:33,205][root][INFO] - cc -pthread /tmp/tmpb3mf8b6v/test.o -laio -o /tmp/tmpb3mf8b6v/a.out
-[2026-05-28 22:59:33,234][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpn0fzq02m/test.c -o /tmp/tmpn0fzq02m/test.o
-[2026-05-28 22:59:33,245][root][INFO] - cc -pthread /tmp/tmpn0fzq02m/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpn0fzq02m/a.out
-[2026-05-28 22:59:33,250][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmp_4ccltw4/test.c -o /tmp/tmp_4ccltw4/test.o
-[2026-05-28 22:59:33,261][root][INFO] - cc -pthread /tmp/tmp_4ccltw4/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmp_4ccltw4/a.out
-[2026-05-28 22:59:33,282][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpyis9nhjl/test.c -o /tmp/tmpyis9nhjl/test.o
-[2026-05-28 22:59:33,294][root][INFO] - cc -pthread /tmp/tmpyis9nhjl/test.o -laio -o /tmp/tmpyis9nhjl/a.out
-[2026-05-28 22:59:33,298][root][INFO] - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -c /tmp/tmpisv57_xa/test.c -o /tmp/tmpisv57_xa/test.o
-[2026-05-28 22:59:33,310][root][INFO] - cc -pthread /tmp/tmpisv57_xa/test.o -laio -o /tmp/tmpisv57_xa/a.out
-[2026-05-28 22:59:39,447][train][INFO] - [rank: 0] Configs:
-{
-│   'data': {
-│   │   'train_dataset': {
-│   │   │   'vla_preprocess_args': {
-│   │   │   │   '_target_': 'alpamayo_r1.processor.qwen_processor.get_preprocess_data_fn_from_model_config',
-│   │   │   │   'components_order': [
-│   │   │   │   │   'image',
-│   │   │   │   │   'traj_history',
-│   │   │   │   │   'route',
-│   │   │   │   │   'prompt',
-│   │   │   │   │   'traj_future'
-│   │   │   │   ],
-│   │   │   │   'components_prompt': [
-│   │   │   │   │   'traj_future'
-│   │   │   │   ],
-│   │   │   │   'label_components': [
-│   │   │   │   │   'traj_future'
-│   │   │   │   ],
-│   │   │   │   'include_camera_ids': True,
-│   │   │   │   'include_frame_nums': True,
-│   │   │   │   'generation_mode': False
-│   │   │   },
-│   │   │   '_recursive_': False,
-│   │   │   '_target_': 'alpamayo.data.pai_nav.PAIDatasetWithNav',
-│   │   │   'local_dir': '/raid/charlie/data/',
-│   │   │   'chunk_ids': [
-│   │   │   │   214,
-│   │   │   │   224,
-│   │   │   │   276,
-│   │   │   │   317,
-│   │   │   │   420,
-│   │   │   │   727,
-│   │   │   │   728,
-│   │   │   │   968,
-│   │   │   │   982,
-│   │   │   │   1519,
-│   │   │   │   1657,
-│   │   │   │   1984,
-│   │   │   │   2277,
-│   │   │   │   2368,
-│   │   │   │   2372,
-│   │   │   │   2447,
-│   │   │   │   2599,
-│   │   │   │   2634,
-│   │   │   │   2868
-│   │   │   ],
-│   │   │   'use_default_keyframe': True,
-│   │   │   'annotations_path': '/raid/charlie/alpamayo1.5/notebooks/nav_demo_samples.json'
-│   │   },
-│   │   'val_dataset': {
-│   │   │   'vla_preprocess_args': {
-│   │   │   │   '_target_': 'alpamayo_r1.processor.qwen_processor.get_preprocess_data_fn_from_model_config',
-│   │   │   │   'components_order': [
-│   │   │   │   │   'image',
-│   │   │   │   │   'traj_history',
-│   │   │   │   │   'route',
-│   │   │   │   │   'prompt',
-│   │   │   │   │   'traj_future'
-│   │   │   │   ],
-│   │   │   │   'components_prompt': [
-│   │   │   │   │   'traj_future'
-│   │   │   │   ],
-│   │   │   │   'label_components': [
-│   │   │   │   │   'traj_future'
-│   │   │   │   ],
-│   │   │   │   'include_camera_ids': True,
-│   │   │   │   'include_frame_nums': True,
-│   │   │   │   'generation_mode': True
-│   │   │   },
-│   │   │   '_recursive_': False,
-│   │   │   '_target_': 'alpamayo.data.pai_nav.PAIDatasetWithNav',
-│   │   │   'local_dir': '/raid/charlie/data/',
-│   │   │   'chunk_ids': [
-│   │   │   │   214,
-│   │   │   │   224,
-│   │   │   │   276,
-│   │   │   │   317,
-│   │   │   │   420,
-│   │   │   │   727,
-│   │   │   │   728,
-│   │   │   │   968,
-│   │   │   │   982,
-│   │   │   │   1519,
-│   │   │   │   1657,
-│   │   │   │   1984,
-│   │   │   │   2277,
-│   │   │   │   2368,
-│   │   │   │   2372,
-│   │   │   │   2447,
-│   │   │   │   2599,
-│   │   │   │   2634,
-│   │   │   │   2868
-│   │   │   ],
-│   │   │   'use_default_keyframe': True,
-│   │   │   'annotations_path': '/raid/charlie/alpamayo1.5/notebooks/nav_demo_samples.json'
-│   │   },
-│   │   'collate_fn': {
-│   │   │   '_target_': 'alpamayo_r1.processor.qwen_processor.collate_fn_from_model_config',
-│   │   │   '_partial_': True
-│   │   }
-│   },
-│   'paths': {
-│   │   'output_dir': 'output_stage1_nav'
-│   },
-│   'callbacks': {},
-│   'evaluate': {
-│   │   'max_eval_steps': -1,
-│   │   'torch_dtype': 'bfloat16',
-│   │   'metric_runner': {
-│   │   │   '_target_': 'alpamayo.metrics.metric_runner.MetricRunner',
-│   │   │   'metrics': [
-│   │   │   │   {
-│   │   │   │   │   '_target_': 'alpamayo.metrics.metric_api.ReasoningSampler',
-│   │   │   │   │   'num_traj_sets': 1,
-│   │   │   │   │   'top_p': 0.98,
-│   │   │   │   │   'temperature': 0.6,
-│   │   │   │   │   'traj_only_generation': False,
-│   │   │   │   │   'max_generation_length': 256
-│   │   │   │   },
-│   │   │   │   {
-│   │   │   │   │   '_target_': 'alpamayo.metrics.metric_api.DistanceMetrics'
-│   │   │   │   }
-│   │   │   ]
-│   │   },
-│   │   'eval_ckpt': None
-│   },
-│   'trainer': {
-│   │   'output_dir': 'output_stage1_nav',
-│   │   'per_device_train_batch_size': 1,
-│   │   'per_device_eval_batch_size': 2,
-│   │   'gradient_accumulation_steps': 4,
-│   │   'learning_rate': 1e-05,
-│   │   'warmup_steps': 500,
-│   │   'logging_steps': 5,
-│   │   'save_steps': 500,
-│   │   'save_total_limit': 2,
-│   │   'num_train_epochs': 700,
-│   │   'bf16': True,
-│   │   'dataloader_pin_memory': True,
-│   │   'dataloader_num_workers': 2,
-│   │   'remove_unused_columns': False,
-│   │   'report_to': 'none',
-│   │   'lr_scheduler_type': 'cosine_warmup_with_min_lr',
-│   │   'lr_scheduler_kwargs': {
-│   │   │   'min_lr': 1e-06
-│   │   },
-│   │   'deepspeed': 'configs/deepspeed/zero2.json',
-│   │   'gradient_checkpointing': True,
-│   │   'gradient_checkpointing_kwargs': {
-│   │   │   'use_reentrant': False
-│   │   },
-│   │   'lr_multiplier': {
-│   │   │   'vlm.model.visual': 0.1
-│   │   },
-│   │   'ddp_find_unused_parameters': False
-│   },
-│   'task_name': 'alpamayo_1_5_sft_stage1_nav',
-│   'run_name': 'alpamayo_1_5_sft_stage1_nav_20260528_225939',
-│   'model': {
-│   │   'checkpoint_path': '/raid/charlie/ar1_ck/',
-│   │   '_target_': 'alpamayo1_5_sft.models.sft_base_model.TrainableReasoningVLA.from_alpamayo_checkpoint',
-│   │   'vlm_name_or_path': 'Qwen/Qwen3-VL-8B-Instruct'
-│   }
-}
-
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLForConditionalGeneration is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3VLModel is bfloat16. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", dtype=torch.float16)`
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
-[2026-05-28 23:03:54,087][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:54,087][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:54,099][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:54,099][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:54,148][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:54,149][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:54,166][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:54,166][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:54,171][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:54,171][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:54,186][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:54,186][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:54,254][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:54,254][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:54,673][alpamayo.data.pai_utils][INFO] - [rank: 5] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:03:55,091][alpamayo.data.pai_utils][INFO] - [rank: 6] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:03:55,103][alpamayo.data.pai_utils][INFO] - [rank: 4] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:03:55,159][alpamayo_r1.models.base_model][INFO] - Total parameters: 8,797,933,808
-[2026-05-28 23:03:55,159][alpamayo_r1.models.base_model][INFO] - Trainable parameters: 8,797,933,808
-[2026-05-28 23:03:55,196][alpamayo.data.pai_utils][INFO] - [rank: 7] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:03:55,196][alpamayo.data.pai_utils][INFO] - [rank: 1] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:03:55,208][alpamayo.data.pai_utils][INFO] - [rank: 3] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:03:55,239][alpamayo.data.pai_utils][INFO] - [rank: 2] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:03:55,605][alpamayo1_5_sft.models.sft_base_model][INFO] - [rank: 0] Loaded 750 VLM tensors from /raid/charlie/ar1_ck (missing=0, unexpected=0)
-[2026-05-28 23:03:55,650][alpamayo.data.pai_utils][INFO] - [rank: 0] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:00,391][alpamayo.data.pai_utils][INFO] - [rank: 5] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:00,832][alpamayo.data.pai_utils][INFO] - [rank: 4] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:00,931][alpamayo.data.pai_utils][INFO] - [rank: 7] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:01,013][alpamayo.data.pai_utils][INFO] - [rank: 3] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:01,064][alpamayo.data.pai_utils][INFO] - [rank: 1] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:01,189][alpamayo.data.pai_utils][INFO] - [rank: 6] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:01,384][alpamayo.data.pai_utils][INFO] - [rank: 2] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:01,551][alpamayo.data.pai_utils][INFO] - [rank: 0] Loading from /raid/charlie/data/ with chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982, 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
-[2026-05-28 23:04:07,684][alpamayo.common.config_utils][INFO] - [rank: 0] Config saved to output_stage1_nav/config.yaml
-[2026-05-28 23:04:07,994][accelerate.accelerator][WARNING] - [RANK 0] Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 4. Using DeepSpeed's value.
-  0%|          | 0/700 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-Could not estimate the number of tokens of the input, floating-point operations will not be computed
-  0%|          | 1/700 [00:33<6:31:38, 33.62s/it]  0%|          | 2/700 [01:01<5:55:02, 30.52s/it]  0%|          | 3/700 [01:28<5:30:50, 28.48s/it]  1%|          | 4/700 [01:54<5:19:00, 27.50s/it]  1%|          | 5/700 [02:21<5:17:12, 27.38s/it]                                                 {'loss': 2.1193, 'grad_norm': 1.6879780292510986, 'learning_rate': 1.0000000000000002e-08, 'epoch': 5.0}
-  1%|          | 5/700 [02:21<5:17:12, 27.38s/it]  1%|          | 6/700 [02:50<5:25:11, 28.11s/it]  1%|          | 7/700 [03:18<5:24:23, 28.09s/it]  1%|          | 8/700 [03:45<5:18:52, 27.65s/it]  1%|▏         | 9/700 [04:12<5:17:15, 27.55s/it]  1%|▏         | 10/700 [04:39<5:14:57, 27.39s/it]                                                  {'loss': 2.1152, 'grad_norm': 1.543734073638916, 'learning_rate': 2.0000000000000004e-08, 'epoch': 10.0}
-  1%|▏         | 10/700 [04:39<5:14:57, 27.39s/it]  2%|▏         | 11/700 [05:07<5:14:22, 27.38s/it]  2%|▏         | 12/700 [05:35<5:15:33, 27.52s/it]  2%|▏         | 13/700 [06:02<5:14:23, 27.46s/it]  2%|▏         | 14/700 [06:29<5:13:29, 27.42s/it]  2%|▏         | 15/700 [06:57<5:12:47, 27.40s/it]                                                  {'loss': 2.1175, 'grad_norm': 1.4114481210708618, 'learning_rate': 3.0000000000000004e-08, 'epoch': 15.0}
-  2%|▏         | 15/700 [06:57<5:12:47, 27.40s/it]  2%|▏         | 16/700 [07:24<5:14:03, 27.55s/it]  2%|▏         | 17/700 [07:52<5:13:55, 27.58s/it]  3%|▎         | 18/700 [08:19<5:11:55, 27.44s/it]  3%|▎         | 19/700 [08:47<5:12:11, 27.51s/it]  3%|▎         | 20/700 [09:14<5:11:32, 27.49s/it]                                                  {'loss': 2.1107, 'grad_norm': 1.3070586919784546, 'learning_rate': 4.000000000000001e-08, 'epoch': 20.0}
-  3%|▎         | 20/700 [09:14<5:11:32, 27.49s/it]  3%|▎         | 21/700 [09:42<5:11:10, 27.50s/it]  3%|▎         | 22/700 [10:10<5:11:34, 27.57s/it]  3%|▎         | 23/700 [10:37<5:11:27, 27.60s/it]  3%|▎         | 24/700 [11:04<5:08:40, 27.40s/it]  4%|▎         | 25/700 [11:31<5:07:10, 27.30s/it]                                                  {'loss': 2.1068, 'grad_norm': 1.4505603313446045, 'learning_rate': 5.000000000000001e-08, 'epoch': 25.0}
-  4%|▎         | 25/700 [11:31<5:07:10, 27.30s/it]  4%|▎         | 26/700 [11:59<5:07:11, 27.35s/it]  4%|▍         | 27/700 [12:26<5:08:10, 27.48s/it]  4%|▍         | 28/700 [12:54<5:08:52, 27.58s/it]  4%|▍         | 29/700 [13:21<5:06:46, 27.43s/it]  4%|▍         | 30/700 [13:49<5:08:16, 27.61s/it]                                                  {'loss': 2.1129, 'grad_norm': 1.3858921527862549, 'learning_rate': 6.000000000000001e-08, 'epoch': 30.0}
-  4%|▍         | 30/700 [13:49<5:08:16, 27.61s/it]  4%|▍         | 31/700 [14:16<5:04:47, 27.34s/it]  5%|▍         | 32/700 [14:44<5:06:16, 27.51s/it]  5%|▍         | 33/700 [15:11<5:05:21, 27.47s/it]  5%|▍         | 34/700 [15:38<5:03:19, 27.33s/it]  5%|▌         | 35/700 [16:05<5:01:32, 27.21s/it]                                                  {'loss': 2.0961, 'grad_norm': 1.4569400548934937, 'learning_rate': 7.000000000000002e-08, 'epoch': 35.0}
-  5%|▌         | 35/700 [16:05<5:01:32, 27.21s/it]  5%|▌         | 36/700 [16:32<5:00:29, 27.15s/it]  5%|▌         | 37/700 [17:00<5:00:26, 27.19s/it]  5%|▌         | 38/700 [17:28<5:04:45, 27.62s/it]  6%|▌         | 39/700 [17:55<5:02:53, 27.49s/it]  6%|▌         | 40/700 [18:22<5:00:39, 27.33s/it]                                                  {'loss': 2.0805, 'grad_norm': 1.3676267862319946, 'learning_rate': 8.000000000000001e-08, 'epoch': 40.0}
-  6%|▌         | 40/700 [18:22<5:00:39, 27.33s/it]  6%|▌         | 41/700 [18:50<5:00:06, 27.32s/it]  6%|▌         | 42/700 [19:17<4:57:59, 27.17s/it]  6%|▌         | 43/700 [19:44<4:59:00, 27.31s/it]  6%|▋         | 44/700 [20:12<5:00:03, 27.44s/it]  6%|▋         | 45/700 [20:40<5:03:07, 27.77s/it]                                                  {'loss': 2.0565, 'grad_norm': 1.2619516849517822, 'learning_rate': 9.000000000000001e-08, 'epoch': 45.0}
-  6%|▋         | 45/700 [20:40<5:03:07, 27.77s/it]  7%|▋         | 46/700 [21:07<4:58:35, 27.39s/it]  7%|▋         | 47/700 [21:34<4:55:58, 27.20s/it]  7%|▋         | 48/700 [22:01<4:55:06, 27.16s/it]  7%|▋         | 49/700 [22:29<4:57:45, 27.44s/it]  7%|▋         | 50/700 [22:57<4:58:45, 27.58s/it]                                                  {'loss': 2.0303, 'grad_norm': 1.2141507863998413, 'learning_rate': 1.0000000000000002e-07, 'epoch': 50.0}
-  7%|▋         | 50/700 [22:57<4:58:45, 27.58s/it]  7%|▋         | 51/700 [23:24<4:57:42, 27.52s/it]  7%|▋         | 52/700 [23:52<4:57:11, 27.52s/it]  8%|▊         | 53/700 [24:19<4:55:34, 27.41s/it]  8%|▊         | 54/700 [24:46<4:54:13, 27.33s/it]  8%|▊         | 55/700 [25:14<4:54:35, 27.40s/it]                                                  {'loss': 2.0174, 'grad_norm': 1.3812137842178345, 'learning_rate': 1.1000000000000002e-07, 'epoch': 55.0}
-  8%|▊         | 55/700 [25:14<4:54:35, 27.40s/it]  8%|▊         | 56/700 [25:41<4:53:14, 27.32s/it]  8%|▊         | 57/700 [26:08<4:51:37, 27.21s/it]  8%|▊         | 58/700 [26:35<4:50:44, 27.17s/it]  8%|▊         | 59/700 [27:02<4:51:41, 27.30s/it]  9%|▊         | 60/700 [27:30<4:53:49, 27.55s/it]                                                  {'loss': 1.9758, 'grad_norm': 1.6015071868896484, 'learning_rate': 1.2000000000000002e-07, 'epoch': 60.0}
-  9%|▊         | 60/700 [27:30<4:53:49, 27.55s/it]  9%|▊         | 61/700 [27:58<4:54:28, 27.65s/it]  9%|▉         | 62/700 [28:26<4:52:52, 27.54s/it]  9%|▉         | 63/700 [28:53<4:53:03, 27.60s/it]  9%|▉         | 64/700 [29:20<4:49:39, 27.33s/it]  9%|▉         | 65/700 [29:48<4:52:19, 27.62s/it]                                                  {'loss': 1.913, 'grad_norm': 1.0093847513198853, 'learning_rate': 1.3000000000000003e-07, 'epoch': 65.0}
-  9%|▉         | 65/700 [29:48<4:52:19, 27.62s/it]  9%|▉         | 66/700 [30:16<4:53:22, 27.76s/it] 10%|▉         | 67/700 [30:44<4:52:57, 27.77s/it] 10%|▉         | 68/700 [31:11<4:50:47, 27.61s/it] 10%|▉         | 69/700 [31:39<4:49:25, 27.52s/it] 10%|█         | 70/700 [32:07<4:52:02, 27.81s/it]                                                  {'loss': 1.8606, 'grad_norm': 1.09256112575531, 'learning_rate': 1.4000000000000004e-07, 'epoch': 70.0}
- 10%|█         | 70/700 [32:07<4:52:02, 27.81s/it] 10%|█         | 71/700 [32:36<4:54:14, 28.07s/it] 10%|█         | 72/700 [33:08<5:06:20, 29.27s/it] 10%|█         | 73/700 [33:37<5:05:02, 29.19s/it] 11%|█         | 74/700 [34:04<4:58:20, 28.60s/it] 11%|█         | 75/700 [34:30<4:48:20, 27.68s/it]                                                  {'loss': 1.8195, 'grad_norm': 1.1143772602081299, 'learning_rate': 1.5000000000000002e-07, 'epoch': 75.0}
- 11%|█         | 75/700 [34:30<4:48:20, 27.68s/it] 11%|█         | 76/700 [34:56<4:43:48, 27.29s/it] 11%|█         | 77/700 [35:22<4:38:32, 26.83s/it] 11%|█         | 78/700 [35:48<4:37:18, 26.75s/it] 11%|█▏        | 79/700 [36:15<4:35:00, 26.57s/it] 11%|█▏        | 80/700 [36:41<4:33:24, 26.46s/it]                                                  {'loss': 1.7579, 'grad_norm': 1.0156410932540894, 'learning_rate': 1.6000000000000003e-07, 'epoch': 80.0}
- 11%|█▏        | 80/700 [36:41<4:33:24, 26.46s/it]W0528 23:41:18.450000 1105012 torch/distributed/elastic/agent/server/api.py:723] Received 15 death signal, shutting down workers
-W0528 23:41:18.451000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105096 closing signal SIGTERM
-W0528 23:41:18.453000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105097 closing signal SIGTERM
-W0528 23:41:18.455000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105098 closing signal SIGTERM
-W0528 23:41:18.456000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105099 closing signal SIGTERM
-W0528 23:41:18.458000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105100 closing signal SIGTERM
-W0528 23:41:18.460000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105101 closing signal SIGTERM
-W0528 23:41:18.465000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105102 closing signal SIGTERM
-W0528 23:41:18.467000 1105012 torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1105103 closing signal SIGTERM
-Traceback (most recent call last):
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/bin/torchrun", line 10, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
-    return f(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/run.py", line 901, in main
-    run(args)
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
-    elastic_launch(
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
-    result = agent.run()
-             ^^^^^^^^^^^
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
-    result = f(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 715, in run
-    result = self._invoke_run(role)
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 879, in _invoke_run
-    time.sleep(monitor_interval)
-  File "/raid/charlie/alpamayo-recipes/recipes/alpamayo1_5_sft/a1_5_sft/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
-    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
-torch.distributed.elastic.multiprocessing.api.SignalException: Process 1105012 got signal: 15
