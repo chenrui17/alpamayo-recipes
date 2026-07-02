@@ -1,4 +1,0 @@
-
->>> Running coc_production_opt_workers2: Production stack with workers=2 (less CPU contention)
->>> Done coc_production_opt_workers2: avg=10.085s
-Wrote /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/RESULTS.md

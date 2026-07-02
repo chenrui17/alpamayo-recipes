@@ -1,0 +1,494 @@
+{
+  "results": [
+    {
+      "summary": {
+        "stable_start_step": 5,
+        "stable_end_step": 20,
+        "stable_step_count": 16,
+        "stable_avg_step_seconds": 41.35375232528895
+      },
+      "records": [
+        {
+          "step": 1,
+          "compute_seconds": 9.049182435497642
+        },
+        {
+          "step": 2,
+          "compute_seconds": 7.574528571218252,
+          "step_seconds": 42.52623699977994
+        },
+        {
+          "step": 3,
+          "compute_seconds": 7.518812047317624,
+          "step_seconds": 40.474321871995926
+        },
+        {
+          "step": 4,
+          "compute_seconds": 7.525018464773893,
+          "step_seconds": 41.696504997089505
+        },
+        {
+          "step": 5,
+          "compute_seconds": 7.841739986091852,
+          "step_seconds": 41.96794190071523
+        },
+        {
+          "step": 6,
+          "compute_seconds": 8.943321725353599,
+          "step_seconds": 40.74841142073274
+        },
+        {
+          "step": 7,
+          "compute_seconds": 7.555740285664797,
+          "step_seconds": 41.287393191829324
+        },
+        {
+          "step": 8,
+          "compute_seconds": 10.294170964509249,
+          "step_seconds": 42.503504605963826
+        },
+        {
+          "step": 9,
+          "compute_seconds": 9.569792849943042,
+          "step_seconds": 41.21501441113651
+        },
+        {
+          "step": 10,
+          "compute_seconds": 9.854933017864823,
+          "step_seconds": 40.87914420478046
+        },
+        {
+          "step": 11,
+          "compute_seconds": 8.092341750860214,
+          "step_seconds": 41.495186476036906
+        },
+        {
+          "step": 12,
+          "compute_seconds": 8.3438791166991,
+          "step_seconds": 41.27698266133666
+        },
+        {
+          "step": 13,
+          "compute_seconds": 8.866288619115949,
+          "step_seconds": 40.233261827379465
+        },
+        {
+          "step": 14,
+          "compute_seconds": 8.378708405420184,
+          "step_seconds": 40.7597582321614
+        },
+        {
+          "step": 15,
+          "compute_seconds": 9.304358344525099,
+          "step_seconds": 42.232516748830676
+        },
+        {
+          "step": 16,
+          "compute_seconds": 9.249183639883995,
+          "step_seconds": 40.770826298743486
+        },
+        {
+          "step": 17,
+          "compute_seconds": 9.805468153208494,
+          "step_seconds": 42.139226673170924
+        },
+        {
+          "step": 18,
+          "compute_seconds": 9.770801022648811,
+          "step_seconds": 41.1425232347101
+        },
+        {
+          "step": 19,
+          "compute_seconds": 10.06924020498991,
+          "step_seconds": 41.272879561409354
+        },
+        {
+          "step": 20,
+          "compute_seconds": 7.979449855163693,
+          "step_seconds": 41.735465755686164
+        }
+      ],
+      "variant": "baseline",
+      "description": "Baseline without dataloader workers or recipe performance caches.",
+      "log_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/baseline.log",
+      "command_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/baseline.command.json"
+    },
+    {
+      "summary": {
+        "stable_start_step": 5,
+        "stable_end_step": 20,
+        "stable_step_count": 16,
+        "stable_avg_step_seconds": 20.039998025633395
+      },
+      "records": [
+        {
+          "step": 1,
+          "compute_seconds": 12.429432483389974
+        },
+        {
+          "step": 2,
+          "compute_seconds": 8.812798788771033,
+          "step_seconds": 20.92152539268136
+        },
+        {
+          "step": 3,
+          "compute_seconds": 8.474066395312548,
+          "step_seconds": 19.715787645429373
+        },
+        {
+          "step": 4,
+          "compute_seconds": 7.696698730811477,
+          "step_seconds": 20.278824150562286
+        },
+        {
+          "step": 5,
+          "compute_seconds": 8.562925089150667,
+          "step_seconds": 20.23097487911582
+        },
+        {
+          "step": 6,
+          "compute_seconds": 9.254629038274288,
+          "step_seconds": 21.41792143136263
+        },
+        {
+          "step": 7,
+          "compute_seconds": 8.090921791270375,
+          "step_seconds": 19.664706548675895
+        },
+        {
+          "step": 8,
+          "compute_seconds": 7.668376022949815,
+          "step_seconds": 19.63149280846119
+        },
+        {
+          "step": 9,
+          "compute_seconds": 8.060117917135358,
+          "step_seconds": 19.45539857260883
+        },
+        {
+          "step": 10,
+          "compute_seconds": 8.656654899939895,
+          "step_seconds": 19.98418083973229
+        },
+        {
+          "step": 11,
+          "compute_seconds": 8.551124827936292,
+          "step_seconds": 19.64746873266995
+        },
+        {
+          "step": 12,
+          "compute_seconds": 8.575308319181204,
+          "step_seconds": 19.61633217893541
+        },
+        {
+          "step": 13,
+          "compute_seconds": 8.786015735939145,
+          "step_seconds": 20.259793208912015
+        },
+        {
+          "step": 14,
+          "compute_seconds": 7.755015831440687,
+          "step_seconds": 19.609969317913055
+        },
+        {
+          "step": 15,
+          "compute_seconds": 9.668599050492048,
+          "step_seconds": 21.251115016639233
+        },
+        {
+          "step": 16,
+          "compute_seconds": 8.434878382831812,
+          "step_seconds": 20.348619163036346
+        },
+        {
+          "step": 17,
+          "compute_seconds": 7.5312742833048105,
+          "step_seconds": 19.857460545375943
+        },
+        {
+          "step": 18,
+          "compute_seconds": 8.962171414867043,
+          "step_seconds": 20.334014071151614
+        },
+        {
+          "step": 19,
+          "compute_seconds": 8.404240269213915,
+          "step_seconds": 19.478050032630563
+        },
+        {
+          "step": 20,
+          "compute_seconds": 8.026849517598748,
+          "step_seconds": 19.852471062913537
+        }
+      ],
+      "variant": "dataloader_workers",
+      "description": "Enable dataloader_num_workers=8, dataloader_persistent_workers=true, and dataloader_prefetch_factor=4.",
+      "log_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/dataloader_workers.log",
+      "command_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/dataloader_workers.command.json"
+    },
+    {
+      "summary": {
+        "stable_start_step": 5,
+        "stable_end_step": 20,
+        "stable_step_count": 16,
+        "stable_avg_step_seconds": 12.031510764732957
+      },
+      "records": [
+        {
+          "step": 1,
+          "compute_seconds": 11.846532644703984
+        },
+        {
+          "step": 2,
+          "compute_seconds": 8.439468808472157,
+          "step_seconds": 13.146728720515966
+        },
+        {
+          "step": 3,
+          "compute_seconds": 8.725341709330678,
+          "step_seconds": 12.009498676285148
+        },
+        {
+          "step": 4,
+          "compute_seconds": 7.536656299605966,
+          "step_seconds": 11.662515630945563
+        },
+        {
+          "step": 5,
+          "compute_seconds": 8.155915945768356,
+          "step_seconds": 12.073686122894287
+        },
+        {
+          "step": 6,
+          "compute_seconds": 8.61242787539959,
+          "step_seconds": 11.950943436473608
+        },
+        {
+          "step": 7,
+          "compute_seconds": 7.519108980894089,
+          "step_seconds": 12.028658539056778
+        },
+        {
+          "step": 8,
+          "compute_seconds": 8.895781826227903,
+          "step_seconds": 12.126558624207973
+        },
+        {
+          "step": 9,
+          "compute_seconds": 8.13978898525238,
+          "step_seconds": 11.691389361396432
+        },
+        {
+          "step": 10,
+          "compute_seconds": 8.779260912910104,
+          "step_seconds": 12.118245327845216
+        },
+        {
+          "step": 11,
+          "compute_seconds": 8.948252094909549,
+          "step_seconds": 12.372352559119463
+        },
+        {
+          "step": 12,
+          "compute_seconds": 8.167580200359225,
+          "step_seconds": 12.14827841706574
+        },
+        {
+          "step": 13,
+          "compute_seconds": 8.339507021009922,
+          "step_seconds": 11.967066356912255
+        },
+        {
+          "step": 14,
+          "compute_seconds": 8.320405261591077,
+          "step_seconds": 12.078014139086008
+        },
+        {
+          "step": 15,
+          "compute_seconds": 8.19926836527884,
+          "step_seconds": 11.928640872240067
+        },
+        {
+          "step": 16,
+          "compute_seconds": 8.907076470553875,
+          "step_seconds": 12.307940302416682
+        },
+        {
+          "step": 17,
+          "compute_seconds": 8.292460856959224,
+          "step_seconds": 11.913249630481005
+        },
+        {
+          "step": 18,
+          "compute_seconds": 8.625601192936301,
+          "step_seconds": 12.130289485678077
+        },
+        {
+          "step": 19,
+          "compute_seconds": 8.277395091950893,
+          "step_seconds": 11.852621257305145
+        },
+        {
+          "step": 20,
+          "compute_seconds": 7.735336862504482,
+          "step_seconds": 11.816237803548574
+        }
+      ],
+      "variant": "zip_collate_cache",
+      "description": "Add zip_cache=true and collate_cache=true on top of dataloader workers.",
+      "log_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/zip_collate_cache.log",
+      "command_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/zip_collate_cache.command.json"
+    },
+    {
+      "summary": {
+        "stable_start_step": 5,
+        "stable_end_step": 20,
+        "stable_step_count": 16,
+        "stable_avg_step_seconds": 12.020703358808532
+      },
+      "records": [
+        {
+          "step": 1,
+          "compute_seconds": 15.43576842918992
+        },
+        {
+          "step": 2,
+          "compute_seconds": 8.050765942782164,
+          "step_seconds": 13.550871396437287
+        },
+        {
+          "step": 3,
+          "compute_seconds": 8.221539752557874,
+          "step_seconds": 12.084703102707863
+        },
+        {
+          "step": 4,
+          "compute_seconds": 7.52746501378715,
+          "step_seconds": 12.17399019934237
+        },
+        {
+          "step": 5,
+          "compute_seconds": 7.878639921545982,
+          "step_seconds": 12.322318190708756
+        },
+        {
+          "step": 6,
+          "compute_seconds": 8.105004204437137,
+          "step_seconds": 11.925732946023345
+        },
+        {
+          "step": 7,
+          "compute_seconds": 8.052245520055294,
+          "step_seconds": 12.026667691767216
+        },
+        {
+          "step": 8,
+          "compute_seconds": 8.3681156989187,
+          "step_seconds": 12.069277634844184
+        },
+        {
+          "step": 9,
+          "compute_seconds": 8.361218294128776,
+          "step_seconds": 12.061584956943989
+        },
+        {
+          "step": 10,
+          "compute_seconds": 8.20838075876236,
+          "step_seconds": 11.673514476045966
+        },
+        {
+          "step": 11,
+          "compute_seconds": 8.24728056229651,
+          "step_seconds": 11.983102582395077
+        },
+        {
+          "step": 12,
+          "compute_seconds": 8.661695247516036,
+          "step_seconds": 12.099787898361683
+        },
+        {
+          "step": 13,
+          "compute_seconds": 8.3189332280308,
+          "step_seconds": 11.965689351782203
+        },
+        {
+          "step": 14,
+          "compute_seconds": 8.329183192923665,
+          "step_seconds": 12.137479048222303
+        },
+        {
+          "step": 15,
+          "compute_seconds": 8.60389794409275,
+          "step_seconds": 12.19090878404677
+        },
+        {
+          "step": 16,
+          "compute_seconds": 9.022399282082915,
+          "step_seconds": 12.26716947183013
+        },
+        {
+          "step": 17,
+          "compute_seconds": 8.556941585615277,
+          "step_seconds": 11.94783203676343
+        },
+        {
+          "step": 18,
+          "compute_seconds": 8.54061289690435,
+          "step_seconds": 11.95900672674179
+        },
+        {
+          "step": 19,
+          "compute_seconds": 8.459992280229926,
+          "step_seconds": 11.855265935882926
+        },
+        {
+          "step": 20,
+          "compute_seconds": 7.914208063855767,
+          "step_seconds": 11.84591600857675
+        }
+      ],
+      "variant": "tf32_cudnn_benchmark",
+      "description": "Add tf32=true and cudnn_benchmark=true on top of data-pipeline caches.",
+      "log_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/tf32_cudnn_benchmark.log",
+      "command_path": "/raid/charlie/alpamayo/git-0611/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/tf32_cudnn_benchmark.command.json"
+    }
+  ],
+  "summary": [
+    {
+      "variant": "baseline",
+      "avg_step_seconds": 41.35375232528895,
+      "samples": 16,
+      "min_step_seconds": 40.233261827379465,
+      "max_step_seconds": 42.503504605963826,
+      "speedup_vs_baseline": 1.0,
+      "incremental_speedup": null
+    },
+    {
+      "variant": "dataloader_workers",
+      "avg_step_seconds": 20.039998025633395,
+      "samples": 16,
+      "min_step_seconds": 19.45539857260883,
+      "max_step_seconds": 21.41792143136263,
+      "speedup_vs_baseline": 2.063560698578557,
+      "incremental_speedup": 2.063560698578557
+    },
+    {
+      "variant": "zip_collate_cache",
+      "avg_step_seconds": 12.031510764732957,
+      "samples": 16,
+      "min_step_seconds": 11.691389361396432,
+      "max_step_seconds": 12.372352559119463,
+      "speedup_vs_baseline": 3.43712050248137,
+      "incremental_speedup": 1.665626072859869
+    },
+    {
+      "variant": "tf32_cudnn_benchmark",
+      "avg_step_seconds": 12.020703358808532,
+      "samples": 16,
+      "min_step_seconds": 11.673514476045966,
+      "max_step_seconds": 12.322318190708756,
+      "speedup_vs_baseline": 3.44021070073123,
+      "incremental_speedup": 1.0008990660198354
+    }
+  ]
+}

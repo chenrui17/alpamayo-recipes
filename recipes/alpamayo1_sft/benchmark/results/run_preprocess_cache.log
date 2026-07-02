@@ -1,7 +1,0 @@
-
->>> Running coc_production_opt_preprocess: production_opt + preprocess_cache (clip-level VLA preprocess)
->>> FAILED coc_production_opt_preprocess, see /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/results/coc_production_opt_preprocess.log
-
->>> Running coc_dl_workers8_preprocess: workers=8 + preprocess_cache only
->>> FAILED coc_dl_workers8_preprocess, see /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/results/coc_dl_workers8_preprocess.log
-Wrote /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/RESULTS.md

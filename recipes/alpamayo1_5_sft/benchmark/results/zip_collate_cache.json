@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "stable_start_step": 5,
+    "stable_end_step": 20,
+    "stable_step_count": 16,
+    "stable_avg_step_seconds": 12.031510764732957
+  },
+  "records": [
+    {
+      "step": 1,
+      "compute_seconds": 11.846532644703984
+    },
+    {
+      "step": 2,
+      "compute_seconds": 8.439468808472157,
+      "step_seconds": 13.146728720515966
+    },
+    {
+      "step": 3,
+      "compute_seconds": 8.725341709330678,
+      "step_seconds": 12.009498676285148
+    },
+    {
+      "step": 4,
+      "compute_seconds": 7.536656299605966,
+      "step_seconds": 11.662515630945563
+    },
+    {
+      "step": 5,
+      "compute_seconds": 8.155915945768356,
+      "step_seconds": 12.073686122894287
+    },
+    {
+      "step": 6,
+      "compute_seconds": 8.61242787539959,
+      "step_seconds": 11.950943436473608
+    },
+    {
+      "step": 7,
+      "compute_seconds": 7.519108980894089,
+      "step_seconds": 12.028658539056778
+    },
+    {
+      "step": 8,
+      "compute_seconds": 8.895781826227903,
+      "step_seconds": 12.126558624207973
+    },
+    {
+      "step": 9,
+      "compute_seconds": 8.13978898525238,
+      "step_seconds": 11.691389361396432
+    },
+    {
+      "step": 10,
+      "compute_seconds": 8.779260912910104,
+      "step_seconds": 12.118245327845216
+    },
+    {
+      "step": 11,
+      "compute_seconds": 8.948252094909549,
+      "step_seconds": 12.372352559119463
+    },
+    {
+      "step": 12,
+      "compute_seconds": 8.167580200359225,
+      "step_seconds": 12.14827841706574
+    },
+    {
+      "step": 13,
+      "compute_seconds": 8.339507021009922,
+      "step_seconds": 11.967066356912255
+    },
+    {
+      "step": 14,
+      "compute_seconds": 8.320405261591077,
+      "step_seconds": 12.078014139086008
+    },
+    {
+      "step": 15,
+      "compute_seconds": 8.19926836527884,
+      "step_seconds": 11.928640872240067
+    },
+    {
+      "step": 16,
+      "compute_seconds": 8.907076470553875,
+      "step_seconds": 12.307940302416682
+    },
+    {
+      "step": 17,
+      "compute_seconds": 8.292460856959224,
+      "step_seconds": 11.913249630481005
+    },
+    {
+      "step": 18,
+      "compute_seconds": 8.625601192936301,
+      "step_seconds": 12.130289485678077
+    },
+    {
+      "step": 19,
+      "compute_seconds": 8.277395091950893,
+      "step_seconds": 11.852621257305145
+    },
+    {
+      "step": 20,
+      "compute_seconds": 7.735336862504482,
+      "step_seconds": 11.816237803548574
+    }
+  ]
+}

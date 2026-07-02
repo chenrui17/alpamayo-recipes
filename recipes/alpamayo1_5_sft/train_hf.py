@@ -25,12 +25,13 @@ from alpamayo.common import misc
 
 from alpamayo1_5_sft.trainer import ReasoningVLA_Trainer
 from alpamayo1_5_sft.trainer import TrainingArguments
-from alpamayo1_5_sft.benchmark.apply_optimizations import (
+from alpamayo1_5_sft.performance.apply_optimizations import (
     apply_model_optimizations,
     apply_runtime_optimizations,
     enable_zip_cache,
 )
-from alpamayo1_5_sft.benchmark.collate_cache import collate_fn_from_model_config_cached
+from alpamayo1_5_sft.performance.collate_cache import collate_fn_from_model_config_cached
+from alpamayo1_5_sft.performance.perf_utils import perf_plain
 
 from alpamayo.common import config_utils
 from alpamayo.common import wandb_utils
@@ -42,17 +43,10 @@ logger = logging.RankedLogger("train", rank_zero_only=True)
 logger.setLevel("INFO")
 
 
-def _perf_plain(cfg: DictConfig) -> dict:
-    perf = cfg.get("performance") or cfg.get("benchmark", {}).get("optimizations") or {}
-    if isinstance(perf, DictConfig):
-        return OmegaConf.to_container(perf, resolve=True)  # type: ignore[return-value]
-    return dict(perf) if perf else {}
-
-
 @hydra.main(version_base=None, config_path=None, config_name="config")
 def train(cfg: DictConfig) -> None:
     """Main training entry point."""
-    perf = _perf_plain(cfg)
+    perf = perf_plain(cfg)
     apply_runtime_optimizations({"optimizations": perf})
     if perf.get("zip_cache", False):
         enable_zip_cache()

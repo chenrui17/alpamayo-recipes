@@ -1,4 +1,0 @@
-
->>> Running coc_production_opt_loadcache: collate + load_cache (full sample) + TF32, zip off for CoC (master_port=29500)
->>> Done coc_production_opt_loadcache: avg=5.492s
-Wrote /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/RESULTS.md

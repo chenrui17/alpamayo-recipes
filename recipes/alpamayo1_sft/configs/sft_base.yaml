@@ -52,7 +52,7 @@ trainer:
   num_train_epochs: 3
   bf16: True
   dataloader_pin_memory: True
-  dataloader_num_workers: 16
+  dataloader_num_workers: 8
   dataloader_persistent_workers: true
   dataloader_prefetch_factor: 4
   remove_unused_columns: False
@@ -69,8 +69,7 @@ trainer:
 task_name: alpamayo_r1_sft
 run_name: ${task_name}_${now:%Y%m%d}_${now:%H%M%S}
 
-# Production-safe data-pipeline optimizations (see benchmark/OPTIMIZATION.md).
-# Disable zip_cache if CPU RAM is tight on large chunk ranges (e.g. chunks 0-99).
+# Data-pipeline optimizations. Disable zip_cache if CPU RAM is tight on large chunk ranges.
 performance:
   zip_cache: true
   collate_cache: true

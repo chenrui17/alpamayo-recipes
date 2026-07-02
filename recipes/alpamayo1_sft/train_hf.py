@@ -24,14 +24,17 @@ from alpamayo.common import misc
 
 from alpamayo1_sft.trainer import ReasoningVLA_Trainer
 from alpamayo1_sft.trainer import TrainingArguments
-from alpamayo1_sft.benchmark.apply_optimizations import (
+from alpamayo1_sft.performance.apply_optimizations import (
     apply_model_optimizations,
     apply_runtime_optimizations,
     enable_zip_cache,
 )
-from alpamayo1_sft.benchmark.load_cache import enable_load_cache, preload_load_cache
-from alpamayo1_sft.benchmark.preprocess_cache import enable_preprocess_cache, preload_preprocess_cache
-from alpamayo1_sft.benchmark.perf_utils import build_collate_fn, perf_plain
+from alpamayo1_sft.performance.load_cache import enable_load_cache, preload_load_cache
+from alpamayo1_sft.performance.preprocess_cache import (
+    enable_preprocess_cache,
+    preload_preprocess_cache,
+)
+from alpamayo1_sft.performance.perf_utils import build_collate_fn, perf_plain
 
 from alpamayo.common import config_utils
 from alpamayo.common import wandb_utils
@@ -91,6 +94,8 @@ def train(cfg: DictConfig) -> None:
     )
 
     if "deepspeed" in cfg.trainer and cfg.trainer.deepspeed is not None:
+        # We should not cast the forward inputs to bfloat16 because our model is mixed
+        # precision and trajectory encoder might require float32 input.
         ds_config = trainer.accelerator.state.deepspeed_plugin.hf_ds_config
         ds_config._dtype = torch.float32
 
