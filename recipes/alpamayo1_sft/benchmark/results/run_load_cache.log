@@ -1,0 +1,7 @@
+
+>>> Running coc_production_opt_loadcache: collate + load_cache (full sample) + TF32, zip off for CoC
+>>> Done coc_production_opt_loadcache: avg=10.211s
+
+>>> Running coc_dl_workers8_loadcache: workers=8 + load_cache only
+>>> FAILED coc_dl_workers8_loadcache, see /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/results/coc_dl_workers8_loadcache.log
+Wrote /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_sft/benchmark/RESULTS.md
