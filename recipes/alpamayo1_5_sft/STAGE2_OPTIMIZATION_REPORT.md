@@ -101,6 +101,12 @@
 ---
 
 ## 5. 复现
+
+> **前置**：liger SwiGLU 与 flow_matching 改动位于已安装的 pip 包中（非本仓库树）。
+> Stage2 默认 `APPLY_LIGER_SWIGLU=1`，复现前需先对 venv 打补丁：
+> `python patches/patch_swiglu.py`（幂等；详见 `patches/README.md`）。
+> 不打补丁训练仍正确，仅 SwiGLU 未融合（损失约 1% 加速）。
+
 ```bash
 ssh <user>@<training-server>   # credentials omitted
 cd /raid/charlie/alpamayo
