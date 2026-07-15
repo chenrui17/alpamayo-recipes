@@ -21,7 +21,12 @@ import torch
 from transformers import AutoConfig
 
 from alpamayo1_x_rl.base_cosmos_wrapper import BaseCosmosWrapper
-from alpamayo1_x_rl.utils.fsdp import shard_lm_layers, shard_visual_tower
+from alpamayo1_x_rl.utils.fsdp import (
+    shard_lm_layers,
+    shard_visual_tower,
+    maybe_compile_lm_layers,
+    maybe_fp8_convert_lm,
+)
 from alpamayo1_x_rl.utils.weight_loading import copy_state_into_dtensor_shards, detect_fsdp2_active
 from alpamayo1_x_rl.models.reasoning_vla.base_model import RLWrapperReasoningVLA
 
@@ -33,6 +38,18 @@ class ReasoningVLACosmos(BaseCosmosWrapper):
         super().__init__(hf_config)
         self.reasoning_vla = RLWrapperReasoningVLA(hf_config)
 
+    @classmethod
+    def fqn_filter_for_quantization(cls):
+        """FQN substrings to EXCLUDE from FP8 quantization (keep LM decoder Linears only).
+
+        Excludes lm_head/embeddings, the visual tower, multimodal projector/merger,
+        and the (frozen) action-expert head, which can corrupt FP8 training.
+        """
+        return [
+            "lm_head", "embed_tokens", "visual", "vision", "merger",
+            "patch_embed", "rotary", "expert", "action", "in_proj",
+        ]
+
     @staticmethod
     def supported_model_types():
         """Return the HF model types this wrapper supports."""
@@ -43,6 +60,10 @@ class ReasoningVLACosmos(BaseCosmosWrapper):
         from torch.distributed.fsdp import fully_shard
 
         rvla = self.reasoning_vla
+        _cfg = getattr(self, "_cosmos_config", None)
+        _pd = getattr(self, "_cosmos_parallel_dims", None)
+        # Optimization hooks (gated by config; no-op if disabled): apply BEFORE sharding.
+        maybe_compile_lm_layers(rvla, _cfg, model_name="ReasoningVLA")
         shard_visual_tower(rvla, fsdp_config, reshard_fn, model_name="ReasoningVLA")
         shard_lm_layers(rvla, fsdp_config, reshard_fn, model_name="ReasoningVLA")
         fully_shard(self, **fsdp_config, reshard_after_forward=True)

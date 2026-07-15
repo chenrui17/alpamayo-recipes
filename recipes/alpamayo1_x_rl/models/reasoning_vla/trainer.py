@@ -235,6 +235,16 @@ class ReasoningVLAGRPOTrainer(AlpamayoGRPOTrainer):
                                     )
                                 )
                                 logprob_masks = user_mini_batch["logprob_masks"]
+                                # FP8/CP/TP round computed_max_len up to seq_len_multiple (e.g. 16),
+                                # but the collated logprob_masks keep the natural length. Advantages
+                                # are a per-sample CONSTANT broadcast across the sequence, so aligning
+                                # their seq length to the mask is lossless (preserves exact values).
+                                if minibatched_advantages.shape[1] != logprob_masks.shape[1]:
+                                    _L = logprob_masks.shape[1]
+                                    if minibatched_advantages.shape[1] > _L:
+                                        minibatched_advantages = minibatched_advantages[:, :_L]
+                                    else:
+                                        minibatched_advantages = minibatched_advantages[:, :1].expand(-1, _L)
                                 current_advantages = logprob_masks * minibatched_advantages
 
                                 # Compute ref per-token logprobs if needed

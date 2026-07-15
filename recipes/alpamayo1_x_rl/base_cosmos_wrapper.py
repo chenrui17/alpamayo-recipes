@@ -74,6 +74,8 @@ class BaseCosmosWrapper(BaseModel):
             fsdp_config = build_fsdp_config(dp_mesh, config)
             reshard_fn = build_reshard_fn(config.train.fsdp_reshard_after_forward)
 
+            model._cosmos_config = config
+            model._cosmos_parallel_dims = parallel_dims
             model._apply_fsdp2(dp_mesh, fsdp_config, reshard_fn)
 
             if parallel_dims.dp_replicate_enabled:

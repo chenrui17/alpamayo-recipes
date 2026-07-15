@@ -234,6 +234,31 @@ class RVLADataPacker(BaseRLDataPacker):
         """Return the maximum sequence length across processed policy samples."""
         return max(x["tokenized_data"]["input_ids"].shape[1] for x in processed_samples)
 
+    @staticmethod
+    def _pad_row_to_len(
+        tensor: torch.Tensor,
+        target_len: int,
+        pad_value: int | bool,
+        *,
+        pad_left: bool = True,
+    ) -> torch.Tensor:
+        """Pad or truncate a [1, L] tensor along the sequence dimension."""
+        if tensor.ndim != 2 or tensor.shape[0] != 1:
+            raise ValueError(f"Expected [1, L] tensor, got shape {tuple(tensor.shape)}")
+        cur_len = tensor.shape[1]
+        if cur_len == target_len:
+            return tensor
+        if cur_len > target_len:
+            return tensor[:, -target_len:] if pad_left else tensor[:, :target_len]
+        pad_len = target_len - cur_len
+        pad = torch.full(
+            (1, pad_len),
+            pad_value,
+            dtype=tensor.dtype,
+            device=tensor.device,
+        )
+        return torch.cat([pad, tensor], dim=1) if pad_left else torch.cat([tensor, pad], dim=1)
+
     def policy_collate_fn(
         self,
         processed_samples: list[Any],
@@ -245,10 +270,35 @@ class RVLADataPacker(BaseRLDataPacker):
             unstackable_keys=["image_frames"],
         )
 
+        pad_token_id = alp_state.get_tokenizer().pad_token_id
+        if pad_token_id is None:
+            pad_token_id = 0
+
+        seq_pad_keys = {"input_ids", "labels_mask", "attention_mask", "position_ids"}
+        padded_rows: list[dict[str, Any]] = []
+        for row in batch["tokenized_data"]:
+            padded_row = dict(row)
+            for k, v in row.items():
+                if k == "text" or not isinstance(v, torch.Tensor):
+                    continue
+                # Only left-pad per-sample sequence tensors [1, L]. Vision fields
+                # (e.g. pixel_values [n_patches, D], image_grid_thw [n_img, 3]) are
+                # concatenated on dim 0 without padding.
+                if k in seq_pad_keys and v.ndim == 2 and v.shape[0] == 1:
+                    if k == "input_ids":
+                        pad_value: int | bool = pad_token_id
+                    elif k in ("labels_mask", "logprob_masks"):
+                        pad_value = False
+                    else:
+                        pad_value = 0
+                    padded_row[k] = self._pad_row_to_len(v, computed_max_len, pad_value)
+            padded_rows.append(padded_row)
+
         tokenized_data = {}
-        for k in batch["tokenized_data"][0].keys():
-            if k not in ["text"]:
-                tokenized_data[k] = torch.cat([row[k] for row in batch["tokenized_data"]])
+        for k in padded_rows[0].keys():
+            if k == "text":
+                continue
+            tokenized_data[k] = torch.cat([row[k] for row in padded_rows])
         batch["tokenized_data"] = tokenized_data
 
         label_components = batch["label_components"][0]

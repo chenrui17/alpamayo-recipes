@@ -88,6 +88,7 @@ REASONING_VLA_SPEC = ModelSpec(
     hydra_config_name="alpamayo1_5_rvla_rl_pai",
     hydra_overrides=[
         f"data.train.dataset.local_dir={_PAI_REASONING_LOCAL_DIR}",
+        "data.train.dataset.model_config.vlm_name_or_path=/root/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
         "data.train.dataset.clip_index_metadata=clip_index_reasoning_mini.parquet",
         "data.train.dataset.features_metadata=features.csv",
         "data.train.dataset.use_default_keyframe=False",

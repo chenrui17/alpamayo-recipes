@@ -92,6 +92,7 @@ REASONING_VLA_SPEC = ModelSpec(
         "data.train.dataset.features_metadata=features.csv",
         "data.train.dataset.use_default_keyframe=True",
         "data.train.dataset.reasoning_metadata=null",
+        "data.train.dataset.model_config.vlm_name_or_path=/root/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/snapshots/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
     ],
 )
 

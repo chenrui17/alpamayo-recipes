@@ -57,7 +57,7 @@ def find_first_attr_chain(root: object, chains: list[list[str]]):
 def check_parallelism_preconditions(parallel_dims, config, model_name: str) -> None:
     assert not parallel_dims.tp_enabled, f"TP not supported for {model_name}"
     assert not parallel_dims.cp_enabled, f"CP not supported for {model_name}"
-    assert not config.train.compile, f"Compile not supported for {model_name}"
+    # compile supported via maybe_compile_lm_layers (optimization); fp8 via maybe_fp8_convert_lm
 
 
 def get_dp_mesh(parallel_dims):
@@ -182,3 +182,78 @@ def shard_lm_layers(
 
     fully_shard(language_model, **fsdp_config, reshard_after_forward=True)
     logger.info(f"[{model_name}][FSDP] Sharded language model ({n_layers} layers)")
+
+
+def maybe_fp8_convert_lm(model_root, config, parallel_dims, model_name="Model"):
+    """Convert LM decoder Linear layers to torchao float8 (in-place) before FSDP sharding."""
+    if config is None or not getattr(getattr(config, "train", None), "fp8", None):
+        return
+    if not config.train.fp8.enable_fp8:
+        return
+    from functools import partial
+    from torchao.float8 import convert_to_float8_training
+    from cosmos_rl.utils.fp8.fp8_util import FP8ModelConverter, module_filter_fn
+
+    language_model = find_first_attr_chain(
+        model_root,
+        [["vlm", "language_model"], ["vlm", "model", "language_model"], ["vlm", "llm"], ["llm"]],
+    )
+    if language_model is None:
+        logger.warning(f"[{model_name}][fp8] no language_model found; skip")
+        return
+    conv = FP8ModelConverter(config, parallel_dims)
+    filter_fqns = [
+        "lm_head", "embed_tokens", "norm", "rotary", "visual", "vision",
+        "merger", "patch_embed", "expert", "action", "in_proj",
+    ]
+    convert_to_float8_training(
+        language_model,
+        config=conv.ao_float8_config,
+        module_filter_fn=partial(module_filter_fn, filter_fqns=filter_fqns),
+    )
+    logger.info(
+        f"[{model_name}][fp8] converted LM Linear -> float8 "
+        f"(quant={config.train.fp8.quant_recipe}, recipe={config.train.fp8.fp8_recipe})"
+    )
+
+
+def maybe_compile_lm_layers(model_root, config, model_name="Model"):
+    """Apply torch.compile to each LM decoder block before FSDP sharding."""
+    if config is None or not getattr(getattr(config, "train", None), "compile", False):
+        return
+    import torch
+
+    language_model = find_first_attr_chain(
+        model_root,
+        [["vlm", "language_model"], ["vlm", "model", "language_model"], ["vlm", "llm"], ["llm"]],
+    )
+    if language_model is None:
+        logger.warning(f"[{model_name}][compile] no language_model found; skip")
+        return
+    lm_core = getattr(language_model, "model", language_model)
+    lm_layers = getattr(lm_core, "layers", None) or getattr(lm_core, "blocks", None)
+    if lm_layers is None:
+        logger.warning(f"[{model_name}][compile] no decoder layers found; skip")
+        return
+    n = 0
+    for name, blk in list(lm_layers.named_children()):
+        # In-place compile: preserves module identity + param names (no _orig_mod prefix),
+        # so checkpoint weight-loading by FQN still matches.
+        blk.compile()
+        n += 1
+    logger.info(f"[{model_name}][compile] torch.compile applied to {n} LM blocks")
+
+    # Also compile the visual tower blocks (the per-sample multi-camera ViT encode is a
+    # prime suspect for the per-sample cost; compile is numerically identical).
+    visual = find_first_attr_chain(
+        model_root,
+        [["vlm", "model", "visual"], ["vlm", "visual"], ["vlm", "model", "vision_tower"]],
+    )
+    if visual is not None:
+        vblocks = getattr(visual, "blocks", None) or getattr(visual, "layers", None)
+        if vblocks is not None:
+            nv = 0
+            for vname, vblk in list(vblocks.named_children()):
+                vblk.compile()
+                nv += 1
+            logger.info(f"[{model_name}][compile] torch.compile applied to {nv} visual blocks")
