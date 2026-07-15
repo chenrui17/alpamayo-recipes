@@ -1,0 +1,16 @@
+{
+  "run_name": "kvon",
+  "step_times_sec": [
+    0.8002159260213375,
+    0.8037942061200738,
+    0.1979353055357933,
+    0.8121554683893919,
+    0.8044957891106606
+  ],
+  "avg_step_sec_all": 0.6837193390354515,
+  "avg_step_sec_stable_tail": 0.6837193390354515,
+  "stable_tail_n": 5,
+  "peak_gpu_mem_gb": 39.366616576,
+  "num_measured_steps": 5,
+  "warmup_steps": 3
+}

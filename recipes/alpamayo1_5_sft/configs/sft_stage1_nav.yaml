@@ -9,8 +9,8 @@ data:
   train_dataset:
     _target_: alpamayo.data.pai_nav.PAIDatasetWithNav
     _recursive_: false
-    local_dir: ???
-    annotations_path: ???
+    local_dir: "/raid/charlie/pai_dataset/"
+    annotations_path: "/raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json"
     chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982,
                 1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
     vla_preprocess_args:
@@ -18,8 +18,8 @@ data:
   val_dataset:
     _target_: alpamayo.data.pai_nav.PAIDatasetWithNav
     _recursive_: false
-    local_dir: ???
-    annotations_path: ???
+    local_dir: "/raid/charlie/pai_dataset/"
+    annotations_path: "/raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json"
     chunk_ids: [214, 224, 276, 317, 420, 727, 728, 968, 982,
               1519, 1657, 1984, 2277, 2368, 2372, 2447, 2599, 2634, 2868]
     vla_preprocess_args:

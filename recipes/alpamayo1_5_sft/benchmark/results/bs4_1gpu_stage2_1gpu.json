@@ -1,0 +1,16 @@
+{
+  "run_name": "bs4_1gpu",
+  "step_times_sec": [
+    18.895750254392624,
+    2.9878728659823537,
+    2.988367815501988,
+    2.9896133467555046,
+    3.0882455026730895
+  ],
+  "avg_step_sec_all": 6.189969957061112,
+  "avg_step_sec_stable_tail": 6.189969957061112,
+  "stable_tail_n": 5,
+  "peak_gpu_mem_gb": 40.095894528,
+  "num_measured_steps": 5,
+  "warmup_steps": 5
+}

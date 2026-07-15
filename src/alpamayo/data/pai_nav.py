@@ -90,6 +90,34 @@ class PAIDatasetWithNav(PAIDataset):
             self._samples = samples
 
         self.clip_ids = [s["clip_id"] for s in self._samples]
+        import os as _os
+        # Number of unique samples (cache is keyed modulo this).
+        self._orig_len = len(self._samples)
+
+        # OPT: for small multi-epoch finetune sets (stage2 nav), per-sample decode
+        # (~1.6s) dominates and per-worker caches thrash under rank/worker index
+        # sharding. Preload all fully-processed UNIQUE samples into memory here in the
+        # main process; DataLoader workers fork after this and inherit the cache copy-
+        # on-write, making __getitem__ a pure memory return (near-zero data_wait).
+        if _os.environ.get("APPLY_PRELOAD", "0") == "1":
+            self._sample_cache = {}
+            _prev = _os.environ.get("APPLY_SAMPLE_CACHE")
+            _os.environ["APPLY_SAMPLE_CACHE"] = "1"
+            for _i in range(self._orig_len):
+                self[_i]
+            if _prev is None:
+                _os.environ.pop("APPLY_SAMPLE_CACHE", None)
+            else:
+                _os.environ["APPLY_SAMPLE_CACHE"] = _prev
+            logger.info("[PAIDatasetWithNav] APPLY_PRELOAD: cached %d unique samples in memory", len(self._sample_cache))
+
+        # BENCH: optionally repeat the sample list to lengthen epochs so tiny-dataset
+        # epoch-boundary reshuffle stalls do not dominate throughput measurement. Done
+        # AFTER preload; repeated indices reuse the cache via modulo in __getitem__.
+        _rep = int(_os.environ.get("APPLY_REPEAT_DATA", "1"))
+        if _rep > 1:
+            self._samples = self._samples * _rep
+            self.clip_ids = self.clip_ids * _rep
 
     def __len__(self) -> int:
         """Return the number of annotated samples."""
@@ -97,9 +125,24 @@ class PAIDatasetWithNav(PAIDataset):
 
     def __getitem__(self, idx: int) -> dict[str, Any] | None:
         """Load a sample using the annotation's clip_id and t0."""
+        # OPT: optional in-memory cache of fully-processed samples. Stage2 nav has a
+        # small sample set trained for multiple epochs, so decoding+tokenizing every
+        # epoch is pure repeated work. Gated by APPLY_SAMPLE_CACHE (per-worker cache).
+        import os as _os
+        _ckey = idx % getattr(self, "_orig_len", len(self._samples))
+        if _os.environ.get("APPLY_SAMPLE_CACHE", "0") == "1":
+            if not hasattr(self, "_sample_cache"):
+                self._sample_cache = {}
+            if _ckey in self._sample_cache:
+                return self._sample_cache[_ckey]
         entry = self._samples[idx]
         clip_id = entry["clip_id"]
         t0_us = int(entry["t0_relative"])
+
+        _prof_load = _os.environ.get("APPLY_LOAD_PROFILE", "0") == "1"
+        if _prof_load:
+            import time as _tl
+            _lt0 = _tl.perf_counter()
 
         sample_data = load_physical_aiavdataset(
             clip_id,
@@ -118,5 +161,19 @@ class PAIDatasetWithNav(PAIDataset):
 
         if self.vla_preprocess_func is not None:
             sample_data["tokenized_data"] = self.vla_preprocess_func(data=sample_data)
+
+        if _prof_load:
+            import time as _tl2
+            print(f"[LOADTIME] idx={idx} total={( _tl2.perf_counter()-_lt0)*1000:.1f}ms", flush=True)
+
+        # OPT: after preprocessing, raw pixel tensors are dead weight for the training
+        # forward (it only consumes tokenized_data/pixel_values); dropping them avoids
+        # multi-MB worker->main IPC + pin + H2D copies every step. Gated, and only when
+        # not in generation/eval mode (eval may still want raw frames).
+        if _os.environ.get("APPLY_DROP_RAW", "0") == "1" and not sample_data.get("generation_mode", False):
+            sample_data.pop("image_frames", None)
+
+        if _os.environ.get("APPLY_SAMPLE_CACHE", "0") == "1":
+            self._sample_cache[_ckey] = sample_data
 
         return sample_data

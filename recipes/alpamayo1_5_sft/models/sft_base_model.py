@@ -16,6 +16,7 @@
 from dataclasses import dataclass
 from typing import Any, Mapping
 import json
+import os
 from collections import defaultdict
 from pathlib import Path
 import einops
@@ -314,6 +315,44 @@ class TrainableReasoningVLA(ReasoningVLA, TrajectoryFusionWithFutureMixin):
         )
         return loss
 
+    @torch._dynamo.disable
+    def _compute_next_token_loss_flce(
+        self,
+        hidden_states: torch.Tensor,
+        labels: torch.Tensor,
+        labels_mask: torch.Tensor,
+    ) -> torch.Tensor:
+        """Fused-linear-cross-entropy variant of _compute_next_token_loss.
+
+        Fuses the lm_head projection and cross-entropy into a single Liger Triton
+        kernel, so the full (B, L, V) logits tensor is never materialized -- only
+        the selected (N, H) hidden states are kept. Mathematically equivalent (up
+        to floating-point error) to _compute_next_token_loss with token_mask=None.
+        """
+        if labels_mask[:, 1:].sum() == 0:
+            return hidden_states.new_zeros(())
+        # Shift by one position (predict next token)
+        shift_hidden = hidden_states[..., :-1, :]
+        shift_labels = labels[..., 1:]
+        sel = labels_mask[:, 1:]
+        shift_hidden = shift_hidden[sel].contiguous()
+        shift_labels = shift_labels[sel].contiguous().to(shift_hidden.device)
+        flce_fn = getattr(self, "_flce_loss_fn", None)
+        if flce_fn is None:
+            from liger_kernel.transformers import LigerFusedLinearCrossEntropyLoss
+
+            flce_fn = LigerFusedLinearCrossEntropyLoss(
+                ignore_index=IGNORE_INDEX, reduction="mean"
+            )
+            self._flce_loss_fn = flce_fn
+        loss = flce_fn(
+            self.vlm.lm_head.weight,
+            shift_hidden,
+            shift_labels,
+            self.vlm.lm_head.bias,
+        )
+        return torch.nan_to_num(loss, nan=0.0)
+
     def forward(
         self,
         tokenized_data: dict[str, Any],
@@ -341,7 +380,17 @@ class TrainableReasoningVLA(ReasoningVLA, TrajectoryFusionWithFutureMixin):
             labels = torch.where(labels_mask, labels, IGNORE_INDEX)
 
         # 3. vlm forward pass
-        outputs = self.vlm(input_ids=input_ids, labels=labels, **tokenized_data)
+        #    APPLY_LIGER_FLCE=1 -> fused-linear-cross-entropy: fetch hidden states only
+        #    and fuse lm_head + CE per mask, never materializing (B, L, V) logits.
+        use_flce = os.environ.get("APPLY_LIGER_FLCE", "0") == "1"
+        if use_flce:
+            base_outputs = self.vlm.model(input_ids=input_ids, **tokenized_data)
+            hidden_states = getattr(base_outputs, "last_hidden_state", None)
+            if hidden_states is None:
+                hidden_states = base_outputs[0]
+            outputs = None
+        else:
+            outputs = self.vlm(input_ids=input_ids, labels=labels, **tokenized_data)
 
         losses = {}
         # Identify trajectory tokens (tokens between traj_future and next special token)
@@ -353,20 +402,30 @@ class TrainableReasoningVLA(ReasoningVLA, TrajectoryFusionWithFutureMixin):
             | (labels == self.special_token_ids["traj_future_start"])
             | (labels == self.special_token_ids["traj_future_end"])
         )
-        losses["future_traj"] = self._compute_next_token_loss(outputs, labels, traj_mask)
+        if use_flce:
+            losses["future_traj"] = self._compute_next_token_loss_flce(
+                hidden_states, labels, traj_mask
+            )
+        else:
+            losses["future_traj"] = self._compute_next_token_loss(outputs, labels, traj_mask)
         #  * self.config.loss_weights.get("future_traj", 1.0)
         labels[traj_mask] = IGNORE_INDEX
 
         # Include all other tokens in the loss
-        losses["others"] = self._compute_next_token_loss(outputs, labels, labels != IGNORE_INDEX)
+        if use_flce:
+            losses["others"] = self._compute_next_token_loss_flce(
+                hidden_states, labels, labels != IGNORE_INDEX
+            )
+        else:
+            losses["others"] = self._compute_next_token_loss(outputs, labels, labels != IGNORE_INDEX)
         #  * self.config.loss_weights.get("others", 1.0)
 
         # Replace the original loss
-        outputs.loss = sum(losses.values())
+        total_loss = sum(losses.values())
 
         return ReasoningVLAOutput(
-            loss=outputs.loss,
-            logits=outputs.logits,
+            loss=total_loss,
+            logits=None if use_flce else outputs.logits,
         )
 
     def sample_trajectories_from_data(

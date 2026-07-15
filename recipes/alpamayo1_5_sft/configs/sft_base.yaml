@@ -66,3 +66,5 @@ trainer:
     use_reentrant: false # recommended by PyTorch for performance
 task_name: alpamayo_r1_5_sft
 run_name: ${task_name}_${now:%Y%m%d}_${now:%H%M%S}
+model:
+  checkpoint_path: "/raid/charlie/Alpamayo-1.5-10B-A1-format"

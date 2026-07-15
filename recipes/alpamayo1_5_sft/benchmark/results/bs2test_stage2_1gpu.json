@@ -1,0 +1,14 @@
+{
+  "run_name": "bs2test",
+  "step_times_sec": [
+    1.5789584098383784,
+    1.5791496820747852,
+    1.4039375660941005
+  ],
+  "avg_step_sec_all": 1.5206818860024214,
+  "avg_step_sec_stable_tail": 1.5206818860024214,
+  "stable_tail_n": 3,
+  "peak_gpu_mem_gb": 36.380916224,
+  "num_measured_steps": 3,
+  "warmup_steps": 3
+}

@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
 from contextlib import nullcontext
 from typing import Any
 
@@ -52,6 +53,7 @@ class TrainableAlpamayoR1(AlpamayoR1):
         if not self.cotrain_vlm:
             for param in self.vlm.parameters():
                 param.requires_grad = False
+
         # print the param count
         logger.info("Model parameter count:")
         param_count = misc.get_param_count(self)
@@ -105,6 +107,10 @@ class TrainableAlpamayoR1(AlpamayoR1):
         **kwargs: Any,
     ) -> ReasoningVLAOutput:
         """Forward pass of the model."""
+        _prof = os.environ.get("APPLY_PROFILE", "0") == "1"
+        if _prof:
+            import time as _t
+            torch.cuda.synchronize(); _t0 = _t.perf_counter()
         # 1. tokenize trajectory and fuse into input_ids
         input_ids = tokenized_data.pop("input_ids")
         batch_size = input_ids.shape[0]
@@ -127,17 +133,82 @@ class TrainableAlpamayoR1(AlpamayoR1):
         else:
             context = torch.no_grad()
 
-        with context:
-            vlm_outputs = self.vlm(
-                input_ids=input_ids,
-                labels=labels,
-                use_cache=True,
-                **tokenized_data,
+        # OPT (diffusion feature-caching): the VLM is frozen and deterministic, so its
+        # cropped KV cache + rope_deltas for a given sample are identical every epoch.
+        # Cache them keyed by input_ids so repeated samples skip the ~590ms VLM forward
+        # entirely (exact; no grad flows through frozen VLM). Gated by APPLY_VLM_KV_CACHE.
+        from transformers.cache_utils import DynamicCache
+        _kv_opt = (os.environ.get("APPLY_VLM_KV_CACHE", "0") == "1"
+                   and not self.cotrain_vlm and self.training)
+        _cache_key = None
+        _cached = None
+        if _kv_opt:
+            if not hasattr(self, "_vlm_kv_cache"):
+                self._vlm_kv_cache = {}
+            _cache_key = hash(input_ids.detach().to("cpu").contiguous().numpy().tobytes())
+            _cached = self._vlm_kv_cache.get(_cache_key)
+
+        if _cached is not None:
+            # HIT: rebuild a fresh cache from stored (immutable) cropped tensors so the
+            # expert's use_cache append (torch.cat) cannot corrupt the stored copy.
+            _legacy, _rope_deltas, _fstart = _cached
+            kv_cache = DynamicCache.from_legacy_cache(
+                tuple((k.to(input_ids.device, non_blocking=True),
+                       v.to(input_ids.device, non_blocking=True)) for (k, v) in _legacy)
             )
 
-        future_start_token_id = self.config.traj_token_ids["future_start"]
-        last_traj_future_start_idx = (input_ids == future_start_token_id).nonzero(as_tuple=False)
-        last_traj_future_start_idx = last_traj_future_start_idx[-1, 1] + 1
+            class _CachedVLMOut:
+                pass
+
+            vlm_outputs = _CachedVLMOut()
+            vlm_outputs.past_key_values = kv_cache
+            vlm_outputs.rope_deltas = _rope_deltas.to(input_ids.device)
+            last_traj_future_start_idx = _fstart
+            if _prof:
+                torch.cuda.synchronize(); _t1 = _t.perf_counter()
+        else:
+            with context:
+                # OPT: when VLM is frozen (not cotrain_vlm), its lm_head logits and CE
+                # loss are computed but discarded. Skip them: labels=None (no CE) and
+                # logits_to_keep=1 (lm_head runs on 1 token instead of [B,L,152k]).
+                _skip_head = os.environ.get("APPLY_VLM_SKIP_HEAD", "1") == "1" and not self.cotrain_vlm
+                if _skip_head:
+                    vlm_outputs = self.vlm(
+                        input_ids=input_ids,
+                        labels=None,
+                        use_cache=True,
+                        logits_to_keep=1,
+                        **tokenized_data,
+                    )
+                else:
+                    vlm_outputs = self.vlm(
+                        input_ids=input_ids,
+                        labels=labels,
+                        use_cache=True,
+                        **tokenized_data,
+                    )
+            if _prof:
+                torch.cuda.synchronize(); _t1 = _t.perf_counter()
+            future_start_token_id = self.config.traj_token_ids["future_start"]
+            last_traj_future_start_idx = (input_ids == future_start_token_id).nonzero(as_tuple=False)
+            last_traj_future_start_idx = int(last_traj_future_start_idx[-1, 1] + 1)
+            kv_cache = vlm_outputs.past_key_values
+            # crop the kv cache to the last <traj_future_start> token
+            kv_cache.crop(last_traj_future_start_idx)
+            if self.stop_grad_from_vlm:
+                for layer in kv_cache.layers:
+                    layer.keys = layer.keys.detach()
+                    layer.values = layer.values.detach()
+            if _kv_opt:
+                _off = os.environ.get("VLM_KV_CACHE_CPU", "0") == "1"
+                _dev = "cpu" if _off else input_ids.device
+                _legacy = tuple(
+                    (layer.keys.detach().to(_dev), layer.values.detach().to(_dev))
+                    for layer in kv_cache.layers
+                )
+                self._vlm_kv_cache[_cache_key] = (
+                    _legacy, vlm_outputs.rope_deltas.detach().to(_dev), last_traj_future_start_idx
+                )
 
         future_traj_data = self._process_traj_future_training(traj_data)
         # [B, n_token_per_future_traj, hidden_size]
@@ -146,15 +217,6 @@ class TrainableAlpamayoR1(AlpamayoR1):
         )
         # [B, n_token_per_history_traj + n_token_per_future_traj, hidden_size]
         expert_embeds = action_embeds
-        # NOTE: we don't need to update the rope deltas as we assume after <traj_future_start> there
-        # will be no more vision tokens.
-        kv_cache = vlm_outputs.past_key_values
-        # crop the kv cache to the last <traj_future_start> token
-        kv_cache.crop(last_traj_future_start_idx)
-        if self.stop_grad_from_vlm:
-            for layer in kv_cache.layers:
-                layer.keys = layer.keys.detach()
-                layer.values = layer.values.detach()
         position_ids = self._process_position_ids_qwen2_5_vl(
             vlm_outputs, batch_size, expert_embeds.shape[1], expert_embeds.device
         )
@@ -169,6 +231,12 @@ class TrainableAlpamayoR1(AlpamayoR1):
             use_cache=True,
             **forward_kwargs,
         )
+        if _prof:
+            torch.cuda.synchronize(); _t2 = _t.perf_counter()
+            if not hasattr(self, "_prof_n"): self._prof_n = 0
+            self._prof_n += 1
+            if self._prof_n % 5 == 0:
+                print(f"[PROFILE] fuse+vlm={( _t1-_t0)*1000:.1f}ms expert={(_t2-_t1)*1000:.1f}ms seqlen={input_ids.shape[1]}", flush=True)
         diffusion_out = expert_outputs.last_hidden_state[:, -action_embeds.shape[1] :]
         pred = self.action_out_proj(diffusion_out)
         pred = pred.view(-1, *self.action_space.get_action_space_dims())

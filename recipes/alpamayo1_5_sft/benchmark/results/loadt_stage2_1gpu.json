@@ -1,0 +1,14 @@
+{
+  "run_name": "loadt",
+  "step_times_sec": [
+    3.0387769918888807,
+    2.6754028983414173,
+    2.699155306443572
+  ],
+  "avg_step_sec_all": 2.8044450655579567,
+  "avg_step_sec_stable_tail": 2.8044450655579567,
+  "stable_tail_n": 3,
+  "peak_gpu_mem_gb": 36.147104256,
+  "num_measured_steps": 3,
+  "warmup_steps": 3
+}

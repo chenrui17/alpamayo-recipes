@@ -1,0 +1,14 @@
+{
+  "run_name": "chk_liger",
+  "step_times_sec": [
+    3.37191460467875,
+    3.028668910264969,
+    3.1401441413909197
+  ],
+  "avg_step_sec_all": 3.180242552111546,
+  "avg_step_sec_stable_tail": 3.180242552111546,
+  "stable_tail_n": 3,
+  "peak_gpu_mem_gb": 36.143061504,
+  "num_measured_steps": 3,
+  "warmup_steps": 3
+}

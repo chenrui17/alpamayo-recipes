@@ -1,0 +1,14 @@
+{
+  "run_name": "chk_noliger",
+  "step_times_sec": [
+    3.42060025036335,
+    3.022878535091877,
+    3.0272768158465624
+  ],
+  "avg_step_sec_all": 3.156918533767263,
+  "avg_step_sec_stable_tail": 3.156918533767263,
+  "stable_tail_n": 3,
+  "peak_gpu_mem_gb": 36.144763392,
+  "num_measured_steps": 3,
+  "warmup_steps": 3
+}

@@ -1,0 +1,293 @@
+data:
+  train_dataset:
+    vla_preprocess_args:
+      _target_: alpamayo.processor.qwen_processor.get_preprocess_data_fn_from_model_config
+      chat_template_version: r1_5
+      components_order:
+      - image
+      - traj_history
+      - route
+      - prompt
+      - traj_future
+      components_prompt:
+      - traj_future
+      label_components:
+      - traj_future
+      include_camera_ids: true
+      include_frame_nums: true
+      generation_mode: false
+    _recursive_: false
+    _target_: alpamayo.data.pai_nav.PAIDatasetWithNav
+    local_dir: /raid/charlie/pai_dataset
+    chunk_ids:
+    - 214
+    - 224
+    - 276
+    - 317
+    - 420
+    - 727
+    - 728
+    - 968
+    - 982
+    - 1519
+    - 1657
+    - 1984
+    - 2277
+    - 2368
+    - 2372
+    - 2447
+    - 2599
+    - 2634
+    - 2868
+    use_default_keyframe: true
+    annotations_path: /raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json
+  val_dataset:
+    vla_preprocess_args:
+      _target_: alpamayo.processor.qwen_processor.get_preprocess_data_fn_from_model_config
+      chat_template_version: r1_5
+      components_order:
+      - image
+      - traj_history
+      - route
+      - prompt
+      - traj_future
+      components_prompt:
+      - traj_future
+      label_components:
+      - traj_future
+      include_camera_ids: true
+      include_frame_nums: true
+      generation_mode: true
+    _recursive_: false
+    _target_: alpamayo.data.pai_nav.PAIDatasetWithNav
+    local_dir: /raid/charlie/pai_dataset
+    chunk_ids:
+    - 214
+    - 224
+    - 276
+    - 317
+    - 420
+    - 727
+    - 728
+    - 968
+    - 982
+    - 1519
+    - 1657
+    - 1984
+    - 2277
+    - 2368
+    - 2372
+    - 2447
+    - 2599
+    - 2634
+    - 2868
+    use_default_keyframe: true
+    annotations_path: /raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json
+  collate_fn:
+    _target_: alpamayo.processor.qwen_processor.collate_fn_from_model_config
+    _partial_: true
+    chat_template_version: r1_5
+paths:
+  output_dir: /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/runs/liger_noswiglu_1gpu
+callbacks:
+  timer:
+    _target_: alpamayo1_5_sft.step_timer.StepTimerCallback
+    warmup_steps: 10
+    result_path: /raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/liger_noswiglu_1gpu.json
+    run_name: liger_noswiglu
+    stable_tail: 10
+evaluate:
+  max_eval_steps: -1
+  torch_dtype: bfloat16
+  metric_runner:
+    _target_: alpamayo.metrics.metric_runner.MetricRunner
+    metrics:
+    - _target_: alpamayo.metrics.metric_api.ReasoningSampler
+      num_traj_sets: 1
+      top_p: 0.98
+      temperature: 0.6
+      traj_only_generation: false
+      max_generation_length: 256
+    - _target_: alpamayo.metrics.metric_api.DistanceMetrics
+  eval_ckpt: null
+trainer:
+  output_dir: ${paths.output_dir}
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 4
+  learning_rate: 1.0e-05
+  warmup_steps: 500
+  logging_steps: 100
+  save_steps: 500
+  save_total_limit: 2
+  num_train_epochs: 700
+  bf16: true
+  dataloader_pin_memory: true
+  dataloader_num_workers: 2
+  remove_unused_columns: false
+  report_to: none
+  lr_scheduler_type: cosine_warmup_with_min_lr
+  lr_scheduler_kwargs:
+    min_lr: 1.0e-06
+  deepspeed: null
+  gradient_checkpointing: true
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+  lr_multiplier:
+    vlm.model.visual: 0.1
+  ddp_find_unused_parameters: false
+  max_steps: 20
+  save_strategy: 'no'
+task_name: alpamayo_1_5_sft_stage1_nav
+run_name: ${task_name}_${now:%Y%m%d}_${now:%H%M%S}
+model:
+  checkpoint_path: /raid/charlie/Alpamayo-1.5-10B-A1-format
+  _target_: alpamayo1_5_sft.models.sft_base_model.TrainableReasoningVLA.from_alpamayo_checkpoint
+  vlm_name_or_path: Qwen/Qwen3-VL-8B-Instruct
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  launcher:
+    _target_: hydra._internal.core_plugins.basic_launcher.BasicLauncher
+  sweeper:
+    _target_: hydra._internal.core_plugins.basic_sweeper.BasicSweeper
+    max_batch_size: null
+    params: null
+  help:
+    app_name: ${hydra.job.name}
+    header: '${hydra.help.app_name} is powered by Hydra.
+
+      '
+    footer: 'Powered by Hydra (https://hydra.cc)
+
+      Use --hydra-help to view Hydra specific help
+
+      '
+    template: '${hydra.help.header}
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (group=option)
+
+
+      $APP_CONFIG_GROUPS
+
+
+      == Config ==
+
+      Override anything in the config (foo.bar=value)
+
+
+      $CONFIG
+
+
+      ${hydra.help.footer}
+
+      '
+  hydra_help:
+    template: 'Hydra (${hydra.runtime.version})
+
+      See https://hydra.cc for more info.
+
+
+      == Flags ==
+
+      $FLAGS_HELP
+
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (For example, append hydra/job_logging=disabled
+      to command line)
+
+
+      $HYDRA_CONFIG_GROUPS
+
+
+      Use ''--cfg hydra'' to Show the Hydra config.
+
+      '
+    hydra_help: ???
+  hydra_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][HYDRA] %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+    root:
+      level: INFO
+      handlers:
+      - console
+    loggers:
+      logging_example:
+        level: DEBUG
+    disable_existing_loggers: false
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        formatter: simple
+        filename: ${hydra.runtime.output_dir}/${hydra.job.name}.log
+    root:
+      level: INFO
+      handlers:
+      - console
+      - file
+    disable_existing_loggers: false
+  env: {}
+  mode: RUN
+  searchpath: []
+  callbacks: {}
+  output_subdir: .hydra
+  overrides:
+    hydra:
+    - hydra.mode=RUN
+    task:
+    - model.checkpoint_path=/raid/charlie/Alpamayo-1.5-10B-A1-format
+    - data.train_dataset.local_dir=/raid/charlie/pai_dataset
+    - data.train_dataset.annotations_path=/raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json
+    - data.val_dataset.local_dir=/raid/charlie/pai_dataset
+    - data.val_dataset.annotations_path=/raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json
+    - trainer.gradient_accumulation_steps=4
+    - trainer.per_device_train_batch_size=1
+    - trainer.logging_steps=100
+    - trainer.report_to=none
+    - trainer.deepspeed=null
+    - +trainer.max_steps=20
+    - +trainer.save_strategy=no
+    - paths.output_dir=/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/runs/liger_noswiglu_1gpu
+    - +callbacks.timer._target_=alpamayo1_5_sft.step_timer.StepTimerCallback
+    - +callbacks.timer.warmup_steps=10
+    - +callbacks.timer.result_path=/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/liger_noswiglu_1gpu.json
+    - +callbacks.timer.run_name=liger_noswiglu
+    - +callbacks.timer.stable_tail=10
+  job:
+    name: train_hf
+    chdir: null
+    override_dirname: +callbacks.timer._target_=alpamayo1_5_sft.step_timer.StepTimerCallback,+callbacks.timer.result_path=/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/results/liger_noswiglu_1gpu.json,+callbacks.timer.run_name=liger_noswiglu,+callbacks.timer.stable_tail=10,+callbacks.timer.warmup_steps=10,+trainer.max_steps=20,+trainer.save_strategy=no,data.train_dataset.annotations_path=/raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json,data.train_dataset.local_dir=/raid/charlie/pai_dataset,data.val_dataset.annotations_path=/raid/charlie/alpamayo/alpamayo1.5/notebooks/nav_demo_samples.json,data.val_dataset.local_dir=/raid/charlie/pai_dataset,model.checkpoint_path=/raid/charlie/Alpamayo-1.5-10B-A1-format,paths.output_dir=/raid/charlie/alpamayo/alpamayo-recipes/recipes/alpamayo1_5_sft/benchmark/runs/liger_noswiglu_1gpu,trainer.deepspeed=null,trainer.gradient_accumulation_steps=4,trainer.logging_steps=100,trainer.per_device_train_batch_size=1,trainer.report_to=none
+    id: ???
+    num: ???
+    config_name: sft_stage1_nav
+    env_set: {}
+    env_copy: []
+    config:
+      override_dirname:
+        kv_sep: '='
+        item_sep: ','
+        exclude_keys: []
+  verbose: false

@@ -45,6 +45,36 @@ def train(cfg: DictConfig) -> None:
 
     model = hyu.instantiate(cfg.model, _convert_="partial")
 
+
+    # Optional Liger-Kernel patch (set APPLY_LIGER_KERNEL=1 to enable)
+    import os
+    if os.environ.get('APPLY_LIGER_KERNEL', '0') == '1':
+        from liger_kernel.transformers import apply_liger_kernel_to_qwen3_vl
+        _swiglu = os.environ.get('APPLY_LIGER_SWIGLU', '1') == '1'
+        apply_liger_kernel_to_qwen3_vl(rope=True, rms_norm=True, swiglu=_swiglu,
+                                        fused_linear_cross_entropy=False, model=model.vlm)
+        logger.info(f'Liger-Kernel patches applied to VLM: rope, rms_norm, swiglu={_swiglu}')
+        # Stage-2: the trained diffusion action Expert is a Qwen3VLTextModel (built from
+        # the VLM text_config), so the same Triton kernels apply to it. Patch its
+        # instance layers too (RMSNorm/SwiGLU); rope was already class/function-patched.
+        if hasattr(model, 'expert') and getattr(model, 'expert', None) is not None:
+            apply_liger_kernel_to_qwen3_vl(rope=True, rms_norm=True, swiglu=_swiglu,
+                                            fused_linear_cross_entropy=False, model=model.expert)
+            logger.info(f'Liger-Kernel patches applied to Expert: rope, rms_norm, swiglu={_swiglu}')
+
+    # OPT (diffusion #1 torch.compile): compile the trained diffusion Expert + action
+    # projections AFTER liger patching. Gated by APPLY_COMPILE_EXPERT.
+    if os.environ.get('APPLY_COMPILE_EXPERT', '0') == '1' and hasattr(model, 'expert') and getattr(model, 'expert', None) is not None:
+        model.expert = torch.compile(model.expert, dynamic=True)
+        model.action_in_proj = torch.compile(model.action_in_proj, dynamic=True)
+        model.action_out_proj = torch.compile(model.action_out_proj, dynamic=True)
+        logger.info('torch.compile applied to expert + action projections (post-liger)')
+
+    # Optional NVTX patches (set APPLY_NVTX=1 to enable, apply AFTER liger)
+    if os.environ.get('APPLY_NVTX', '0') == '1':
+        from alpamayo1_5_sft.nvtx_patches import apply_nvtx_patches
+        apply_nvtx_patches(vlm_model=model.vlm)
+
     train_dataset = hyu.instantiate(
         cfg.data.train_dataset, _convert_="partial", model_config=model.config
     )

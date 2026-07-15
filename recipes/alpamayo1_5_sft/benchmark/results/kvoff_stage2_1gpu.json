@@ -1,0 +1,16 @@
+{
+  "run_name": "kvoff",
+  "step_times_sec": [
+    0.7925992580130696,
+    0.7909411229193211,
+    0.7984461393207312,
+    0.796202695928514,
+    0.795070169493556
+  ],
+  "avg_step_sec_all": 0.7946518771350384,
+  "avg_step_sec_stable_tail": 0.7946518771350384,
+  "stable_tail_n": 5,
+  "peak_gpu_mem_gb": 36.046506496,
+  "num_measured_steps": 5,
+  "warmup_steps": 3
+}
