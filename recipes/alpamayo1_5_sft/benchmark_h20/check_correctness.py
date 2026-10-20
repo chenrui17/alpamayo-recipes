@@ -388,6 +388,7 @@ def run(args: argparse.Namespace, report: dict[str, Any]) -> bool:
     report["source_files"] = {
         str(path.relative_to(repo)): hashlib.sha256(path.read_bytes()).hexdigest()
         for path in sorted((repo / "recipes/alpamayo1_5_sft/performance").glob("*.py"))
+        if not path.name.startswith("._")
     }
     for relative in ("recipes/alpamayo1_5_sft/models/sft_alpamayo_r1.py", "recipes/alpamayo1_5_sft/benchmark_h20/check_correctness.py"):
         report["source_files"][relative] = hashlib.sha256((repo / relative).read_bytes()).hexdigest()

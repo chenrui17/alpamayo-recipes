@@ -49,7 +49,7 @@ def git_snapshot(code_root: Path, run_dir: Path) -> dict[str, Any]:
     snapshot.mkdir()
     harness_sha256 = {}
     for path in sorted(Path(__file__).parent.iterdir()):
-        if path.is_file() and path.suffix in {".py", ".md"}:
+        if path.is_file() and not path.name.startswith("._") and path.suffix in {".py", ".md"}:
             data = path.read_bytes()
             (snapshot / path.name).write_bytes(data)
             harness_sha256[path.name] = hashlib.sha256(data).hexdigest()
