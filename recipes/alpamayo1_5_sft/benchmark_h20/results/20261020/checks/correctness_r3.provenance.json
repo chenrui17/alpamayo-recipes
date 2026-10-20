@@ -1,0 +1,13 @@
+{
+  "file": "correctness_r3.json",
+  "source_sha256": "1462451b47891da8b94d96924b05c06dab0269c9a0f9db575c40b8ca462cc05a",
+  "public_sha256": "1462451b47891da8b94d96924b05c06dab0269c9a0f9db575c40b8ca462cc05a",
+  "sanitized": false,
+  "status": "passed",
+  "source_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "source_capture_note": "Completed real-model comparison. Original report embeds the tracked patch fingerprint and runtime source hashes; no post-run fields were added to that report.",
+  "source_patch_sha256": "75f0ab9e34cf131285965902007ab60c2033342da144eacbd227d18033dc0591",
+  "embedded_source_path_count": 15,
+  "embedded_python_source_count": 10,
+  "embedded_appledouble_metadata_count": 5
+}

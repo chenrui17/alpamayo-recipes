@@ -1,0 +1,8 @@
+{
+  "file": "data_equivalence_r2.json",
+  "source_sha256": "c34ac34f4292045fda17b41be3fdf5194dad67233b4a0198215c76d0f002a94c",
+  "public_sha256": "c34ac34f4292045fda17b41be3fdf5194dad67233b4a0198215c76d0f002a94c",
+  "sanitized": false,
+  "status": "passed",
+  "source_capture_note": "Completed real-dataset equivalence check; source JSON retained."
+}

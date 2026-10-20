@@ -1,0 +1,54 @@
+{
+  "run_id": "latest_workers0_r1",
+  "source_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "source_patch_sha256": "8fed45caf5e40b4a7c833ae6888189d004e134feccb5558026659c95e49dcea6",
+  "status": "complete",
+  "mode": "timing",
+  "world_size": 8,
+  "steady_window": [
+    5,
+    20
+  ],
+  "files": {
+    "config.resolved.yaml": {
+      "source_sha256": "1bb47d5a350ca0ac5e9834f801b91d09a0f4e4add25b2f7544f60c34ad576805",
+      "public_sha256": "1bb47d5a350ca0ac5e9834f801b91d09a0f4e4add25b2f7544f60c34ad576805",
+      "sanitized": false
+    },
+    "manifest.json": {
+      "source_sha256": "e12aa7320a2a9516b39a3ddb1306527e43801b5fba38dfb8ac5184a10b09e577",
+      "public_sha256": "e12aa7320a2a9516b39a3ddb1306527e43801b5fba38dfb8ac5184a10b09e577",
+      "sanitized": false
+    },
+    "steps.json": {
+      "source_sha256": "3871aba57b4c1b686a128014eed756769020755a2f8a089efb47083a270806e3",
+      "public_sha256": "3871aba57b4c1b686a128014eed756769020755a2f8a089efb47083a270806e3",
+      "sanitized": false
+    },
+    "summary.json": {
+      "source_sha256": "a0177ec3935a9623f5472602811288e9a6890587d33ee03727d9c4bb5c738729",
+      "public_sha256": "a0177ec3935a9623f5472602811288e9a6890587d33ee03727d9c4bb5c738729",
+      "sanitized": false
+    },
+    "training/config.yaml": {
+      "source_sha256": "91e18b125d5cbc245fa400e99aace514184e01fbdf5ec4ade5b7f42a45b1ed74",
+      "public_sha256": "91e18b125d5cbc245fa400e99aace514184e01fbdf5ec4ade5b7f42a45b1ed74",
+      "sanitized": false
+    },
+    "training/stage2_data.json": {
+      "source_sha256": "5947ee6750b76acd45a6a486145437d56f3212bf6605a04813bf2b88da4628f6",
+      "public_sha256": "5947ee6750b76acd45a6a486145437d56f3212bf6605a04813bf2b88da4628f6",
+      "sanitized": false
+    },
+    "training/stage2_final.json": {
+      "source_sha256": "6b7231e0929fc1bb268fa056fbd4d199943dc4984af5918a6441645e7baf4749",
+      "public_sha256": "6b7231e0929fc1bb268fa056fbd4d199943dc4984af5918a6441645e7baf4749",
+      "sanitized": false
+    },
+    "training/stage2_runtime.json": {
+      "source_sha256": "8b54d735feec2f3a4dcd73a0b7afad9a1a8e2e9431989cff63cb22438717e372",
+      "public_sha256": "8b54d735feec2f3a4dcd73a0b7afad9a1a8e2e9431989cff63cb22438717e372",
+      "sanitized": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "file": "correctness_r2.json",
+  "status": "passed",
+  "source_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "source_sha256": "2df4aab2fd669cc72f81f4bb9d9e384be61abaab685af020907b4b7ecec1f71b",
+  "public_sha256": "2df4aab2fd669cc72f81f4bb9d9e384be61abaab685af020907b4b7ecec1f71b",
+  "sanitized": false,
+  "scope": "one real sample, one real checkpoint, no optimizer update; bf16 numerical check",
+  "variant_order": [
+    "baseline",
+    "skiphead",
+    "prefix",
+    "trajectory",
+    "liger",
+    "combined"
+  ],
+  "all_variants_passed": true
+}

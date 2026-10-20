@@ -1,0 +1,30 @@
+[
+  {
+    "name": "compile",
+    "start": 1792489479.704292,
+    "status": "complete",
+    "returncode": 0,
+    "end": 1792489480.0607986
+  },
+  {
+    "name": "upstream_cpu",
+    "start": 1792489480.0608919,
+    "status": "complete",
+    "returncode": 0,
+    "end": 1792489487.6790614
+  },
+  {
+    "name": "stage1_alpamayo15",
+    "start": 1792489487.6792195,
+    "status": "complete",
+    "returncode": 0,
+    "end": 1792489504.4170613
+  },
+  {
+    "name": "stage1_alpamayo1",
+    "start": 1792489504.4172301,
+    "status": "complete",
+    "returncode": 0,
+    "end": 1792489521.1495862
+  }
+]

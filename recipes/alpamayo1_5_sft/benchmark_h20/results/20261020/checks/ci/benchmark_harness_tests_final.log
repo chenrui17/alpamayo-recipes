@@ -1,0 +1,57 @@
+test_cli_requires_new_run_name_and_protects_measurement_overrides (alpamayo1_5_sft.benchmark_h20.test_harness.AnalysisTests) ... usage: python3 -m unittest [-h] [--python PYTHON] --work-dir WORK_DIR
+                           [--code-root CODE_ROOT]
+                           [--train-module TRAIN_MODULE] --config-path
+                           CONFIG_PATH --config-name CONFIG_NAME --result-dir
+                           RESULT_DIR [--run-id RUN_ID]
+                           [--mode {timing,profile}]
+                           [--nproc-per-node NPROC_PER_NODE]
+                           [--master-port MASTER_PORT] [--max-steps MAX_STEPS]
+                           [--steady-start-step STEADY_START_STEP]
+                           [--steady-end-step STEADY_END_STEP]
+                           [--logging-steps LOGGING_STEPS]
+                           [--profile-start-step PROFILE_START_STEP]
+                           [--profile-end-step PROFILE_END_STEP]
+                           [--global-samples-per-step GLOBAL_SAMPLES_PER_STEP]
+                           [--global-tokens-per-step GLOBAL_TOKENS_PER_STEP]
+                           [--override OVERRIDE] [--env NAME=VALUE]
+                           [--nsys NSYS] [--nsys-option NSYS_OPTION]
+python3 -m unittest: error: run-id must be a simple directory name
+usage: python3 -m unittest [-h] [--python PYTHON] --work-dir WORK_DIR
+                           [--code-root CODE_ROOT]
+                           [--train-module TRAIN_MODULE] --config-path
+                           CONFIG_PATH --config-name CONFIG_NAME --result-dir
+                           RESULT_DIR [--run-id RUN_ID]
+                           [--mode {timing,profile}]
+                           [--nproc-per-node NPROC_PER_NODE]
+                           [--master-port MASTER_PORT] [--max-steps MAX_STEPS]
+                           [--steady-start-step STEADY_START_STEP]
+                           [--steady-end-step STEADY_END_STEP]
+                           [--logging-steps LOGGING_STEPS]
+                           [--profile-start-step PROFILE_START_STEP]
+                           [--profile-end-step PROFILE_END_STEP]
+                           [--global-samples-per-step GLOBAL_SAMPLES_PER_STEP]
+                           [--global-tokens-per-step GLOBAL_TOKENS_PER_STEP]
+                           [--override OVERRIDE] [--env NAME=VALUE]
+                           [--nsys NSYS] [--nsys-option NSYS_OPTION]
+python3 -m unittest: error: Use the runner CLI instead of overriding protected key trainer.max_steps
+ok
+test_result_verification_rejects_stale_identity_and_rank_count (alpamayo1_5_sft.benchmark_h20.test_harness.AnalysisTests) ... ok
+test_statistics_p90_definition (alpamayo1_5_sft.benchmark_h20.test_harness.AnalysisTests) ... ok
+test_all_ranks_synchronize_and_rank_max_is_computed_per_step (alpamayo1_5_sft.benchmark_h20.test_harness.CallbackTests) ... ok
+test_callback_does_not_need_cuda_for_cpu_timings (alpamayo1_5_sft.benchmark_h20.test_harness.CallbackTests) ... ok
+test_early_stop_is_incomplete_even_if_profiler_is_closed (alpamayo1_5_sft.benchmark_h20.test_harness.CallbackTests) ... ok
+test_nonzero_rank_also_gathers_but_does_not_write (alpamayo1_5_sft.benchmark_h20.test_harness.CallbackTests) ... ok
+test_profile_starts_before_step5_and_stops_after_step8 (alpamayo1_5_sft.benchmark_h20.test_harness.CallbackTests) ... ok
+test_absent_tables_and_legacy_kernel_schema (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+test_cuda_runtime_driver_nested_calls_union_and_wait_clues (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+test_export_csv_and_input_database_stays_unchanged (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+test_interval_helpers_and_conservative_kernel_classification (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+test_kernel_duration_and_device_union_do_not_add_overlaps (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+test_last_step_label_without_gpu_events_is_rejected (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+test_missing_rank_or_incomplete_step_is_rejected (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+test_nvtx_registered_string_resolution_and_nested_exclusive_time (alpamayo1_5_sft.benchmark_h20.test_analyze_nsys.NsightAnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.094s
+
+OK

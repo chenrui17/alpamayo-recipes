@@ -1,0 +1,21 @@
+device,group,name,kernel_count,sum_kernel_duration_ns
+7,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,660540628
+2,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,660318512
+5,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,659988108
+1,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,659350129
+6,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,659146958
+0,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,658749629
+4,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,658710367
+3,other,nvjet_tst_128x248_64x4_2x1_v_bz_coopA_TNT,288,655295664
+7,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,569493763
+2,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,568831851
+5,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,568472267
+1,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,568002146
+6,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,567936666
+4,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,567668730
+0,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,567668203
+3,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,564387087
+1,NCCL,ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<(unsigned long)4096>),440,514454844
+0,NCCL,ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<(unsigned long)4096>),440,514160565
+4,NCCL,ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<(unsigned long)4096>),440,509626420
+6,NCCL,ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<(unsigned long)4096>),440,486112808

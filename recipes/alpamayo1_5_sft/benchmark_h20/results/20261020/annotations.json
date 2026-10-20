@@ -1,0 +1,52 @@
+{
+  "latest_factor_r1": {
+    "candidate_activation": false,
+    "comparison_eligible": false,
+    "classification": "failed_activation_diagnostic",
+    "note": "Timing completed, but the intended factor reuse did not activate: theta and accel each recorded 20 misses and zero hits; the action-space cache recorded 32 total evictions. DDP buffer broadcasts changed unrelated output-affine buffer versions and invalidated the factor cache. Preserve as a diagnostic; exclude from factor-reuse performance evidence and comparison figures.",
+    "cache_counters_from_stage2_final": {
+      "theta": {
+        "misses": 20,
+        "hits": 0
+      },
+      "accel": {
+        "misses": 20,
+        "hits": 0
+      },
+      "action_space_total_evictions": 32
+    },
+    "counter_source": "runs/latest_factor_r1/training/stage2_final.json"
+  },
+  "latest_factor_r2": {
+    "candidate_activation": true,
+    "comparison_eligible": true,
+    "classification": "activation_verified",
+    "note": "Factor reuse activated: theta and accel each recorded one miss and 19 hits; total evictions were zero. This validates activation, not a measured speedup over the Liger reference.",
+    "cache_counters_from_stage2_final": {
+      "theta": {
+        "misses": 1,
+        "hits": 19
+      },
+      "accel": {
+        "misses": 1,
+        "hits": 19
+      },
+      "action_space_total_evictions": 0
+    },
+    "counter_source": "runs/latest_factor_r2/training/stage2_final.json"
+  },
+  "latest_combined_r1": {
+    "candidate_activation": true,
+    "comparison_eligible": true,
+    "classification": "activation_verified",
+    "note": "Combined configuration completed with DDP bucket 256 MiB, Liger, IO/skip-head, prefix and factor reuse. The saved runtime report records 20/20 prefix applications and theta/accel each one miss and 19 hits, with zero evictions.",
+    "counter_source": "runs/latest_combined_r1/training/stage2_final.json"
+  },
+  "latest_combined_r2": {
+    "candidate_activation": true,
+    "comparison_eligible": true,
+    "classification": "activation_verified",
+    "note": "Independent confirmation of the combined configuration. The saved runtime report records 20/20 prefix applications and theta/accel each one miss and 19 hits, with zero evictions.",
+    "counter_source": "runs/latest_combined_r2/training/stage2_final.json"
+  }
+}

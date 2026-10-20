@@ -1,0 +1,109 @@
+{
+  "trajectory_cache": {
+    "enabled": true,
+    "runtime_enabled": true,
+    "patched": true,
+    "patched_instance_count": 2,
+    "instances": [
+      {
+        "aliases": [
+          "action_space"
+        ],
+        "class": "UnicycleAccelCurvatureActionSpace",
+        "capacity": 8,
+        "entries": 2,
+        "cached_tensor_bytes": 65792,
+        "hits": {
+          "theta": 9,
+          "accel": 9
+        },
+        "misses": {
+          "theta": 1,
+          "accel": 1
+        },
+        "build_failures": {
+          "theta": 0,
+          "accel": 0
+        },
+        "fallbacks": {
+          "theta": 0,
+          "accel": 0
+        },
+        "evictions": 0,
+        "fallback_reasons": {
+          "theta": {},
+          "accel": {}
+        },
+        "last_input": {
+          "theta": {
+            "shape": [
+              1,
+              1,
+              64
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0",
+            "eligibility_failure": null
+          },
+          "accel": {
+            "shape": [
+              1,
+              1,
+              64
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0",
+            "eligibility_failure": null
+          }
+        },
+        "last_build_error": {}
+      },
+      {
+        "aliases": [
+          "traj_tokenizer.action_space"
+        ],
+        "class": "UnicycleAccelCurvatureActionSpace",
+        "capacity": 8,
+        "entries": 0,
+        "cached_tensor_bytes": 0,
+        "hits": {
+          "theta": 0,
+          "accel": 0
+        },
+        "misses": {
+          "theta": 0,
+          "accel": 0
+        },
+        "build_failures": {
+          "theta": 0,
+          "accel": 0
+        },
+        "fallbacks": {
+          "theta": 0,
+          "accel": 0
+        },
+        "evictions": 0,
+        "fallback_reasons": {
+          "theta": {},
+          "accel": {}
+        },
+        "last_input": {},
+        "last_build_error": {}
+      }
+    ]
+  },
+  "vlm_prefix": {
+    "requested": true,
+    "applied": true,
+    "tokens_before": 3212,
+    "tokens_after": 3081,
+    "trimmed_tokens": 131,
+    "fallback_reason": null
+  },
+  "vlm_prefix_totals": {
+    "calls": 10,
+    "applied_calls": 10,
+    "trimmed_tokens": 1310,
+    "fallbacks": {}
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "file": "boundary_kernels.json",
+  "source_sha256": "c558f9cf47fbe43f67461312a51bf066fdb537bd317ec9eb38fc126ec32f1562",
+  "public_sha256": "c558f9cf47fbe43f67461312a51bf066fdb537bd317ec9eb38fc126ec32f1562",
+  "sanitized": false,
+  "status": "complete",
+  "scope": "Read-only audit of the two kernels clipped at the selected combined-profile window boundary; original per-kernel timings are retained."
+}

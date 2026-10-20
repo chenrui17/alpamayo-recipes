@@ -1,0 +1,28 @@
+[
+  {
+    "pid": 31292,
+    "device": 1,
+    "name": "void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::FusedOptimizerTensorListMetadata<(int)4>, at::native::<unnamed>::FusedAdamMathFunctor<c10::BFloat16, (int)4, (at::native::ADAM_MODE)1, (bool)0>, const float *, double, double, double, double, double, bool, const float *, const float *>(T1, T2, T3...)",
+    "start_ns": 3278421925,
+    "end_ns": 3279152933,
+    "window_ns": [
+      80966196,
+      3279105192
+    ],
+    "full_ns": 731008,
+    "clipped_outside_ns": 47741
+  },
+  {
+    "pid": 31298,
+    "device": 7,
+    "name": "void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::FusedOptimizerTensorListMetadata<(int)4>, at::native::<unnamed>::FusedAdamMathFunctor<c10::BFloat16, (int)4, (at::native::ADAM_MODE)1, (bool)0>, const float *, double, double, double, double, double, bool, const float *, const float *>(T1, T2, T3...)",
+    "start_ns": 3278552861,
+    "end_ns": 3279283549,
+    "window_ns": [
+      80799373,
+      3279105192
+    ],
+    "full_ns": 730688,
+    "clipped_outside_ns": 178357
+  }
+]

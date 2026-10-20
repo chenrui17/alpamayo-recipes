@@ -1,0 +1,64 @@
+test_bad_switch_and_repeat_fail_explicitly (test_stage2_data.Stage2DataSwitchTests.test_bad_switch_and_repeat_fail_explicitly) ... ok
+test_disabled_returns_source_without_reading_samples (test_stage2_data.Stage2DataSwitchTests.test_disabled_returns_source_without_reading_samples) ... ok
+test_drop_raw_preserves_source_and_online_processing_inputs (test_stage2_data.Stage2DataSwitchTests.test_drop_raw_preserves_source_and_online_processing_inputs) ... ok
+test_empty_repeated_dataset_has_no_valid_indices (test_stage2_data.Stage2DataSwitchTests.test_empty_repeated_dataset_has_no_valid_indices) ... ok
+test_evaluation_is_untouched_even_with_all_switches_enabled (test_stage2_data.Stage2DataSwitchTests.test_evaluation_is_untouched_even_with_all_switches_enabled) ... ok
+test_repeat_argument_overrides_environment (test_stage2_data.Stage2DataSwitchTests.test_repeat_argument_overrides_environment) ... ok
+test_repeat_maps_original_indices_without_mutating_source (test_stage2_data.Stage2DataSwitchTests.test_repeat_maps_original_indices_without_mutating_source) ... ok
+test_cache_budget_counts_arrays_and_stops_before_next_clone (test_stage2_data.Stage2PreloadTests.test_cache_budget_counts_arrays_and_stops_before_next_clone) ... ok
+test_explicit_budget_overrides_environment_and_invalid_budget_fails (test_stage2_data.Stage2PreloadTests.test_explicit_budget_overrides_environment_and_invalid_budget_fails) ... ok
+test_hydra_sequence_metadata_is_cached_and_isolated (test_stage2_data.Stage2PreloadTests.test_hydra_sequence_metadata_is_cached_and_isolated) ... ok
+test_preload_in_loader_worker_is_rejected (test_stage2_data.Stage2PreloadTests.test_preload_in_loader_worker_is_rejected) ... ok
+test_preload_propagates_dataset_errors (test_stage2_data.Stage2PreloadTests.test_preload_propagates_dataset_errors) ... ok
+test_preload_reads_unique_samples_once_and_isolates_every_return (test_stage2_data.Stage2PreloadTests.test_preload_reads_unique_samples_once_and_isolates_every_return) ... ok
+Skipping import of cpp extensions due to incompatible torch version 2.8.0+cu128 for torchao version 0.15.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+/opt/venv/lib/python3.12/site-packages/torchao/dtypes/floatx/__init__.py:5: DeprecationWarning: Importing from torchao.dtypes.floatx.floatx_tensor_core_layout is deprecated. Please use 'from torchao.prototype.dtypes.floatx.floatx_tensor_core_layout import ...' instead. This import path will be removed in a future torchao release. Please check issue: https://github.com/pytorch/ao/issues/2752 for more details. 
+  from .floatx_tensor_core_layout import (
+/opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:1: DeprecationWarning: Importing from torchao.dtypes.uintx.dyn_int8_act_int4_wei_cpu_layout is deprecated. Please use 'from torchao.prototype.dtypes import Int8DynamicActInt4WeightCPULayout' instead. This import path will be removed in a future release of torchao. See https://github.com/pytorch/ao/issues/2752 for more details.
+  from .dyn_int8_act_int4_wei_cpu_layout import (
+/opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:10: DeprecationWarning: Importing from torchao.dtypes.uintx.marlin_qqq_tensor is deprecated. Please use 'from torchao.prototype.dtypes import MarlinQQQLayout, MarlinQQQTensor' instead. This import path will be removed in a future release of torchao. See https://github.com/pytorch/ao/issues/2752 for more details.
+  from .marlin_qqq_tensor import (
+/opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:30: DeprecationWarning: Importing from torchao.dtypes.uintx.uintx_layout is deprecated. Please use 'from torchao.prototype.dtypes import UintxLayout, UintxTensor' instead. This import path will be removed in a future release of torchao. See https://github.com/pytorch/ao/issues/2752 for more details.
+  from .uintx_layout import (
+/opt/venv/lib/python3.12/site-packages/torchao/dtypes/__init__.py:25: DeprecationWarning: Importing BlockSparseLayout from torchao.dtypes is deprecated. Please use 'from torchao.prototype.dtypes import BlockSparseLayout' instead. This import path will be removed in a future torchao release. Please check issue: https://github.com/pytorch/ao/issues/2752 for more details. 
+  from .uintx.block_sparse_layout import BlockSparseLayout
+/opt/venv/lib/python3.12/site-packages/torchao/dtypes/__init__.py:26: DeprecationWarning: Importing from torchao.dtypes is deprecated. Please use 'from torchao.prototype.dtypes import CutlassInt4PackedLayout' instead. This import path will be removed in a future torchao release. Please check issue: https://github.com/pytorch/ao/issues/2752 for more details. 
+  from .uintx.cutlass_int4_packed_layout import CutlassInt4PackedLayout
+/opt/venv/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2511: SyntaxWarning: invalid escape sequence '\.'
+  """Configuration class for applying different quantization configs to modules or parameters based on their fully qualified names (FQNs).
+test_frozen_skip_preserves_loss_and_expert_gradient (test_stage2_optimizations.Stage2ForwardTests.test_frozen_skip_preserves_loss_and_expert_gradient) ... ok
+test_joint_vlm_loss_and_gradient_are_unchanged (test_stage2_optimizations.Stage2ForwardTests.test_joint_vlm_loss_and_gradient_are_unchanged) ... ok
+test_real_compile_forward_backward_and_checkpoint_roundtrip (test_stage2_optimizations.Stage2RealCompileTests.test_real_compile_forward_backward_and_checkpoint_roundtrip) ... ok
+test_compile_preserves_module_parameter_and_state_identity (test_stage2_optimizations.Stage2SwitchTests.test_compile_preserves_module_parameter_and_state_identity) ... ok
+test_default_does_not_import_optional_dependencies (test_stage2_optimizations.Stage2SwitchTests.test_default_does_not_import_optional_dependencies) ... ok
+test_invalid_switch_is_not_silently_disabled (test_stage2_optimizations.Stage2SwitchTests.test_invalid_switch_is_not_silently_disabled) ... ok
+test_joint_training_ignores_stage2_requests (test_stage2_optimizations.Stage2SwitchTests.test_joint_training_ignores_stage2_requests) ... ok
+test_liger_noop_is_detected_and_loaded_swiglu_is_patched (test_stage2_optimizations.Stage2SwitchTests.test_liger_noop_is_detected_and_loaded_swiglu_is_patched) ... ok
+test_requested_optimization_rejects_unfrozen_vlm (test_stage2_optimizations.Stage2SwitchTests.test_requested_optimization_rejects_unfrozen_vlm) ... ok
+test_skip_head_rejects_unsupported_forward (test_stage2_optimizations.Stage2SwitchTests.test_skip_head_rejects_unsupported_forward) ... ok
+test_disabled_preserves_identity_without_touching_model_or_torch (test_stage2_prefix.PrefixSwitchTests.test_disabled_preserves_identity_without_touching_model_or_torch) ... ok
+test_invalid_switch_is_not_accepted (test_stage2_prefix.PrefixSwitchTests.test_invalid_switch_is_not_accepted) ... ok
+test_joint_training_and_missing_skip_head_fall_back_before_dependencies (test_stage2_prefix.PrefixSwitchTests.test_joint_training_and_missing_skip_head_fall_back_before_dependencies) ... ok
+test_boundary_at_first_or_last_token_is_handled_inclusively (test_stage2_prefix.RealQwenPrefixTests.test_boundary_at_first_or_last_token_is_handled_inclusively) ... ok
+test_explicit_positions_past_unknown_inputs_and_nondefault_rope_fall_back (test_stage2_prefix.RealQwenPrefixTests.test_explicit_positions_past_unknown_inputs_and_nondefault_rope_fall_back) ... ok
+test_real_tiny_qwen_cpu_prefix_kv_and_rope_delta_match_full_text (test_stage2_prefix.RealQwenPrefixTests.test_real_tiny_qwen_cpu_prefix_kv_and_rope_delta_match_full_text) ... ok
+test_requires_one_boundary_no_padding_and_batch_one (test_stage2_prefix.RealQwenPrefixTests.test_requires_one_boundary_no_padding_and_batch_one) ... ok
+test_success_keeps_boundary_and_never_changes_inputs_or_visual_objects (test_stage2_prefix.RealQwenPrefixTests.test_success_keeps_boundary_and_never_changes_inputs_or_visual_objects) ... ok
+test_unfrozen_weights_or_nonzero_attention_dropout_fall_back (test_stage2_prefix.RealQwenPrefixTests.test_unfrozen_weights_or_nonzero_attention_dropout_fall_back) ... ok
+test_visual_tokens_after_boundary_always_fall_back (test_stage2_prefix.RealQwenPrefixTests.test_visual_tokens_after_boundary_always_fall_back) ... ok
+test_default_off_has_no_torch_import_or_model_mutation (test_stage2_trajectory.DisabledTrajectoryCacheTests.test_default_off_has_no_torch_import_or_model_mutation) ... ok
+test_amp_context_is_part_of_key_even_with_same_float32_input (test_stage2_trajectory.RealTrajectoryCacheTests.test_amp_context_is_part_of_key_even_with_same_float32_input) ... ok
+test_configuration_shape_and_dtype_changes_miss_and_lru_is_bounded (test_stage2_trajectory.RealTrajectoryCacheTests.test_configuration_shape_and_dtype_changes_miss_and_lru_is_bounded) ... ok
+test_eligibility_diagnostics_and_role_specific_configuration (test_stage2_trajectory.RealTrajectoryCacheTests.test_eligibility_diagnostics_and_role_specific_configuration) ... ok
+test_factor_failure_falls_back_to_original_solvers_without_global_patch (test_stage2_trajectory.RealTrajectoryCacheTests.test_factor_failure_falls_back_to_original_solvers_without_global_patch) ... ok
+test_optional_states_initial_velocity_and_checkpoint_buffers_are_preserved (test_stage2_trajectory.RealTrajectoryCacheTests.test_optional_states_initial_velocity_and_checkpoint_buffers_are_preserved) ... ok
+test_output_buffer_broadcasts_preserve_hits_and_live_normalization (test_stage2_trajectory.RealTrajectoryCacheTests.test_output_buffer_broadcasts_preserve_hits_and_live_normalization) ... ok
+test_real_hf_configuration_with_hydra_listconfig_bounds_activates (test_stage2_trajectory.RealTrajectoryCacheTests.test_real_hf_configuration_with_hydra_listconfig_bounds_activates) ... ok
+test_real_history_and_future_tokens_match_with_shared_alias_detection (test_stage2_trajectory.RealTrajectoryCacheTests.test_real_history_and_future_tokens_match_with_shared_alias_detection) ... ok
+test_runtime_disable_delegates_without_changing_counters (test_stage2_trajectory.RealTrajectoryCacheTests.test_runtime_disable_delegates_without_changing_counters) ... ok
+test_targets_match_original_across_lengths_heading_wrap_and_low_speed (test_stage2_trajectory.RealTrajectoryCacheTests.test_targets_match_original_across_lengths_heading_wrap_and_low_speed) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 14.112s
+
+OK

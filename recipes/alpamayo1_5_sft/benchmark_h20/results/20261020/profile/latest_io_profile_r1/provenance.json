@@ -1,0 +1,250 @@
+{
+  "run_id": "latest_io_profile_r1",
+  "mode": "profile",
+  "status": "complete",
+  "source_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "source_patch_sha256": "ed0a1a6020a8537e153b3e0608c45332374e908e7e07a92162cd399cd317097c",
+  "capture_validation": {
+    "valid": true,
+    "requested_steps": [
+      5,
+      8
+    ],
+    "expected_rank_processes": 8,
+    "observed_rank_processes": 8,
+    "processes": [
+      {
+        "process_key": "16785995",
+        "pid": 8779,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16785996",
+        "pid": 8780,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16785997",
+        "pid": 8781,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16785998",
+        "pid": 8782,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16785999",
+        "pid": 8783,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16786000",
+        "pid": 8784,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16786001",
+        "pid": 8785,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16786002",
+        "pid": 8786,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      }
+    ],
+    "step_processes_without_gpu_kernels": [],
+    "steps_without_gpu_kernels": [],
+    "export_event_bounds_ns": [
+      75127117,
+      5326431338
+    ],
+    "selected_window_union_ns": 3645123311,
+    "clipped_kernel_count": 0
+  },
+  "omitted_large_artifacts": [
+    "nsight.nsys-rep",
+    "nsight.sqlite"
+  ],
+  "files": {
+    "manifest.json": {
+      "source_sha256": "b68fb00c43050c86061d82f76f27ee3d59029ad5cd03b9e1c968846b3a8b9e2e",
+      "public_sha256": "b68fb00c43050c86061d82f76f27ee3d59029ad5cd03b9e1c968846b3a8b9e2e",
+      "sanitized": false
+    },
+    "config.resolved.yaml": {
+      "source_sha256": "2e21c51cde83b10dbf51bf7d5af8998534eb30b1505c77de598ecb3bf87a9e3a",
+      "public_sha256": "2e21c51cde83b10dbf51bf7d5af8998534eb30b1505c77de598ecb3bf87a9e3a",
+      "sanitized": false
+    },
+    "steps.json": {
+      "source_sha256": "10608c563515975e3f507eeb58cecee24f55afe0da1bd684a5fe1301c2387f36",
+      "public_sha256": "10608c563515975e3f507eeb58cecee24f55afe0da1bd684a5fe1301c2387f36",
+      "sanitized": false
+    },
+    "summary.json": {
+      "source_sha256": "7490a06b8a6ca6e16f7dd50236819a35fa3dbd79e5b4925b98dd20a3e8617009",
+      "public_sha256": "7490a06b8a6ca6e16f7dd50236819a35fa3dbd79e5b4925b98dd20a3e8617009",
+      "sanitized": false
+    },
+    "training/config.yaml": {
+      "source_sha256": "08a3ff66651fd54d2bc15b812ef48d2cc37902039dd5a591561daa6ba6dcccf1",
+      "public_sha256": "08a3ff66651fd54d2bc15b812ef48d2cc37902039dd5a591561daa6ba6dcccf1",
+      "sanitized": false
+    },
+    "analysis.json": {
+      "source_sha256": "8247f6d4f9fdcae8a737020a53a778417e63a814e1caca7a65c5a2a2130cb97a",
+      "public_sha256": "8247f6d4f9fdcae8a737020a53a778417e63a814e1caca7a65c5a2a2130cb97a",
+      "sanitized": false
+    },
+    "training/stage2_runtime.json": {
+      "source_sha256": "8cab4eb311b62891afa9d11aad09337cbdf12b11feb7c58b6c8abd59f57e9fd3",
+      "public_sha256": "8cab4eb311b62891afa9d11aad09337cbdf12b11feb7c58b6c8abd59f57e9fd3",
+      "sanitized": false
+    },
+    "training/stage2_data.json": {
+      "source_sha256": "faf0c676bc820332f9689eaee65eb27e255cda60e844f26871739f89871deebb",
+      "public_sha256": "faf0c676bc820332f9689eaee65eb27e255cda60e844f26871739f89871deebb",
+      "sanitized": false
+    },
+    "analysis_csv/kernels_by_device_phase.csv": {
+      "source_sha256": "c25c9212a5d98dcc8236329572587f5f3cb13d7f99fdb66d7c73b771dd911d47",
+      "public_sha256": "c25c9212a5d98dcc8236329572587f5f3cb13d7f99fdb66d7c73b771dd911d47",
+      "sanitized": false
+    },
+    "analysis_csv/top_kernels.csv": {
+      "source_sha256": "b67995be1c11e1e8eb0c204547c0ede2f57fdedc6ff0d84464f8efaeb69a6b28",
+      "public_sha256": "b67995be1c11e1e8eb0c204547c0ede2f57fdedc6ff0d84464f8efaeb69a6b28",
+      "sanitized": false
+    },
+    "analysis_csv/interstep_gaps.csv": {
+      "source_sha256": "3780db3c71f06a9020131dd6e0e445b855c03c971a025dcc5cd17b5c8306f1e6",
+      "public_sha256": "3780db3c71f06a9020131dd6e0e445b855c03c971a025dcc5cd17b5c8306f1e6",
+      "sanitized": false
+    },
+    "analysis_csv/osrt_wait_calls.csv": {
+      "source_sha256": "f2ea60ebddfba80b501ee62619a82a97f705cf47e08b193c65793adec9f28595",
+      "public_sha256": "f2ea60ebddfba80b501ee62619a82a97f705cf47e08b193c65793adec9f28595",
+      "sanitized": false
+    },
+    "analysis_csv/nvtx_phases.csv": {
+      "source_sha256": "f97e3221e693a58fdbad053a483a16b629d88313018156c6e5c8e6248fbd29fa",
+      "public_sha256": "f97e3221e693a58fdbad053a483a16b629d88313018156c6e5c8e6248fbd29fa",
+      "sanitized": false
+    },
+    "analysis_csv/devices.csv": {
+      "source_sha256": "b7a343b99aa843ffbe88a6ad4d3c8e582e434c9fd2fa70e11ab801c7ce9ffb90",
+      "public_sha256": "b7a343b99aa843ffbe88a6ad4d3c8e582e434c9fd2fa70e11ab801c7ce9ffb90",
+      "sanitized": false
+    },
+    "analysis_csv/cuda_api_category_unions.csv": {
+      "source_sha256": "68375f146992254e142bb1df6075a01b897a0e9782b608dfd4b36eeb8e2a83c2",
+      "public_sha256": "68375f146992254e142bb1df6075a01b897a0e9782b608dfd4b36eeb8e2a83c2",
+      "sanitized": false
+    },
+    "analysis_csv/optimizer_steps.csv": {
+      "source_sha256": "a8989db7e90f3b7384e7906be55aae2d09e6ffac91a2b241069c0188f6b2e06d",
+      "public_sha256": "a8989db7e90f3b7384e7906be55aae2d09e6ffac91a2b241069c0188f6b2e06d",
+      "sanitized": false
+    },
+    "analysis_csv/kernels_by_device_group.csv": {
+      "source_sha256": "c19787aa0bdbf673fc1d7d14758fbd0ca33eb6d4ab4c382b163021f37f267b15",
+      "public_sha256": "c19787aa0bdbf673fc1d7d14758fbd0ca33eb6d4ab4c382b163021f37f267b15",
+      "sanitized": false
+    },
+    "analysis_csv/cuda_api.csv": {
+      "source_sha256": "0ed45a2d03914d4c560bea73f3fba5e17048b3822c1837e73899182178b27d4a",
+      "public_sha256": "0ed45a2d03914d4c560bea73f3fba5e17048b3822c1837e73899182178b27d4a",
+      "sanitized": false
+    }
+  }
+}

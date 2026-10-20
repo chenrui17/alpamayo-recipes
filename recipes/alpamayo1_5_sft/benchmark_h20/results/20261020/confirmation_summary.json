@@ -1,0 +1,57 @@
+{
+  "groups": {
+    "upstream_baseline": {
+      "run_ids": [
+        "latest_baseline_r3",
+        "latest_baseline_r4"
+      ],
+      "independent_runs": 2,
+      "steady_intervals_per_run": 16,
+      "run_mean_seconds": [
+        0.9739665422821417,
+        0.9210644122504164
+      ],
+      "mean_of_run_means_seconds": 0.947515477266279,
+      "second_run_change_relative_to_first": -0.05431616768659031
+    },
+    "liger_control": {
+      "run_ids": [
+        "latest_liger_r1",
+        "latest_liger_r2"
+      ],
+      "independent_runs": 2,
+      "steady_intervals_per_run": 16,
+      "run_mean_seconds": [
+        0.7671345853304956,
+        0.7707237578288186
+      ],
+      "mean_of_run_means_seconds": 0.7689291715796571,
+      "second_run_change_relative_to_first": 0.00467867381676812
+    },
+    "combined": {
+      "run_ids": [
+        "latest_combined_r1",
+        "latest_combined_r2"
+      ],
+      "independent_runs": 2,
+      "steady_intervals_per_run": 16,
+      "run_mean_seconds": [
+        0.7513608095759992,
+        0.7487603981571738
+      ],
+      "mean_of_run_means_seconds": 0.7500606038665865,
+      "second_run_change_relative_to_first": -0.0034609356592510965
+    }
+  },
+  "comparisons": {
+    "upstream_baseline_to_combined": {
+      "step_time_reduction_fraction": 0.20839224069392392,
+      "throughput_ratio": 1.263251892422834
+    },
+    "liger_control_to_combined": {
+      "step_time_reduction_fraction": 0.02453875910873282,
+      "throughput_ratio": 1.0251560575449539
+    }
+  },
+  "note": "Descriptive results from two independent runs per configuration; each has 16 synchronized rank-max intervals. Step intervals are not independent repetitions. No confidence interval or drift-cause attribution is claimed."
+}

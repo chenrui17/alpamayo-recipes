@@ -1,0 +1,8 @@
+{
+  "file": "comparison.json",
+  "source_sha256": "170188a01f4e090fd5483747b2d82b8b30f0a21cdfd58f17d2b766859ef537cb",
+  "public_sha256": "170188a01f4e090fd5483747b2d82b8b30f0a21cdfd58f17d2b766859ef537cb",
+  "sanitized": false,
+  "status": "complete",
+  "scope": "Read-only SQLite/NVTX comparison of strict 8-process step5-8 captures; timings are diagnostic and are not non-profiled performance measurements."
+}

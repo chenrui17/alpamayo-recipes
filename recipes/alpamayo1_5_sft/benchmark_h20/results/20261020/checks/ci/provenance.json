@@ -1,0 +1,51 @@
+{
+  "scope": "Completed CPU test and compile logs. Clean-checkout tests run at the commit reported separately by the trusted task coordinator; final_ci_status.json itself records times/statuses and no commit. cpu_tests_post_ddp.log is the separately recorded working-tree candidate test run. No dependency-lock/build checks are implied.",
+  "files": {
+    "final_ci_status.json": {
+      "source_sha256": "7a1ba20c281a88cbded6441972c5b7f2136702eb4c91179d138666265c2fb8ec",
+      "public_sha256": "d43ee931e5ca73d6a1ef8e60002bfe271d27549db2482ad0b7685a5a3de49d1f",
+      "sanitized": true
+    },
+    "ci_compile.log": {
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sanitized": false
+    },
+    "ci_upstream_cpu.log": {
+      "source_sha256": "74e8a2ac6d2ebc55822cb0e4c22856769ff4d4b507a66461aa811b5952aaf32f",
+      "public_sha256": "74e8a2ac6d2ebc55822cb0e4c22856769ff4d4b507a66461aa811b5952aaf32f",
+      "sanitized": false
+    },
+    "ci_stage1_alpamayo15.log": {
+      "source_sha256": "4760bfd3e39869f21c673a9861a3b3864e7c746c7306c10a5932e67dc1d4cdff",
+      "public_sha256": "4760bfd3e39869f21c673a9861a3b3864e7c746c7306c10a5932e67dc1d4cdff",
+      "sanitized": false
+    },
+    "ci_stage1_alpamayo1.log": {
+      "source_sha256": "4760bfd3e39869f21c673a9861a3b3864e7c746c7306c10a5932e67dc1d4cdff",
+      "public_sha256": "4760bfd3e39869f21c673a9861a3b3864e7c746c7306c10a5932e67dc1d4cdff",
+      "sanitized": false
+    },
+    "cpu_tests_post_ddp.log": {
+      "source_sha256": "9cd2f99de5b84e6036a1220c9f533e47ecbf47da56cf3648338e5b207d2aba88",
+      "public_sha256": "9cd2f99de5b84e6036a1220c9f533e47ecbf47da56cf3648338e5b207d2aba88",
+      "sanitized": false
+    },
+    "benchmark_harness_tests_final.log": {
+      "source_sha256": "5ad817392904783412822f7bfee055d734f6e9d943c3d3843e89df4f6f8e31ee",
+      "public_sha256": "5ad817392904783412822f7bfee055d734f6e9d943c3d3843e89df4f6f8e31ee",
+      "sanitized": false
+    }
+  },
+  "clean_checkout_commit_reported_by_coordinator": "290634348506b8f434fb1dce8b37d2486319dec2",
+  "passed_test_counts_from_logs": {
+    "upstream_cpu": 32,
+    "stage1_alpamayo15": 8,
+    "stage1_alpamayo1": 8,
+    "post_ddp_candidates": 44,
+    "benchmark_harness_and_nsys": 16
+  },
+  "compile_status": "complete_returncode_zero",
+  "total_passed_cpu_tests_from_logs": 108,
+  "benchmark_harness_log_scope": "Local CPU-only unittest run on final source, captured directly to the original artifact log by the task coordinator."
+}

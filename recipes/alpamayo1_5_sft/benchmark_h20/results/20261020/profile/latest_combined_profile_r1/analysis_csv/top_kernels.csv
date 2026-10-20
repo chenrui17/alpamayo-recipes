@@ -1,0 +1,21 @@
+device,group,name,kernel_count,sum_kernel_duration_ns
+3,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,639350787
+7,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,639263945
+5,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,639016591
+2,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,638744142
+4,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,638178317
+1,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,638037981
+0,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,637699699
+6,other,nvjet_tst_128x240_64x4_2x1_v_bz_coopA_TNT,288,637176998
+7,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,569428481
+3,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,569307622
+5,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,569060227
+2,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,568910735
+4,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,568376402
+1,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,568093296
+0,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,567911956
+6,other,nvjet_tst_128x272_64x4_2x1_v_bz_coopA_TNT,432,567259778
+3,NCCL,ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<(unsigned long)4096>),68,361492218
+0,NCCL,ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<(unsigned long)4096>),68,352555688
+2,NCCL,ncclDevKernel_AllReduce_Sum_bf16_RING_LL(ncclDevKernelArgsStorage<(unsigned long)4096>),68,340980738
+4,other,"void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::FusedOptimizerTensorListMetadata<(int)4>, at::native::<unnamed>::FusedAdamMathFunctor<c10::BFloat16, (int)4, (at::native::ADAM_MODE)1, (bool)0>, const float *, double, double, double, double, double, bool, const float *, const float *>(T1, T2, T3...)",456,318603011

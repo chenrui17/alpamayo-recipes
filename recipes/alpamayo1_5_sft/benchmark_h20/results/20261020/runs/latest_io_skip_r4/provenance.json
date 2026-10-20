@@ -1,0 +1,49 @@
+{
+  "run_id": "latest_io_skip_r4",
+  "source_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "source_patch_sha256": "ed0a1a6020a8537e153b3e0608c45332374e908e7e07a92162cd399cd317097c",
+  "status": "complete",
+  "mode": "timing",
+  "world_size": 8,
+  "steady_window": [
+    5,
+    20
+  ],
+  "files": {
+    "config.resolved.yaml": {
+      "source_sha256": "39220561ca6ca5d608c5065b1c298d2c6cf58449fcba189860f3da76005fac9e",
+      "public_sha256": "39220561ca6ca5d608c5065b1c298d2c6cf58449fcba189860f3da76005fac9e",
+      "sanitized": false
+    },
+    "manifest.json": {
+      "source_sha256": "bd3d890e1d1a3f4bf2487ec9328eafb740769d7217a40231baba9373549f626a",
+      "public_sha256": "bd3d890e1d1a3f4bf2487ec9328eafb740769d7217a40231baba9373549f626a",
+      "sanitized": false
+    },
+    "steps.json": {
+      "source_sha256": "8e4e3babfff47dbdf22f5174ceeb4ee2cbc397bcdca055eab4a51a3308e6ff11",
+      "public_sha256": "8e4e3babfff47dbdf22f5174ceeb4ee2cbc397bcdca055eab4a51a3308e6ff11",
+      "sanitized": false
+    },
+    "summary.json": {
+      "source_sha256": "026652fc17a3715b7ca574d1c6d3d7b172da5c84206c4f611f9a175ed95bea33",
+      "public_sha256": "026652fc17a3715b7ca574d1c6d3d7b172da5c84206c4f611f9a175ed95bea33",
+      "sanitized": false
+    },
+    "training/config.yaml": {
+      "source_sha256": "05152005a5ea0c7e127af2ec6909a9bcb6d4cdcdb122f3472642bbf23e4e069e",
+      "public_sha256": "05152005a5ea0c7e127af2ec6909a9bcb6d4cdcdb122f3472642bbf23e4e069e",
+      "sanitized": false
+    },
+    "training/stage2_data.json": {
+      "source_sha256": "884cf8a0c1ee12db6f1686dfcd8c4c0fe8d0ee01270feea441881bd6173d99fb",
+      "public_sha256": "884cf8a0c1ee12db6f1686dfcd8c4c0fe8d0ee01270feea441881bd6173d99fb",
+      "sanitized": false
+    },
+    "training/stage2_runtime.json": {
+      "source_sha256": "8cab4eb311b62891afa9d11aad09337cbdf12b11feb7c58b6c8abd59f57e9fd3",
+      "public_sha256": "8cab4eb311b62891afa9d11aad09337cbdf12b11feb7c58b6c8abd59f57e9fd3",
+      "sanitized": false
+    }
+  }
+}

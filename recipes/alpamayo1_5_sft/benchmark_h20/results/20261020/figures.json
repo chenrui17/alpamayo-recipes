@@ -1,0 +1,33 @@
+{
+  "timing_means": [
+    "legacy_baseline_r3",
+    "legacy_io_skip_r3",
+    "legacy_liger_r1",
+    "latest_baseline_r3",
+    "latest_baseline_r4",
+    "latest_io_skip_r4",
+    "latest_liger_r1",
+    "latest_liger_r2",
+    "latest_ddp128_r1",
+    "latest_ddp256_r1",
+    "latest_prefix_r1",
+    "latest_factor_r2",
+    "latest_nopreload_r1",
+    "latest_workers0_r1",
+    "latest_combined_r1",
+    "latest_combined_r2"
+  ],
+  "latest_step_intervals": [
+    "latest_baseline_r3",
+    "latest_baseline_r4",
+    "latest_liger_r1",
+    "latest_liger_r2",
+    "latest_combined_r1",
+    "latest_combined_r2"
+  ],
+  "excluded_failed_activation_runs": [
+    "latest_factor_r1"
+  ],
+  "source": "runs.json plus runs/<run_id>/steps.json",
+  "profile_timings_used": false
+}

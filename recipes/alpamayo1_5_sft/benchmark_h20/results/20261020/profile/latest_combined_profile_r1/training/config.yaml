@@ -1,0 +1,304 @@
+data:
+  train_dataset:
+    vla_preprocess_args:
+      _target_: alpamayo.processor.qwen_processor.get_preprocess_data_fn_from_model_config
+      chat_template_version: r1_5
+      components_order:
+      - image
+      - traj_history
+      - route
+      - prompt
+      - traj_future
+      components_prompt:
+      - traj_future
+      label_components:
+      - traj_future
+      include_camera_ids: true
+      include_frame_nums: true
+      generation_mode: false
+    _recursive_: false
+    _target_: alpamayo.data.pai_nav.PAIDatasetWithNav
+    local_dir: /work/pai_dataset
+    chunk_ids:
+    - 214
+    - 224
+    - 276
+    - 317
+    - 420
+    - 727
+    - 728
+    - 968
+    - 982
+    - 1519
+    - 1657
+    - 1984
+    - 2277
+    - 2368
+    - 2372
+    - 2447
+    - 2599
+    - 2634
+    - 2868
+    use_default_keyframe: true
+    annotations_path: /workspace/alpamayo/projects/alpamayo_1.5_release/notebooks/nav_demo_samples.json
+  val_dataset:
+    vla_preprocess_args:
+      _target_: alpamayo.processor.qwen_processor.get_preprocess_data_fn_from_model_config
+      chat_template_version: r1_5
+      components_order:
+      - image
+      - traj_history
+      - route
+      - prompt
+      - traj_future
+      components_prompt:
+      - traj_future
+      label_components:
+      - traj_future
+      include_camera_ids: true
+      include_frame_nums: true
+      generation_mode: true
+    _recursive_: false
+    _target_: alpamayo.data.pai_nav.PAIDatasetWithNav
+    local_dir: /work/pai_dataset
+    chunk_ids:
+    - 2868
+    use_default_keyframe: true
+    annotations_path: /workspace/alpamayo/projects/alpamayo_1.5_release/notebooks/nav_demo_samples.json
+  collate_fn:
+    _target_: alpamayo.processor.qwen_processor.collate_fn_from_model_config
+    _partial_: true
+    chat_template_version: r1_5
+paths:
+  output_dir: /work/results/latest_combined_profile_r1/training
+callbacks:
+  h20_benchmark:
+    _target_: alpamayo1_5_sft.benchmark_h20.callback.DistributedStepCallback
+    output_path: /work/results/latest_combined_profile_r1/steps.json
+    run_id: latest_combined_profile_r1
+    steady_start_step: 5
+    steady_end_step: 10
+    expected_max_steps: 10
+    profile: true
+    profile_start_step: 5
+    profile_end_step: 8
+    global_samples_per_step: 8.0
+    global_tokens_per_step: null
+evaluate:
+  max_eval_steps: -1
+  torch_dtype: bfloat16
+  metric_runner:
+    _target_: alpamayo.metrics.metric_runner.MetricRunner
+    metrics:
+    - _target_: alpamayo.metrics.metric_api.ReasoningSampler
+      num_traj_sets: 1
+      top_p: 0.98
+      temperature: 0.6
+      traj_only_generation: false
+      max_generation_length: 256
+    - _target_: alpamayo.metrics.metric_api.DistanceMetrics
+  eval_ckpt: null
+trainer:
+  output_dir: /work/results/latest_combined_profile_r1/training
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0001
+  warmup_steps: 100
+  logging_steps: 1
+  save_steps: 500
+  save_total_limit: 2
+  num_train_epochs: 3
+  bf16: true
+  dataloader_pin_memory: true
+  dataloader_num_workers: 8
+  dataloader_persistent_workers: true
+  dataloader_prefetch_factor: 4
+  remove_unused_columns: false
+  report_to: none
+  lr_scheduler_type: cosine_warmup_with_min_lr
+  lr_scheduler_kwargs:
+    min_lr: 1.0e-06
+  deepspeed: null
+  gradient_checkpointing: false
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+  ddp_find_unused_parameters: false
+  save_strategy: 'no'
+  eval_strategy: 'no'
+  disable_tqdm: true
+  optim: adamw_torch_fused
+  ddp_bucket_cap_mb: 256
+  max_steps: 10
+task_name: alpamayo_1_5_sft_stage2_nav
+run_name: ${task_name}_${now:%Y%m%d}_${now:%H%M%S}
+performance:
+  zip_cache: true
+  collate_cache: true
+  tf32: true
+  cudnn_benchmark: true
+model:
+  _target_: alpamayo1_5_sft.models.sft_alpamayo_r1.TrainableAlpamayoR1.from_pretrained
+  pretrained_model_name_or_path: /work/models/original-alpamayo15
+  dtype: auto
+  cotrain_vlm: false
+  stage1_vlm_checkpoint_path: null
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  launcher:
+    _target_: hydra._internal.core_plugins.basic_launcher.BasicLauncher
+  sweeper:
+    _target_: hydra._internal.core_plugins.basic_sweeper.BasicSweeper
+    max_batch_size: null
+    params: null
+  help:
+    app_name: ${hydra.job.name}
+    header: '${hydra.help.app_name} is powered by Hydra.
+
+      '
+    footer: 'Powered by Hydra (https://hydra.cc)
+
+      Use --hydra-help to view Hydra specific help
+
+      '
+    template: '${hydra.help.header}
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (group=option)
+
+
+      $APP_CONFIG_GROUPS
+
+
+      == Config ==
+
+      Override anything in the config (foo.bar=value)
+
+
+      $CONFIG
+
+
+      ${hydra.help.footer}
+
+      '
+  hydra_help:
+    template: 'Hydra (${hydra.runtime.version})
+
+      See https://hydra.cc for more info.
+
+
+      == Flags ==
+
+      $FLAGS_HELP
+
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (For example, append hydra/job_logging=disabled
+      to command line)
+
+
+      $HYDRA_CONFIG_GROUPS
+
+
+      Use ''--cfg hydra'' to Show the Hydra config.
+
+      '
+    hydra_help: ???
+  hydra_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][HYDRA] %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+    root:
+      level: INFO
+      handlers:
+      - console
+    loggers:
+      logging_example:
+        level: DEBUG
+    disable_existing_loggers: false
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        formatter: simple
+        filename: ${hydra.runtime.output_dir}/${hydra.job.name}.log
+    root:
+      level: INFO
+      handlers:
+      - console
+      - file
+    disable_existing_loggers: false
+  env: {}
+  mode: RUN
+  searchpath: []
+  callbacks: {}
+  output_subdir: .hydra
+  overrides:
+    hydra:
+    - hydra.mode=RUN
+    task:
+    - model.pretrained_model_name_or_path=/work/models/original-alpamayo15
+    - model.stage1_vlm_checkpoint_path=null
+    - data.train_dataset.local_dir=/work/pai_dataset
+    - data.train_dataset.annotations_path=/workspace/alpamayo/projects/alpamayo_1.5_release/notebooks/nav_demo_samples.json
+    - data.val_dataset.local_dir=/work/pai_dataset
+    - data.val_dataset.annotations_path=/workspace/alpamayo/projects/alpamayo_1.5_release/notebooks/nav_demo_samples.json
+    - ++trainer.save_strategy=no
+    - ++trainer.eval_strategy=no
+    - trainer.report_to=none
+    - trainer.per_device_train_batch_size=1
+    - trainer.gradient_accumulation_steps=1
+    - ++trainer.disable_tqdm=true
+    - trainer.ddp_find_unused_parameters=false
+    - ++trainer.optim=adamw_torch_fused
+    - ++trainer.ddp_bucket_cap_mb=256
+    - ++trainer.max_steps=10
+    - ++trainer.logging_steps=1
+    - ++paths.output_dir="/work/results/latest_combined_profile_r1/training"
+    - ++trainer.output_dir="/work/results/latest_combined_profile_r1/training"
+    - ++callbacks.h20_benchmark._target_="alpamayo1_5_sft.benchmark_h20.callback.DistributedStepCallback"
+    - ++callbacks.h20_benchmark.output_path="/work/results/latest_combined_profile_r1/steps.json"
+    - ++callbacks.h20_benchmark.run_id="latest_combined_profile_r1"
+    - ++callbacks.h20_benchmark.steady_start_step=5
+    - ++callbacks.h20_benchmark.steady_end_step=10
+    - ++callbacks.h20_benchmark.expected_max_steps=10
+    - ++callbacks.h20_benchmark.profile=true
+    - ++callbacks.h20_benchmark.profile_start_step=5
+    - ++callbacks.h20_benchmark.profile_end_step=8
+    - ++callbacks.h20_benchmark.global_samples_per_step=8.0
+    - ++callbacks.h20_benchmark.global_tokens_per_step=null
+  job:
+    name: train_hf
+    chdir: null
+    override_dirname: ++callbacks.h20_benchmark._target_="alpamayo1_5_sft.benchmark_h20.callback.DistributedStepCallback",++callbacks.h20_benchmark.expected_max_steps=10,++callbacks.h20_benchmark.global_samples_per_step=8.0,++callbacks.h20_benchmark.global_tokens_per_step=null,++callbacks.h20_benchmark.output_path="/work/results/latest_combined_profile_r1/steps.json",++callbacks.h20_benchmark.profile=true,++callbacks.h20_benchmark.profile_end_step=8,++callbacks.h20_benchmark.profile_start_step=5,++callbacks.h20_benchmark.run_id="latest_combined_profile_r1",++callbacks.h20_benchmark.steady_end_step=10,++callbacks.h20_benchmark.steady_start_step=5,++paths.output_dir="/work/results/latest_combined_profile_r1/training",++trainer.ddp_bucket_cap_mb=256,++trainer.disable_tqdm=true,++trainer.eval_strategy=no,++trainer.logging_steps=1,++trainer.max_steps=10,++trainer.optim=adamw_torch_fused,++trainer.output_dir="/work/results/latest_combined_profile_r1/training",++trainer.save_strategy=no,data.train_dataset.annotations_path=/workspace/alpamayo/projects/alpamayo_1.5_release/notebooks/nav_demo_samples.json,data.train_dataset.local_dir=/work/pai_dataset,data.val_dataset.annotations_path=/workspace/alpamayo/projects/alpamayo_1.5_release/notebooks/nav_demo_samples.json,data.val_dataset.local_dir=/work/pai_dataset,model.pretrained_model_name_or_path=/work/models/original-alpamayo15,model.stage1_vlm_checkpoint_path=null,trainer.ddp_find_unused_parameters=false,trainer.gradient_accumulation_steps=1,trainer.per_device_train_batch_size=1,trainer.report_to=none
+    id: ???
+    num: ???
+    config_name: sft_stage2_nav
+    env_set: {}
+    env_copy: []
+    config:
+      override_dirname:
+        kv_sep: '='
+        item_sep: ','
+        exclude_keys: []
+  verbose: false

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "date": "2026-10-20",
+  "complete_timing_runs": 17,
+  "comparison_eligible_runs": 16,
+  "profile_runs": 2,
+  "strict_profile_windows_verified": 2,
+  "profile_clipped_kernel_counts": {
+    "latest_combined_profile_r1": 2,
+    "latest_io_profile_r1": 0
+  },
+  "passed_real_model_reports": 2,
+  "passed_dataset_reports": 1,
+  "completed_clean_checkout_checks_including_compile": 4,
+  "verified_public_file_hashes": 175,
+  "verified_raw_timing_means": 17,
+  "scanned_files": 216,
+  "scanned_bytes": 6433135,
+  "exact_credential_check_requested": true,
+  "exact_credential_values_checked": 1,
+  "actual_registry_host_check_requested": true,
+  "private_ipv4_check": true,
+  "sensitive_matches": 0,
+  "privacy_scan_exception": "The CGNAT network constant in the public redactor/auditor source is not a host address.",
+  "note": "Source patch hashes were independently verified during import; patch bodies remain outside this public archive."
+}

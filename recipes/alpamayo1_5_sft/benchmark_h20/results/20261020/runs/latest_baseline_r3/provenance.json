@@ -1,0 +1,49 @@
+{
+  "run_id": "latest_baseline_r3",
+  "source_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "source_patch_sha256": "237757ad7e20cee7a7545b827354f9839b87e126c9add0ce9116ce19e40ecc16",
+  "status": "complete",
+  "mode": "timing",
+  "world_size": 8,
+  "steady_window": [
+    5,
+    20
+  ],
+  "files": {
+    "config.resolved.yaml": {
+      "source_sha256": "4377bb5754fe2ccbe0c62f76ee1f6b4b0f8eb93f76b5604d26068cf74eea1e04",
+      "public_sha256": "4377bb5754fe2ccbe0c62f76ee1f6b4b0f8eb93f76b5604d26068cf74eea1e04",
+      "sanitized": false
+    },
+    "manifest.json": {
+      "source_sha256": "009c169d176e75cf35e63225d7e352f4f5d3535a5b8f7d69a773b2f568c5ee34",
+      "public_sha256": "009c169d176e75cf35e63225d7e352f4f5d3535a5b8f7d69a773b2f568c5ee34",
+      "sanitized": false
+    },
+    "steps.json": {
+      "source_sha256": "35a9aeadc061a43855c1b3cd5d582e7df185175290d6903d8629ddb880fa55c7",
+      "public_sha256": "35a9aeadc061a43855c1b3cd5d582e7df185175290d6903d8629ddb880fa55c7",
+      "sanitized": false
+    },
+    "summary.json": {
+      "source_sha256": "acc134908cef1a99ff97e1f5b8b540ecfac265c6c01a08a8275ed0db82faf443",
+      "public_sha256": "acc134908cef1a99ff97e1f5b8b540ecfac265c6c01a08a8275ed0db82faf443",
+      "sanitized": false
+    },
+    "training/config.yaml": {
+      "source_sha256": "6d47feaf0e362bb8eb46b323551e77672754611aab1b90df29e57fd955951779",
+      "public_sha256": "6d47feaf0e362bb8eb46b323551e77672754611aab1b90df29e57fd955951779",
+      "sanitized": false
+    },
+    "training/stage2_data.json": {
+      "source_sha256": "410f00c773b59952ed29fc39effd19b1f9d58ec71f3630f2fbd885c25cbf81e0",
+      "public_sha256": "410f00c773b59952ed29fc39effd19b1f9d58ec71f3630f2fbd885c25cbf81e0",
+      "sanitized": false
+    },
+    "training/stage2_runtime.json": {
+      "source_sha256": "00dad91ff3dad5b09bba62099042356e2a953399931c7fbb6e40c80f898b8169",
+      "public_sha256": "00dad91ff3dad5b09bba62099042356e2a953399931c7fbb6e40c80f898b8169",
+      "sanitized": false
+    }
+  }
+}

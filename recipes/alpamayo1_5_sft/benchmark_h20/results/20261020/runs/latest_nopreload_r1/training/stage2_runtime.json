@@ -1,0 +1,38 @@
+{
+  "optimizations": {
+    "vlm_skip_head": true,
+    "liger_kernel": true,
+    "compile_expert": false,
+    "requested": {
+      "vlm_skip_head": true,
+      "liger_kernel": true,
+      "compile_expert": false
+    },
+    "liger": {
+      "vlm": {
+        "rms_norm_instances": 145,
+        "swiglu_instances": 36
+      },
+      "expert": {
+        "rms_norm_instances": 145,
+        "swiglu_instances": 36
+      },
+      "rope": true,
+      "vision_rope": true
+    },
+    "liger_swiglu": true,
+    "trajectory": {
+      "requested": false,
+      "enabled": false,
+      "runtime_enabled": false,
+      "patched": false,
+      "patched_instance_count": 0,
+      "instances": []
+    }
+  },
+  "cuda_matmul_allow_tf32": true,
+  "cudnn_allow_tf32": true,
+  "cudnn_benchmark": true,
+  "trainable_parameters": 2280592386,
+  "frozen_vlm": true
+}

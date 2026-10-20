@@ -1,0 +1,1710 @@
+{
+  "latest_io_profile_r1": {
+    "capture_validation": {
+      "valid": true,
+      "requested_steps": [
+        5,
+        8
+      ],
+      "expected_rank_processes": 8,
+      "observed_rank_processes": 8,
+      "processes": [
+        {
+          "process_key": "16785995",
+          "pid": 8779,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16785996",
+          "pid": 8780,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16785997",
+          "pid": 8781,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16785998",
+          "pid": 8782,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16785999",
+          "pid": 8783,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16786000",
+          "pid": 8784,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16786001",
+          "pid": 8785,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16786002",
+          "pid": 8786,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        }
+      ],
+      "step_processes_without_gpu_kernels": [],
+      "steps_without_gpu_kernels": [],
+      "export_event_bounds_ns": [
+        75127117,
+        5326431338
+      ],
+      "selected_window_union_ns": 3645123311,
+      "clipped_kernel_count": 0
+    },
+    "explicit_sync": {
+      "cudaStreamSynchronize_v3020": {
+        "count": 18432,
+        "sum_ns": 8293246935
+      },
+      "cudaDeviceSynchronize_v3020": {
+        "count": 32,
+        "sum_ns": 2540631061
+      },
+      "cudaEventSynchronize_v3020": {
+        "count": 256,
+        "sum_ns": 969263
+      }
+    },
+    "kernel_groups": {
+      "FA": {
+        "count": 17280,
+        "sum_ns": 3755047418
+      },
+      "GEMM": {
+        "count": 4288,
+        "sum_ns": 145398495
+      },
+      "NCCL": {
+        "count": 3632,
+        "sum_ns": 3786018160
+      },
+      "other": {
+        "count": 83808,
+        "sum_ns": 16636902915
+      },
+      "pointwise": {
+        "count": 284088,
+        "sum_ns": 2953115022
+      }
+    },
+    "kernel_phases": {
+      "action": {
+        "count": 1664,
+        "sum_ns": 3260129
+      },
+      "expert": {
+        "count": 79008,
+        "sum_ns": 635017433
+      },
+      "head": {
+        "count": 32,
+        "sum_ns": 18397356
+      },
+      "language": {
+        "count": 66272,
+        "sum_ns": 13394069893
+      },
+      "trajectory": {
+        "count": 9056,
+        "sum_ns": 15043023
+      },
+      "unattributed": {
+        "count": 180936,
+        "sum_ns": 8462953777
+      },
+      "visual": {
+        "count": 53600,
+        "sum_ns": 4720043020
+      },
+      "vlm": {
+        "count": 2528,
+        "sum_ns": 27697379
+      }
+    },
+    "step_duration_ns": [
+      915998093,
+      928998080,
+      880747983,
+      875451955,
+      915214292,
+      928592934,
+      880631788,
+      877312446,
+      926750914,
+      939634474,
+      886670375,
+      880922772,
+      917600855,
+      929991455,
+      881025696,
+      875557887,
+      915742804,
+      928524060,
+      880552519,
+      876397467,
+      916870742,
+      930370111,
+      881880648,
+      879995819,
+      916034464,
+      929491790,
+      881492504,
+      878384309,
+      916652998,
+      930139289,
+      880758462,
+      878289349
+    ],
+    "gpu_device_windows": [
+      {
+        "device": "0",
+        "window_union_ns": 3639350046,
+        "kernel_busy_union_ns": 3261447985,
+        "gpu_activity_busy_union_ns": 3274503841,
+        "no_recorded_gpu_activity_ns": 364846205
+      },
+      {
+        "device": "1",
+        "window_union_ns": 3640110712,
+        "kernel_busy_union_ns": 3276627156,
+        "gpu_activity_busy_union_ns": 3288840010,
+        "no_recorded_gpu_activity_ns": 351270702
+      },
+      {
+        "device": "2",
+        "window_union_ns": 3644850311,
+        "kernel_busy_union_ns": 3033528114,
+        "gpu_activity_busy_union_ns": 3063391505,
+        "no_recorded_gpu_activity_ns": 581458806
+      },
+      {
+        "device": "3",
+        "window_union_ns": 3639365304,
+        "kernel_busy_union_ns": 3202791279,
+        "gpu_activity_busy_union_ns": 3216429071,
+        "no_recorded_gpu_activity_ns": 422936233
+      },
+      {
+        "device": "4",
+        "window_union_ns": 3639880326,
+        "kernel_busy_union_ns": 3272891641,
+        "gpu_activity_busy_union_ns": 3285630814,
+        "no_recorded_gpu_activity_ns": 354249512
+      },
+      {
+        "device": "5",
+        "window_union_ns": 3642777404,
+        "kernel_busy_union_ns": 3184123169,
+        "gpu_activity_busy_union_ns": 3198705122,
+        "no_recorded_gpu_activity_ns": 444072282
+      },
+      {
+        "device": "6",
+        "window_union_ns": 3641312665,
+        "kernel_busy_union_ns": 3240184195,
+        "gpu_activity_busy_union_ns": 3252407396,
+        "no_recorded_gpu_activity_ns": 388905269
+      },
+      {
+        "device": "7",
+        "window_union_ns": 3640591936,
+        "kernel_busy_union_ns": 3236627181,
+        "gpu_activity_busy_union_ns": 3249418461,
+        "no_recorded_gpu_activity_ns": 391173475
+      }
+    ],
+    "crop_segments": {
+      "step_count": 32,
+      "steps": [
+        {
+          "pid": 8779,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 272354667,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198049595,
+            "count": 1,
+            "host_api_sum_ns": 197810617
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3594631,
+            "count": 144,
+            "host_api_sum_ns": 1067223
+          }
+        },
+        {
+          "pid": 8779,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 287733552,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198147678,
+            "count": 1,
+            "host_api_sum_ns": 197919773
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3644004,
+            "count": 144,
+            "host_api_sum_ns": 1087852
+          }
+        },
+        {
+          "pid": 8779,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 243849127,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198086493,
+            "count": 1,
+            "host_api_sum_ns": 197924174
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3620611,
+            "count": 144,
+            "host_api_sum_ns": 1078193
+          }
+        },
+        {
+          "pid": 8779,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238447343,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198028860,
+            "count": 1,
+            "host_api_sum_ns": 197874203
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3608861,
+            "count": 144,
+            "host_api_sum_ns": 1073382
+          }
+        },
+        {
+          "pid": 8780,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 278213134,
+          "after_vlm_before_future": {
+            "elapsed_ns": 197861771,
+            "count": 1,
+            "host_api_sum_ns": 197689102
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3551142,
+            "count": 144,
+            "host_api_sum_ns": 1028369
+          }
+        },
+        {
+          "pid": 8780,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 290914013,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198135620,
+            "count": 1,
+            "host_api_sum_ns": 197970366
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3525626,
+            "count": 144,
+            "host_api_sum_ns": 1022442
+          }
+        },
+        {
+          "pid": 8780,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 243498255,
+          "after_vlm_before_future": {
+            "elapsed_ns": 197869145,
+            "count": 1,
+            "host_api_sum_ns": 197718985
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3551097,
+            "count": 144,
+            "host_api_sum_ns": 1051180
+          }
+        },
+        {
+          "pid": 8780,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238509520,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198348214,
+            "count": 1,
+            "host_api_sum_ns": 198179201
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3559633,
+            "count": 144,
+            "host_api_sum_ns": 1055035
+          }
+        },
+        {
+          "pid": 8781,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 236905972,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198733853,
+            "count": 1,
+            "host_api_sum_ns": 198453345
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 4131034,
+            "count": 144,
+            "host_api_sum_ns": 1080115
+          }
+        },
+        {
+          "pid": 8781,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238017022,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198592919,
+            "count": 1,
+            "host_api_sum_ns": 198347479
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3636961,
+            "count": 144,
+            "host_api_sum_ns": 1090716
+          }
+        },
+        {
+          "pid": 8781,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238212218,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198506559,
+            "count": 1,
+            "host_api_sum_ns": 198339055
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3720381,
+            "count": 144,
+            "host_api_sum_ns": 1079368
+          }
+        },
+        {
+          "pid": 8781,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238266315,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198444498,
+            "count": 1,
+            "host_api_sum_ns": 198287298
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3592569,
+            "count": 144,
+            "host_api_sum_ns": 1069572
+          }
+        },
+        {
+          "pid": 8782,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 244068247,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198225098,
+            "count": 1,
+            "host_api_sum_ns": 197936403
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 4255975,
+            "count": 144,
+            "host_api_sum_ns": 1073132
+          }
+        },
+        {
+          "pid": 8782,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 264746144,
+          "after_vlm_before_future": {
+            "elapsed_ns": 196789483,
+            "count": 1,
+            "host_api_sum_ns": 196453607
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3610828,
+            "count": 144,
+            "host_api_sum_ns": 1068914
+          }
+        },
+        {
+          "pid": 8782,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 236125656,
+          "after_vlm_before_future": {
+            "elapsed_ns": 196690082,
+            "count": 1,
+            "host_api_sum_ns": 196494838
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3604086,
+            "count": 144,
+            "host_api_sum_ns": 1067334
+          }
+        },
+        {
+          "pid": 8782,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 239295080,
+          "after_vlm_before_future": {
+            "elapsed_ns": 196679530,
+            "count": 1,
+            "host_api_sum_ns": 196481515
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3576251,
+            "count": 144,
+            "host_api_sum_ns": 1075970
+          }
+        },
+        {
+          "pid": 8783,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 277866854,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198067366,
+            "count": 1,
+            "host_api_sum_ns": 197865797
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3673541,
+            "count": 144,
+            "host_api_sum_ns": 1065852
+          }
+        },
+        {
+          "pid": 8783,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 289981220,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198426006,
+            "count": 1,
+            "host_api_sum_ns": 198231736
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3674283,
+            "count": 144,
+            "host_api_sum_ns": 1072099
+          }
+        },
+        {
+          "pid": 8783,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 240384124,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198083219,
+            "count": 1,
+            "host_api_sum_ns": 197925242
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3658241,
+            "count": 144,
+            "host_api_sum_ns": 1052779
+          }
+        },
+        {
+          "pid": 8783,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238079584,
+          "after_vlm_before_future": {
+            "elapsed_ns": 197794925,
+            "count": 1,
+            "host_api_sum_ns": 197637363
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3677491,
+            "count": 144,
+            "host_api_sum_ns": 1067845
+          }
+        },
+        {
+          "pid": 8784,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 246058212,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198369636,
+            "count": 1,
+            "host_api_sum_ns": 198144516
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 4016264,
+            "count": 144,
+            "host_api_sum_ns": 1052449
+          }
+        },
+        {
+          "pid": 8784,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 256814280,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198344923,
+            "count": 1,
+            "host_api_sum_ns": 198104730
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3574579,
+            "count": 144,
+            "host_api_sum_ns": 1048358
+          }
+        },
+        {
+          "pid": 8784,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238388261,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198433378,
+            "count": 1,
+            "host_api_sum_ns": 198247879
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3618881,
+            "count": 144,
+            "host_api_sum_ns": 1050859
+          }
+        },
+        {
+          "pid": 8784,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 238399539,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198403658,
+            "count": 1,
+            "host_api_sum_ns": 198117650
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3533270,
+            "count": 144,
+            "host_api_sum_ns": 1053635
+          }
+        },
+        {
+          "pid": 8785,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 260787734,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198037548,
+            "count": 1,
+            "host_api_sum_ns": 197788535
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3527966,
+            "count": 144,
+            "host_api_sum_ns": 1035085
+          }
+        },
+        {
+          "pid": 8785,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 267461385,
+          "after_vlm_before_future": {
+            "elapsed_ns": 197986594,
+            "count": 1,
+            "host_api_sum_ns": 197676886
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 4680773,
+            "count": 144,
+            "host_api_sum_ns": 1083773
+          }
+        },
+        {
+          "pid": 8785,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 240038302,
+          "after_vlm_before_future": {
+            "elapsed_ns": 197924637,
+            "count": 1,
+            "host_api_sum_ns": 197757673
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3544954,
+            "count": 144,
+            "host_api_sum_ns": 1044010
+          }
+        },
+        {
+          "pid": 8785,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 237979582,
+          "after_vlm_before_future": {
+            "elapsed_ns": 197820718,
+            "count": 1,
+            "host_api_sum_ns": 197585922
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3717857,
+            "count": 144,
+            "host_api_sum_ns": 1053098
+          }
+        },
+        {
+          "pid": 8786,
+          "step": 5,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 254232172,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198614873,
+            "count": 1,
+            "host_api_sum_ns": 198273236
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3974018,
+            "count": 144,
+            "host_api_sum_ns": 1058805
+          }
+        },
+        {
+          "pid": 8786,
+          "step": 6,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 271019935,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198547454,
+            "count": 1,
+            "host_api_sum_ns": 198307619
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 4563300,
+            "count": 144,
+            "host_api_sum_ns": 1051791
+          }
+        },
+        {
+          "pid": 8786,
+          "step": 7,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 239165057,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198542913,
+            "count": 1,
+            "host_api_sum_ns": 198364424
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3522268,
+            "count": 144,
+            "host_api_sum_ns": 1041493
+          }
+        },
+        {
+          "pid": 8786,
+          "step": 8,
+          "stream_sync_count_main_thread": 564,
+          "stream_sync_sum_main_thread_ns": 239116976,
+          "after_vlm_before_future": {
+            "elapsed_ns": 198620706,
+            "count": 1,
+            "host_api_sum_ns": 198370458
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 3705863,
+            "count": 144,
+            "host_api_sum_ns": 1055465
+          }
+        }
+      ],
+      "innermost_nvtx_attribution": {
+        "fuse_traj_tokens": {
+          "count": 64,
+          "sum_ns": 12396093
+        },
+        "vlm_visual": {
+          "count": 9952,
+          "sum_ns": 174005345
+        },
+        "vlm": {
+          "count": 2336,
+          "sum_ns": 30968478
+        },
+        "vlm_language_model": {
+          "count": 224,
+          "sum_ns": 1018310933
+        },
+        "optimizer_step_outer": {
+          "count": 4704,
+          "sum_ns": 6824153198
+        },
+        "_process_traj_future_training": {
+          "count": 768,
+          "sum_ns": 5095435
+        }
+      }
+    }
+  },
+  "latest_combined_profile_r1": {
+    "capture_validation": {
+      "valid": true,
+      "requested_steps": [
+        5,
+        8
+      ],
+      "expected_rank_processes": 8,
+      "observed_rank_processes": 8,
+      "processes": [
+        {
+          "process_key": "16808507",
+          "pid": 31291,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16808508",
+          "pid": 31292,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16808509",
+          "pid": 31293,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16808510",
+          "pid": 31294,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16808511",
+          "pid": 31295,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16808512",
+          "pid": 31296,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16808513",
+          "pid": 31297,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        },
+        {
+          "process_key": "16808514",
+          "pid": 31298,
+          "rank": null,
+          "observed_steps": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "missing_steps": [],
+          "unexpected_steps": [],
+          "duplicate_steps": [],
+          "open_or_invalid_steps": [],
+          "valid": true
+        }
+      ],
+      "step_processes_without_gpu_kernels": [],
+      "steps_without_gpu_kernels": [],
+      "export_event_bounds_ns": [
+        79634742,
+        5295372288
+      ],
+      "selected_window_union_ns": 3198561514,
+      "clipped_kernel_count": 2
+    },
+    "explicit_sync": {
+      "cudaStreamSynchronize_v3020": {
+        "count": 13664,
+        "sum_ns": 11024263220
+      },
+      "cudaDeviceSynchronize_v3020": {
+        "count": 29,
+        "sum_ns": 2311650242
+      },
+      "cudaEventSynchronize_v3020": {
+        "count": 256,
+        "sum_ns": 875709
+      }
+    },
+    "kernel_groups": {
+      "FA": {
+        "count": 17280,
+        "sum_ns": 3659221785
+      },
+      "GEMM": {
+        "count": 4160,
+        "sum_ns": 145487490
+      },
+      "NCCL": {
+        "count": 656,
+        "sum_ns": 2258907948
+      },
+      "other": {
+        "count": 86275,
+        "sum_ns": 16282305720
+      },
+      "pointwise": {
+        "count": 99832,
+        "sum_ns": 965395525
+      }
+    },
+    "kernel_phases": {
+      "action": {
+        "count": 1664,
+        "sum_ns": 3251457
+      },
+      "expert": {
+        "count": 36224,
+        "sum_ns": 536383942
+      },
+      "head": {
+        "count": 32,
+        "sum_ns": 18411133
+      },
+      "language": {
+        "count": 22272,
+        "sum_ns": 11732674570
+      },
+      "trajectory": {
+        "count": 7168,
+        "sum_ns": 11964761
+      },
+      "unattributed": {
+        "count": 92491,
+        "sum_ns": 6694279761
+      },
+      "visual": {
+        "count": 45824,
+        "sum_ns": 4286952144
+      },
+      "vlm": {
+        "count": 2528,
+        "sum_ns": 27400700
+      }
+    },
+    "step_duration_ns": [
+      799759488,
+      789589023,
+      791543637,
+      792991427,
+      804114308,
+      793954211,
+      796149695,
+      793983415,
+      799991825,
+      789774675,
+      791641236,
+      792670702,
+      799804721,
+      789598337,
+      791397274,
+      792651983,
+      800402950,
+      792379890,
+      793198626,
+      793991929,
+      799548290,
+      789777922,
+      792218129,
+      793854992,
+      799764907,
+      789621541,
+      791509923,
+      794065995,
+      799787462,
+      789507580,
+      791921377,
+      794207425
+    ],
+    "gpu_device_windows": [
+      {
+        "device": "0",
+        "window_union_ns": 3197007103,
+        "kernel_busy_union_ns": 2806853353,
+        "gpu_activity_busy_union_ns": 2817827716,
+        "no_recorded_gpu_activity_ns": 379179387
+      },
+      {
+        "device": "1",
+        "window_union_ns": 3198138996,
+        "kernel_busy_union_ns": 2653201156,
+        "gpu_activity_busy_union_ns": 2681501225,
+        "no_recorded_gpu_activity_ns": 516637771
+      },
+      {
+        "device": "2",
+        "window_union_ns": 3197036741,
+        "kernel_busy_union_ns": 2805334497,
+        "gpu_activity_busy_union_ns": 2816141845,
+        "no_recorded_gpu_activity_ns": 380894896
+      },
+      {
+        "device": "3",
+        "window_union_ns": 3196917547,
+        "kernel_busy_union_ns": 2821836871,
+        "gpu_activity_busy_union_ns": 2832309167,
+        "no_recorded_gpu_activity_ns": 364608380
+      },
+      {
+        "device": "4",
+        "window_union_ns": 3198057009,
+        "kernel_busy_union_ns": 2735944995,
+        "gpu_activity_busy_union_ns": 2751777266,
+        "no_recorded_gpu_activity_ns": 446279743
+      },
+      {
+        "device": "5",
+        "window_union_ns": 3197662816,
+        "kernel_busy_union_ns": 2761827808,
+        "gpu_activity_busy_union_ns": 2774250866,
+        "no_recorded_gpu_activity_ns": 423411950
+      },
+      {
+        "device": "6",
+        "window_union_ns": 3198150182,
+        "kernel_busy_union_ns": 2740386044,
+        "gpu_activity_busy_union_ns": 2755610913,
+        "no_recorded_gpu_activity_ns": 442539269
+      },
+      {
+        "device": "7",
+        "window_union_ns": 3198305819,
+        "kernel_busy_union_ns": 2766286750,
+        "gpu_activity_busy_union_ns": 2780253145,
+        "no_recorded_gpu_activity_ns": 418052674
+      }
+    ],
+    "crop_segments": {
+      "step_count": 32,
+      "steps": [
+        {
+          "pid": 31291,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 346801824,
+          "after_vlm_before_future": {
+            "elapsed_ns": 52924,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 130060,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31291,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 340037395,
+          "after_vlm_before_future": {
+            "elapsed_ns": 20522,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 126772,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31291,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 342120573,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18032,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 125819,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31291,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 342693556,
+          "after_vlm_before_future": {
+            "elapsed_ns": 19694,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 126997,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31292,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 335086390,
+          "after_vlm_before_future": {
+            "elapsed_ns": 34692,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 130030,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31292,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 336199770,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17223,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 125117,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31292,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 336018224,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18312,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 125360,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31292,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 336897589,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17542,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 207582,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31293,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 344609264,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18695,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 131757,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31293,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 338328227,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17638,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 120379,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31293,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 339462810,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17056,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 122824,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31293,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 338769448,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17362,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 119872,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31294,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 351872854,
+          "after_vlm_before_future": {
+            "elapsed_ns": 19303,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 127040,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31294,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 343749783,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17965,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 121957,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31294,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 346364964,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18740,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 120813,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31294,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 347904920,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17078,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 120537,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31295,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 341642527,
+          "after_vlm_before_future": {
+            "elapsed_ns": 21457,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 145081,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31295,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 336032525,
+          "after_vlm_before_future": {
+            "elapsed_ns": 24488,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 126215,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31295,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 337684446,
+          "after_vlm_before_future": {
+            "elapsed_ns": 20632,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 125668,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31295,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 336779887,
+          "after_vlm_before_future": {
+            "elapsed_ns": 21376,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 211796,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31296,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 340128433,
+          "after_vlm_before_future": {
+            "elapsed_ns": 21526,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 147365,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31296,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 334422331,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18151,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 124026,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31296,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 341148869,
+          "after_vlm_before_future": {
+            "elapsed_ns": 17620,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 141650,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31296,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 337552911,
+          "after_vlm_before_future": {
+            "elapsed_ns": 27682,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 140175,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31297,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 344630299,
+          "after_vlm_before_future": {
+            "elapsed_ns": 39536,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 133884,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31297,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 336188621,
+          "after_vlm_before_future": {
+            "elapsed_ns": 16973,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 126807,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31297,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 337962989,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18116,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 205571,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31297,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 337109532,
+          "after_vlm_before_future": {
+            "elapsed_ns": 25602,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 146632,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31298,
+          "step": 5,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 345719438,
+          "after_vlm_before_future": {
+            "elapsed_ns": 21497,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 127227,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31298,
+          "step": 6,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 340166684,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18737,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 122997,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31298,
+          "step": 7,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 341169823,
+          "after_vlm_before_future": {
+            "elapsed_ns": 18678,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 127233,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        },
+        {
+          "pid": 31298,
+          "step": 8,
+          "stream_sync_count_main_thread": 415,
+          "stream_sync_sum_main_thread_ns": 338735456,
+          "after_vlm_before_future": {
+            "elapsed_ns": 27556,
+            "count": 0,
+            "host_api_sum_ns": 0
+          },
+          "scalar_crop_interval": {
+            "elapsed_ns": 134604,
+            "count": 0,
+            "host_api_sum_ns": 0
+          }
+        }
+      ],
+      "innermost_nvtx_attribution": {
+        "fuse_traj_tokens": {
+          "count": 64,
+          "sum_ns": 15441558
+        },
+        "optimizer_step_outer": {
+          "count": 224,
+          "sum_ns": 92666361
+        },
+        "vlm_visual": {
+          "count": 9952,
+          "sum_ns": 174443885
+        },
+        "vlm": {
+          "count": 2336,
+          "sum_ns": 30804507
+        },
+        "vlm_language_model": {
+          "count": 224,
+          "sum_ns": 881714343
+        },
+        "_process_traj_future_training": {
+          "count": 480,
+          "sum_ns": 9698921708
+        }
+      }
+    }
+  }
+}

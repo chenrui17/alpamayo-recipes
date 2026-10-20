@@ -1,0 +1,17 @@
+{
+  "optimizations": {
+    "vlm_skip_head": false,
+    "liger_kernel": false,
+    "compile_expert": false,
+    "requested": {
+      "vlm_skip_head": false,
+      "liger_kernel": false,
+      "compile_expert": false
+    }
+  },
+  "cuda_matmul_allow_tf32": true,
+  "cudnn_allow_tf32": true,
+  "cudnn_benchmark": true,
+  "trainable_parameters": 2280592386,
+  "frozen_vlm": true
+}

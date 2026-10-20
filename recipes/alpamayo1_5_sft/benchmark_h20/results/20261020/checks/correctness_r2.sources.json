@@ -1,0 +1,25 @@
+{
+  "note": "Collected immediately after correctness_r2 completed; these runtime source files were synchronized before this run and were not modified during it. Existing JSON is preserved as originally written.",
+  "files": {
+    "recipes/alpamayo1_5_sft/performance/stage2_optimizations.py": "bb00b1dfff8b6b6314bcbb597ef6e14edc4af07116377595631771bc60515448",
+    "recipes/alpamayo1_5_sft/performance/._stage2_optimizations.py": "dfc0273d5bc05ae05a693ffa0823b79d2b3bcd5130803b25b5d9b770fbbf955b",
+    "recipes/alpamayo1_5_sft/performance/stage2_trajectory.py": "987bf568ad1ef4f0944d161c42931d192bff18a183c4d66be079fe5072ec3879",
+    "recipes/alpamayo1_5_sft/performance/collate_cache.py": "443c0a5bf149d801f03d863031ad3b59fd9b7809619e10ab27e5a0b28b214348",
+    "recipes/alpamayo1_5_sft/performance/apply_optimizations.py": "03aadde2422bf51a9a1cab63ca5f07911e7815c8befb1068263249ea6b51c5af",
+    "recipes/alpamayo1_5_sft/performance/step_time_callback.py": "a61a145f12c0be258884c1e01b6cbdc2cdb96761dae536c43097277d07847b79",
+    "recipes/alpamayo1_5_sft/performance/perf_utils.py": "1d01c4a38f5e34de6cb31b557cb9e00e729320fe58b7eb33501e781d9bba57d8",
+    "recipes/alpamayo1_5_sft/performance/._perf_utils.py": "dfc0273d5bc05ae05a693ffa0823b79d2b3bcd5130803b25b5d9b770fbbf955b",
+    "recipes/alpamayo1_5_sft/performance/._apply_optimizations.py": "dfc0273d5bc05ae05a693ffa0823b79d2b3bcd5130803b25b5d9b770fbbf955b",
+    "recipes/alpamayo1_5_sft/performance/._step_time_callback.py": "dfc0273d5bc05ae05a693ffa0823b79d2b3bcd5130803b25b5d9b770fbbf955b",
+    "recipes/alpamayo1_5_sft/performance/._collate_cache.py": "dfc0273d5bc05ae05a693ffa0823b79d2b3bcd5130803b25b5d9b770fbbf955b",
+    "recipes/alpamayo1_5_sft/performance/stage2_data.py": "2f0e840aceee377398d30eaa789fc9e083287be2907d789a961824ce1ce4a188",
+    "recipes/alpamayo1_5_sft/performance/stage2_prefix.py": "0d534a8d6219801efb984930749bfc48ceb4944a0daa5e342924a852e0f06610",
+    "recipes/alpamayo1_5_sft/models/sft_alpamayo_r1.py": "c38449f80cc92b15fc04e31f28c01122c7d42868028b42dba048063780d0924d",
+    "recipes/alpamayo1_5_sft/benchmark_h20/check_correctness.py": "2b2ce2ee2013497c5e76ee6ebe7c3f918e2f30fa718ecf872402a94643ca2185",
+    "recipes/alpamayo1_5_sft/benchmark_h20/check_data.py": "6305490b459b3a1ec92402da84ca6a95aaa8eab7d302d015fb689fabcb707a4b",
+    "src/alpamayo/data/pai_nav.py": "dd1149a8e66483e812ce844a2b86447ca324be01ccbef30e7be39d986cad0d92",
+    "src/alpamayo/processor/qwen_processor.py": "cdf75fe88f9c5829f373aae244e797f5ce0527be17204467b2d07b82da2cec2d"
+  },
+  "recipe_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "inference_commit": "f3198c2f6158e1158ae8cb4fc7d7716bd25085bb"
+}

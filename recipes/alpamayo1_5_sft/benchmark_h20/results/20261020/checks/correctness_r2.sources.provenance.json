@@ -1,0 +1,8 @@
+{
+  "file": "correctness_r2.sources.json",
+  "source_sha256": "69d691194b62d2a303ae6cce2b3dec46b899bd50844c1ed7970390b373a98888",
+  "public_sha256": "69d691194b62d2a303ae6cce2b3dec46b899bd50844c1ed7970390b373a98888",
+  "sanitized": false,
+  "status": null,
+  "source_capture_note": "Source sidecar was collected after the run; the original passed correctness JSON is unchanged."
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "legacy_io_skip_r3",
+  "source_commit": "9cd8718cdfed189863c354b387a87933d16ea5c1",
+  "source_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "status": "complete",
+  "mode": "timing",
+  "world_size": 8,
+  "steady_window": [
+    5,
+    20
+  ],
+  "files": {
+    "config.resolved.yaml": {
+      "source_sha256": "eb9863420a91a603e5007c6cbb7faf22d2da74ae0d351a6c12c9a5389eb032c9",
+      "public_sha256": "eb9863420a91a603e5007c6cbb7faf22d2da74ae0d351a6c12c9a5389eb032c9",
+      "sanitized": false
+    },
+    "manifest.json": {
+      "source_sha256": "5bef30b3908c4b5656df924f9c257c1f6e4ba3c7bfd4984ed1fc3055f13fe351",
+      "public_sha256": "5bef30b3908c4b5656df924f9c257c1f6e4ba3c7bfd4984ed1fc3055f13fe351",
+      "sanitized": false
+    },
+    "steps.json": {
+      "source_sha256": "19dac8da0c91eac08b05a813a37b052d0af58d54d58d15322edf2911ddf0a511",
+      "public_sha256": "19dac8da0c91eac08b05a813a37b052d0af58d54d58d15322edf2911ddf0a511",
+      "sanitized": false
+    },
+    "summary.json": {
+      "source_sha256": "110cd86b9cad903f22126b216d03895c69372f43547be646e31a174199a509c6",
+      "public_sha256": "110cd86b9cad903f22126b216d03895c69372f43547be646e31a174199a509c6",
+      "sanitized": false
+    },
+    "training/config.yaml": {
+      "source_sha256": "32cff49462a68e99f1a320a590b6bc946d1267db811184e586b846e704bb2734",
+      "public_sha256": "32cff49462a68e99f1a320a590b6bc946d1267db811184e586b846e704bb2734",
+      "sanitized": false
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-20",
+  "node": "H20-04",
+  "gpu_count": 8,
+  "container_image_digest": "sha256:c63e3ff7e9af85be5576a772aecc51bb4d3fe40296c5b2c19fca808d725c6b48",
+  "python": "3.12.3",
+  "torch_build_cuda": "12.8",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "accelerate": "1.13.0",
+    "flash-attn": "2.8.3",
+    "liger-kernel": "0.7.0",
+    "physical-ai-av": "0.2.2",
+    "nvidia-nccl-cu12": "2.27.3",
+    "nvidia-cuda-runtime-cu12": "12.8.90",
+    "omegaconf": "2.3.0",
+    "hydra-core": "1.3.2",
+    "deepspeed": "0.18.9"
+  },
+  "nsight_systems": "2025.3.2",
+  "source_environment_sha256": "34f584154676e6f4a92c078121a7d55fc97496d7ec7d140a46d50330aad28fd2",
+  "version_query": "Python importlib.metadata inside task container; torch/version.py read via ast, no torch import or GPU execution",
+  "default_optimizer": "Transformers 4.57.1 selects adamw_torch_fused for Torch >= 2.8; explicit fused is not credited as a new optimization",
+  "additional_repository_revisions": {
+    "captured_utc": "2026-10-20T09:33:44.923687+00:00",
+    "repositories": {
+      "/work/inference": {
+        "head": "f3198c2f6158e1158ae8cb4fc7d7716bd25085bb",
+        "tracked_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "/work/inference-old": {
+        "head": "4b96c546ce3416e7b1e4d86e7649662852c3c1ac",
+        "tracked_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "capture_note": "Read-only post-run metadata observation. Per-run manifests retain actual runtime module origins; these additional repository revisions were not retroactively inserted into their startup manifests."
+  }
+}

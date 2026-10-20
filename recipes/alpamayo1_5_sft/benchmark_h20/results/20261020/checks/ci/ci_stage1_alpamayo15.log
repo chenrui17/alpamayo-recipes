@@ -1,0 +1,32 @@
+........                                                                 [100%]
+=============================== warnings summary ===============================
+../../opt/venv/lib/python3.12/site-packages/torchao/dtypes/floatx/__init__.py:5
+  /opt/venv/lib/python3.12/site-packages/torchao/dtypes/floatx/__init__.py:5: DeprecationWarning: Importing from torchao.dtypes.floatx.floatx_tensor_core_layout is deprecated. Please use 'from torchao.prototype.dtypes.floatx.floatx_tensor_core_layout import ...' instead. This import path will be removed in a future torchao release. Please check issue: https://github.com/pytorch/ao/issues/2752 for more details. 
+    from .floatx_tensor_core_layout import (
+
+../../opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:1
+  /opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:1: DeprecationWarning: Importing from torchao.dtypes.uintx.dyn_int8_act_int4_wei_cpu_layout is deprecated. Please use 'from torchao.prototype.dtypes import Int8DynamicActInt4WeightCPULayout' instead. This import path will be removed in a future release of torchao. See https://github.com/pytorch/ao/issues/2752 for more details.
+    from .dyn_int8_act_int4_wei_cpu_layout import (
+
+../../opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:10
+  /opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:10: DeprecationWarning: Importing from torchao.dtypes.uintx.marlin_qqq_tensor is deprecated. Please use 'from torchao.prototype.dtypes import MarlinQQQLayout, MarlinQQQTensor' instead. This import path will be removed in a future release of torchao. See https://github.com/pytorch/ao/issues/2752 for more details.
+    from .marlin_qqq_tensor import (
+
+../../opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:30
+  /opt/venv/lib/python3.12/site-packages/torchao/dtypes/uintx/__init__.py:30: DeprecationWarning: Importing from torchao.dtypes.uintx.uintx_layout is deprecated. Please use 'from torchao.prototype.dtypes import UintxLayout, UintxTensor' instead. This import path will be removed in a future release of torchao. See https://github.com/pytorch/ao/issues/2752 for more details.
+    from .uintx_layout import (
+
+../../opt/venv/lib/python3.12/site-packages/torchao/dtypes/__init__.py:25
+  /opt/venv/lib/python3.12/site-packages/torchao/dtypes/__init__.py:25: DeprecationWarning: Importing BlockSparseLayout from torchao.dtypes is deprecated. Please use 'from torchao.prototype.dtypes import BlockSparseLayout' instead. This import path will be removed in a future torchao release. Please check issue: https://github.com/pytorch/ao/issues/2752 for more details. 
+    from .uintx.block_sparse_layout import BlockSparseLayout
+
+../../opt/venv/lib/python3.12/site-packages/torchao/dtypes/__init__.py:26
+  /opt/venv/lib/python3.12/site-packages/torchao/dtypes/__init__.py:26: DeprecationWarning: Importing from torchao.dtypes is deprecated. Please use 'from torchao.prototype.dtypes import CutlassInt4PackedLayout' instead. This import path will be removed in a future torchao release. Please check issue: https://github.com/pytorch/ao/issues/2752 for more details. 
+    from .uintx.cutlass_int4_packed_layout import CutlassInt4PackedLayout
+
+../../opt/venv/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2511
+  /opt/venv/lib/python3.12/site-packages/torchao/quantization/quant_api.py:2511: SyntaxWarning: invalid escape sequence '\.'
+    """Configuration class for applying different quantization configs to modules or parameters based on their fully qualified names (FQNs).
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+8 passed, 7 warnings in 9.25s

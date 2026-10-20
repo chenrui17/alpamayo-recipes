@@ -1,0 +1,2547 @@
+{
+  "schema_version": 1,
+  "run_id": "latest_combined_r1",
+  "mode": "timing",
+  "complete": true,
+  "world_size": 8,
+  "expected_max_steps": 20,
+  "steady_start_step": 5,
+  "steady_end_step": 20,
+  "first_interval_excluded": true,
+  "measurement": "CUDA-synchronized optimizer-step-end wall intervals; rank maximum per step",
+  "global_samples_per_step": 8.0,
+  "global_tokens_per_step": null,
+  "profile_window": null,
+  "ranks": [
+    {
+      "rank": 0,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.07265697466209531,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557212160,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.08065843023359776,
+          "step_seconds": 0.7559590032324195,
+          "max_memory_allocated_bytes": 40595687424,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.0808202801272273,
+          "step_seconds": 0.7541581359691918,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.08086872519925237,
+          "step_seconds": 0.7502893880009651,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08045177115127444,
+          "step_seconds": 0.7494227648712695,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.0808196128346026,
+          "step_seconds": 0.7515815789811313,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.0806085653603077,
+          "step_seconds": 0.7520615812391043,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.08079540403559804,
+          "step_seconds": 0.7485930267721415,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08081940468400717,
+          "step_seconds": 0.7505817408673465,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08080913871526718,
+          "step_seconds": 0.7518451539799571,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.08058331813663244,
+          "step_seconds": 0.7503363532014191,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08091918705031276,
+          "step_seconds": 0.7470477242022753,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08088165009394288,
+          "step_seconds": 0.7496561068110168,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.0808982397429645,
+          "step_seconds": 0.7506368388421834,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08054654998704791,
+          "step_seconds": 0.7517533879727125,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.08077794825658202,
+          "step_seconds": 0.7479293062351644,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.08087359834462404,
+          "step_seconds": 0.7491925461217761,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.08083441108465195,
+          "step_seconds": 0.7500120927579701,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08080216636881232,
+          "step_seconds": 0.7506108372472227,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.08064344897866249,
+          "step_seconds": 0.7521652146242559,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1521,
+          "train_samples_per_second": 7.94,
+          "train_steps_per_second": 0.992,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596301824,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    },
+    {
+      "rank": 1,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.07092890096828341,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557144576,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.0803768360055983,
+          "step_seconds": 0.7562582269310951,
+          "max_memory_allocated_bytes": 40595646464,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.08080163085833192,
+          "step_seconds": 0.7524461876600981,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.08076689206063747,
+          "step_seconds": 0.7512275823391974,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08044084394350648,
+          "step_seconds": 0.7532264296896756,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.08042098069563508,
+          "step_seconds": 0.748558069113642,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.08066979888826609,
+          "step_seconds": 0.7518193610012531,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.08066791202872992,
+          "step_seconds": 0.7492063799872994,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08029641257598996,
+          "step_seconds": 0.7523633618839085,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08063275692984462,
+          "step_seconds": 0.7498727962374687,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.08070890884846449,
+          "step_seconds": 0.748924464918673,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08073470508679748,
+          "step_seconds": 0.7488813111558557,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08040893217548728,
+          "step_seconds": 0.7501095728948712,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.08058997616171837,
+          "step_seconds": 0.750237719155848,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08076584991067648,
+          "step_seconds": 0.7494680499657989,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.08066794415935874,
+          "step_seconds": 0.7491146568208933,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.08054437302052975,
+          "step_seconds": 0.7508640601299703,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.08038682816550136,
+          "step_seconds": 0.7499205148778856,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08072458300739527,
+          "step_seconds": 0.749187296256423,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.08065521717071533,
+          "step_seconds": 0.7503134799189866,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1499,
+          "train_samples_per_second": 7.94,
+          "train_steps_per_second": 0.993,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596170752,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    },
+    {
+      "rank": 2,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.07266639219596982,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557212160,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.08080997504293919,
+          "step_seconds": 0.7531615840271115,
+          "max_memory_allocated_bytes": 40595687424,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.08096947986632586,
+          "step_seconds": 0.7534011197276413,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.08092804998159409,
+          "step_seconds": 0.7511172192171216,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08091663243249059,
+          "step_seconds": 0.7501436402089894,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.08092184690758586,
+          "step_seconds": 0.7517412547022104,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.08073123218491673,
+          "step_seconds": 0.7509618862532079,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.08089678175747395,
+          "step_seconds": 0.7489529117010534,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08102916367352009,
+          "step_seconds": 0.750998395960778,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08084808941930532,
+          "step_seconds": 0.7513295453973114,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.0808666842058301,
+          "step_seconds": 0.7494246428832412,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08089782111346722,
+          "step_seconds": 0.7484907577745616,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08091915678232908,
+          "step_seconds": 0.7501078979112208,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.0808079931885004,
+          "step_seconds": 0.751137682236731,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08079017326235771,
+          "step_seconds": 0.7496213871054351,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.08094869880005717,
+          "step_seconds": 0.7493581506423652,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.08099164394661784,
+          "step_seconds": 0.7492366610094905,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.08086255099624395,
+          "step_seconds": 0.7487708562985063,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08090843493118882,
+          "step_seconds": 0.7516018627211452,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.08099520159885287,
+          "step_seconds": 0.7485128729604185,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1567,
+          "train_samples_per_second": 7.938,
+          "train_steps_per_second": 0.992,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596211712,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    },
+    {
+      "rank": 3,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.07182054966688156,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557212160,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.08078839397057891,
+          "step_seconds": 0.754423432983458,
+          "max_memory_allocated_bytes": 40595687424,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.08075173106044531,
+          "step_seconds": 0.7525975103490055,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.0807804437354207,
+          "step_seconds": 0.7508378736674786,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08081733481958508,
+          "step_seconds": 0.7503209360875189,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.08073335373774171,
+          "step_seconds": 0.7516584838740528,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.08078893087804317,
+          "step_seconds": 0.7508856579661369,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.08082395605742931,
+          "step_seconds": 0.749136308208108,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08070162497460842,
+          "step_seconds": 0.750950621906668,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08083534380421042,
+          "step_seconds": 0.7519414038397372,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.08078848710283637,
+          "step_seconds": 0.7494148383848369,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08072437299415469,
+          "step_seconds": 0.7478572628460824,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08072234084829688,
+          "step_seconds": 0.7500648819841444,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.08087294222787023,
+          "step_seconds": 0.7506238580681384,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08076113695278764,
+          "step_seconds": 0.751339822076261,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.08072493271902204,
+          "step_seconds": 0.7478341488167644,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.08084624819457531,
+          "step_seconds": 0.7495766840875149,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.080771722830832,
+          "step_seconds": 0.748727953992784,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08088908577337861,
+          "step_seconds": 0.7517268927767873,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.08074157312512398,
+          "step_seconds": 0.7494893311522901,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1537,
+          "train_samples_per_second": 7.939,
+          "train_steps_per_second": 0.992,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596211712,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    },
+    {
+      "rank": 4,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.0722536719404161,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557144576,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.08067944878712296,
+          "step_seconds": 0.767380615696311,
+          "max_memory_allocated_bytes": 40595646464,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.08079119306057692,
+          "step_seconds": 0.7507027690298855,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.08076669694855809,
+          "step_seconds": 0.7528968891128898,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08045265125110745,
+          "step_seconds": 0.7517174142412841,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.08065898390486836,
+          "step_seconds": 0.7497733156196773,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.08058203896507621,
+          "step_seconds": 0.7495804959908128,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.0809192219749093,
+          "step_seconds": 0.7511042593978345,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08051959611475468,
+          "step_seconds": 0.7503314618952572,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08073130901902914,
+          "step_seconds": 0.7524519390426576,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.08084642700850964,
+          "step_seconds": 0.7474868237040937,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08089457591995597,
+          "step_seconds": 0.7492088661529124,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08059096708893776,
+          "step_seconds": 0.7500953329727054,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.08063409198075533,
+          "step_seconds": 0.7502510319463909,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08086381899192929,
+          "step_seconds": 0.7492433562874794,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.08087296411395073,
+          "step_seconds": 0.7483278498984873,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.0808771881274879,
+          "step_seconds": 0.7502430928871036,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.080661048181355,
+          "step_seconds": 0.7504089050926268,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08067949814721942,
+          "step_seconds": 0.7506282799877226,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.08088852185755968,
+          "step_seconds": 0.748804812785238,
+          "max_memory_allocated_bytes": 40596260864,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1506,
+          "train_samples_per_second": 7.94,
+          "train_steps_per_second": 0.993,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596260864,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    },
+    {
+      "rank": 5,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.07260024826973677,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557144576,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.08081916673108935,
+          "step_seconds": 0.7569782696664333,
+          "max_memory_allocated_bytes": 40595646464,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.08086743531748652,
+          "step_seconds": 0.7532615154050291,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.08099396387115121,
+          "step_seconds": 0.7513182605616748,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08088042633607984,
+          "step_seconds": 0.750026167370379,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.08081662701442838,
+          "step_seconds": 0.7516887066885829,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.08069721609354019,
+          "step_seconds": 0.7508093942888081,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.08087236993014812,
+          "step_seconds": 0.7498044618405402,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08093614969402552,
+          "step_seconds": 0.7503405688330531,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08085293369367719,
+          "step_seconds": 0.7513623270206153,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.08079049596562982,
+          "step_seconds": 0.7500967630185187,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08084263699129224,
+          "step_seconds": 0.7476110570132732,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08080464182421565,
+          "step_seconds": 0.750382365193218,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.08086769795045257,
+          "step_seconds": 0.7503002369776368,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08074208488687873,
+          "step_seconds": 0.7499837768264115,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.08065162412822247,
+          "step_seconds": 0.7495319973677397,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.08077975828200579,
+          "step_seconds": 0.7496344898827374,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.08087682817131281,
+          "step_seconds": 0.7484981999732554,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08082058699801564,
+          "step_seconds": 0.7518421849235892,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.0807359041646123,
+          "step_seconds": 0.7492162771522999,
+          "max_memory_allocated_bytes": 40596170752,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1541,
+          "train_samples_per_second": 7.939,
+          "train_steps_per_second": 0.992,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596170752,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    },
+    {
+      "rank": 6,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.07260210067033768,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557212160,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.08082887204363942,
+          "step_seconds": 0.7553518083877861,
+          "max_memory_allocated_bytes": 40595687424,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.08088131388649344,
+          "step_seconds": 0.7532230857759714,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.08083677385002375,
+          "step_seconds": 0.7509614550508559,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08083266811445355,
+          "step_seconds": 0.7504252148792148,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.07966698706150055,
+          "step_seconds": 0.7512495359405875,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.08080129511654377,
+          "step_seconds": 0.7512747752480209,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.08082572324201465,
+          "step_seconds": 0.7490107319317758,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08089559618383646,
+          "step_seconds": 0.7510616751387715,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08080684393644333,
+          "step_seconds": 0.7510022069327533,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.0807837606407702,
+          "step_seconds": 0.7498881206847727,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08080371702089906,
+          "step_seconds": 0.747612476348877,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08084960980340838,
+          "step_seconds": 0.7506548026576638,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.08080595219507813,
+          "step_seconds": 0.7511303871870041,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08082635700702667,
+          "step_seconds": 0.7490116651169956,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.0806581461802125,
+          "step_seconds": 0.7491526319645345,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.08080577524378896,
+          "step_seconds": 0.7494082939811051,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.0807520467787981,
+          "step_seconds": 0.7503252527676523,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08084618207067251,
+          "step_seconds": 0.750818770378828,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.08076826529577374,
+          "step_seconds": 0.7483361619524658,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1539,
+          "train_samples_per_second": 7.939,
+          "train_steps_per_second": 0.992,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596301824,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    },
+    {
+      "rank": 7,
+      "global_step": 20,
+      "records": [
+        {
+          "step": 1,
+          "sync_seconds": 0.07261930033564568,
+          "step_seconds": null,
+          "max_memory_allocated_bytes": 40557212160,
+          "max_memory_reserved_bytes": 41584427008
+        },
+        {
+          "step": 2,
+          "sync_seconds": 0.0807098769582808,
+          "step_seconds": 0.7720757597126067,
+          "max_memory_allocated_bytes": 40595687424,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 3,
+          "sync_seconds": 0.08049413282424212,
+          "step_seconds": 0.7534878239966929,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 4,
+          "sync_seconds": 0.08089148672297597,
+          "step_seconds": 0.750590228009969,
+          "max_memory_allocated_bytes": 40596211712,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 5,
+          "sync_seconds": 0.08085554139688611,
+          "step_seconds": 0.7505667442455888,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 6,
+          "sync_seconds": 0.08041095593944192,
+          "step_seconds": 0.7518716319464147,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 7,
+          "sync_seconds": 0.08073935890570283,
+          "step_seconds": 0.7509554899297655,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 8,
+          "sync_seconds": 0.08078709430992603,
+          "step_seconds": 0.7486055460758507,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 9,
+          "sync_seconds": 0.08109961310401559,
+          "step_seconds": 0.7520240400917828,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 10,
+          "sync_seconds": 0.08082498703151941,
+          "step_seconds": 0.7501458586193621,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 11,
+          "sync_seconds": 0.0809510457329452,
+          "step_seconds": 0.7496381630189717,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 12,
+          "sync_seconds": 0.08067446621134877,
+          "step_seconds": 0.7475576652213931,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 13,
+          "sync_seconds": 0.08054709667339921,
+          "step_seconds": 0.7514364467933774,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 14,
+          "sync_seconds": 0.08070235094055533,
+          "step_seconds": 0.7500924509949982,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 15,
+          "sync_seconds": 0.08087952435016632,
+          "step_seconds": 0.7492780983448029,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 16,
+          "sync_seconds": 0.08090370008721948,
+          "step_seconds": 0.7495406488887966,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 17,
+          "sync_seconds": 0.08068584278225899,
+          "step_seconds": 0.749337347690016,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 18,
+          "sync_seconds": 0.08078387985005975,
+          "step_seconds": 0.7499283012002707,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 19,
+          "sync_seconds": 0.08067552465945482,
+          "step_seconds": 0.7512781987898052,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        },
+        {
+          "step": 20,
+          "sync_seconds": 0.08088235789909959,
+          "step_seconds": 0.7481731763109565,
+          "max_memory_allocated_bytes": 40596301824,
+          "max_memory_reserved_bytes": 41869639680
+        }
+      ],
+      "logs": [
+        {
+          "loss": 0.5612,
+          "grad_norm": 0.94140625,
+          "learning_rate": 1.0000000000000002e-06,
+          "epoch": 0.05,
+          "step": 1
+        },
+        {
+          "loss": 1.7258,
+          "grad_norm": 7.5625,
+          "learning_rate": 2.0000000000000003e-06,
+          "epoch": 0.1,
+          "step": 2
+        },
+        {
+          "loss": 0.7522,
+          "grad_norm": 1.7890625,
+          "learning_rate": 3e-06,
+          "epoch": 0.15,
+          "step": 3
+        },
+        {
+          "loss": 0.6914,
+          "grad_norm": 1.171875,
+          "learning_rate": 4.000000000000001e-06,
+          "epoch": 0.2,
+          "step": 4
+        },
+        {
+          "loss": 0.7159,
+          "grad_norm": 1.140625,
+          "learning_rate": 5e-06,
+          "epoch": 0.25,
+          "step": 5
+        },
+        {
+          "loss": 0.8125,
+          "grad_norm": 1.75,
+          "learning_rate": 6e-06,
+          "epoch": 0.3,
+          "step": 6
+        },
+        {
+          "loss": 0.6996,
+          "grad_norm": 1.59375,
+          "learning_rate": 7.000000000000001e-06,
+          "epoch": 0.35,
+          "step": 7
+        },
+        {
+          "loss": 1.0178,
+          "grad_norm": 1.8515625,
+          "learning_rate": 8.000000000000001e-06,
+          "epoch": 0.4,
+          "step": 8
+        },
+        {
+          "loss": 0.7845,
+          "grad_norm": 1.59375,
+          "learning_rate": 9e-06,
+          "epoch": 0.45,
+          "step": 9
+        },
+        {
+          "loss": 0.7536,
+          "grad_norm": 1.5,
+          "learning_rate": 1e-05,
+          "epoch": 0.5,
+          "step": 10
+        },
+        {
+          "loss": 1.2233,
+          "grad_norm": 2.359375,
+          "learning_rate": 1.1000000000000001e-05,
+          "epoch": 0.55,
+          "step": 11
+        },
+        {
+          "loss": 0.7548,
+          "grad_norm": 0.9921875,
+          "learning_rate": 1.2e-05,
+          "epoch": 0.6,
+          "step": 12
+        },
+        {
+          "loss": 0.6031,
+          "grad_norm": 1.78125,
+          "learning_rate": 1.3000000000000001e-05,
+          "epoch": 0.65,
+          "step": 13
+        },
+        {
+          "loss": 1.1877,
+          "grad_norm": 1.9140625,
+          "learning_rate": 1.4000000000000001e-05,
+          "epoch": 0.7,
+          "step": 14
+        },
+        {
+          "loss": 0.6072,
+          "grad_norm": 1.3671875,
+          "learning_rate": 1.5e-05,
+          "epoch": 0.75,
+          "step": 15
+        },
+        {
+          "loss": 1.0163,
+          "grad_norm": 2.40625,
+          "learning_rate": 1.6000000000000003e-05,
+          "epoch": 0.8,
+          "step": 16
+        },
+        {
+          "loss": 0.4746,
+          "grad_norm": 1.0625,
+          "learning_rate": 1.7000000000000003e-05,
+          "epoch": 0.85,
+          "step": 17
+        },
+        {
+          "loss": 1.0976,
+          "grad_norm": 2.0625,
+          "learning_rate": 1.8e-05,
+          "epoch": 0.9,
+          "step": 18
+        },
+        {
+          "loss": 1.295,
+          "grad_norm": 1.65625,
+          "learning_rate": 1.9e-05,
+          "epoch": 0.95,
+          "step": 19
+        },
+        {
+          "loss": 0.6916,
+          "grad_norm": 1.0234375,
+          "learning_rate": 2e-05,
+          "epoch": 1.0,
+          "step": 20
+        },
+        {
+          "train_runtime": 20.1506,
+          "train_samples_per_second": 7.94,
+          "train_steps_per_second": 0.993,
+          "total_flos": 0.0,
+          "train_loss": 0.8732868373394013,
+          "epoch": 1.0,
+          "step": 20
+        }
+      ],
+      "max_memory_allocated_bytes": 40596301824,
+      "max_memory_reserved_bytes": 41869639680,
+      "capture_started_at_step": null,
+      "capture_stopped_at_step": null
+    }
+  ],
+  "rank_max_records": [
+    {
+      "step": 1,
+      "step_seconds": null,
+      "slowest_rank": null,
+      "max_sync_seconds": 0.07266639219596982
+    },
+    {
+      "step": 2,
+      "step_seconds": 0.7720757597126067,
+      "slowest_rank": 7,
+      "max_sync_seconds": 0.08082887204363942
+    },
+    {
+      "step": 3,
+      "step_seconds": 0.7541581359691918,
+      "slowest_rank": 0,
+      "max_sync_seconds": 0.08096947986632586
+    },
+    {
+      "step": 4,
+      "step_seconds": 0.7528968891128898,
+      "slowest_rank": 4,
+      "max_sync_seconds": 0.08099396387115121
+    },
+    {
+      "step": 5,
+      "step_seconds": 0.7532264296896756,
+      "slowest_rank": 1,
+      "max_sync_seconds": 0.08091663243249059
+    },
+    {
+      "step": 6,
+      "step_seconds": 0.7518716319464147,
+      "slowest_rank": 7,
+      "max_sync_seconds": 0.08092184690758586
+    },
+    {
+      "step": 7,
+      "step_seconds": 0.7520615812391043,
+      "slowest_rank": 0,
+      "max_sync_seconds": 0.08080129511654377
+    },
+    {
+      "step": 8,
+      "step_seconds": 0.7511042593978345,
+      "slowest_rank": 4,
+      "max_sync_seconds": 0.0809192219749093
+    },
+    {
+      "step": 9,
+      "step_seconds": 0.7523633618839085,
+      "slowest_rank": 1,
+      "max_sync_seconds": 0.08109961310401559
+    },
+    {
+      "step": 10,
+      "step_seconds": 0.7524519390426576,
+      "slowest_rank": 4,
+      "max_sync_seconds": 0.08085293369367719
+    },
+    {
+      "step": 11,
+      "step_seconds": 0.7503363532014191,
+      "slowest_rank": 0,
+      "max_sync_seconds": 0.0809510457329452
+    },
+    {
+      "step": 12,
+      "step_seconds": 0.7492088661529124,
+      "slowest_rank": 4,
+      "max_sync_seconds": 0.08091918705031276
+    },
+    {
+      "step": 13,
+      "step_seconds": 0.7514364467933774,
+      "slowest_rank": 7,
+      "max_sync_seconds": 0.08091915678232908
+    },
+    {
+      "step": 14,
+      "step_seconds": 0.751137682236731,
+      "slowest_rank": 2,
+      "max_sync_seconds": 0.0808982397429645
+    },
+    {
+      "step": 15,
+      "step_seconds": 0.7517533879727125,
+      "slowest_rank": 0,
+      "max_sync_seconds": 0.08087952435016632
+    },
+    {
+      "step": 16,
+      "step_seconds": 0.7495406488887966,
+      "slowest_rank": 7,
+      "max_sync_seconds": 0.08094869880005717
+    },
+    {
+      "step": 17,
+      "step_seconds": 0.7508640601299703,
+      "slowest_rank": 1,
+      "max_sync_seconds": 0.08099164394661784
+    },
+    {
+      "step": 18,
+      "step_seconds": 0.7504089050926268,
+      "slowest_rank": 4,
+      "max_sync_seconds": 0.08087682817131281
+    },
+    {
+      "step": 19,
+      "step_seconds": 0.7518421849235892,
+      "slowest_rank": 5,
+      "max_sync_seconds": 0.08090843493118882
+    },
+    {
+      "step": 20,
+      "step_seconds": 0.7521652146242559,
+      "slowest_rank": 0,
+      "max_sync_seconds": 0.08099520159885287
+    }
+  ]
+}

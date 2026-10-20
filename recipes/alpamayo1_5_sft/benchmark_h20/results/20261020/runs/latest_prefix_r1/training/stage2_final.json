@@ -1,0 +1,23 @@
+{
+  "trajectory_cache": {
+    "enabled": false,
+    "runtime_enabled": false,
+    "patched": false,
+    "patched_instance_count": 0,
+    "instances": []
+  },
+  "vlm_prefix": {
+    "requested": true,
+    "applied": true,
+    "tokens_before": 3213,
+    "tokens_after": 3082,
+    "trimmed_tokens": 131,
+    "fallback_reason": null
+  },
+  "vlm_prefix_totals": {
+    "calls": 20,
+    "applied_calls": 20,
+    "trimmed_tokens": 2620,
+    "fallbacks": {}
+  }
+}

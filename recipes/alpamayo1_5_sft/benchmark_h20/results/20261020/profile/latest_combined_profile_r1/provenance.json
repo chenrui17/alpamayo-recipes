@@ -1,0 +1,255 @@
+{
+  "run_id": "latest_combined_profile_r1",
+  "mode": "profile",
+  "status": "complete",
+  "source_commit": "2e907dab31e5353f42b2c8a2f79d7e39b6e0d42c",
+  "source_patch_sha256": "456df9a0da8110393b1db5f7685861b34b343f763e26e479a066f5f4b66e4d13",
+  "capture_validation": {
+    "valid": true,
+    "requested_steps": [
+      5,
+      8
+    ],
+    "expected_rank_processes": 8,
+    "observed_rank_processes": 8,
+    "processes": [
+      {
+        "process_key": "16808507",
+        "pid": 31291,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16808508",
+        "pid": 31292,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16808509",
+        "pid": 31293,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16808510",
+        "pid": 31294,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16808511",
+        "pid": 31295,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16808512",
+        "pid": 31296,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16808513",
+        "pid": 31297,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      },
+      {
+        "process_key": "16808514",
+        "pid": 31298,
+        "rank": null,
+        "observed_steps": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_steps": [],
+        "unexpected_steps": [],
+        "duplicate_steps": [],
+        "open_or_invalid_steps": [],
+        "valid": true
+      }
+    ],
+    "step_processes_without_gpu_kernels": [],
+    "steps_without_gpu_kernels": [],
+    "export_event_bounds_ns": [
+      79634742,
+      5295372288
+    ],
+    "selected_window_union_ns": 3198561514,
+    "clipped_kernel_count": 2
+  },
+  "omitted_large_artifacts": [
+    "nsight.nsys-rep",
+    "nsight.sqlite"
+  ],
+  "files": {
+    "analysis.json": {
+      "source_sha256": "7fa6eb34bbc693b0c51b14985acb3ba37dc4447a048884a8c6d256575c7eeb43",
+      "public_sha256": "7fa6eb34bbc693b0c51b14985acb3ba37dc4447a048884a8c6d256575c7eeb43",
+      "sanitized": false
+    },
+    "analysis_csv/cuda_api.csv": {
+      "source_sha256": "b8a240cba58a74c2dbd22be162a15b3f9297c47688f855b6d46c58609228b713",
+      "public_sha256": "b8a240cba58a74c2dbd22be162a15b3f9297c47688f855b6d46c58609228b713",
+      "sanitized": false
+    },
+    "analysis_csv/cuda_api_category_unions.csv": {
+      "source_sha256": "b73a8a98c8050c5a5d1e0865b306ab362c004d5644e63c1db54de08de0eb40cd",
+      "public_sha256": "b73a8a98c8050c5a5d1e0865b306ab362c004d5644e63c1db54de08de0eb40cd",
+      "sanitized": false
+    },
+    "analysis_csv/devices.csv": {
+      "source_sha256": "d37e8d530ae9a22d6adc04b47eefca0c395569d3bdedda42a6e4ac8e11dfaebe",
+      "public_sha256": "d37e8d530ae9a22d6adc04b47eefca0c395569d3bdedda42a6e4ac8e11dfaebe",
+      "sanitized": false
+    },
+    "analysis_csv/interstep_gaps.csv": {
+      "source_sha256": "32f0f1e4a48f5cd691992719de2e992cfec4c69d8936094f89fd5c821def8f0b",
+      "public_sha256": "32f0f1e4a48f5cd691992719de2e992cfec4c69d8936094f89fd5c821def8f0b",
+      "sanitized": false
+    },
+    "analysis_csv/kernels_by_device_group.csv": {
+      "source_sha256": "f4c39d32cfbeae7547cfd82e828a76c061f0cc73fbe6411601eb1da6e266db85",
+      "public_sha256": "f4c39d32cfbeae7547cfd82e828a76c061f0cc73fbe6411601eb1da6e266db85",
+      "sanitized": false
+    },
+    "analysis_csv/kernels_by_device_phase.csv": {
+      "source_sha256": "75af17fc71f6ad2f4728c9ca1b2df70d3f06c8559dffb6d52950766740e7d8ee",
+      "public_sha256": "75af17fc71f6ad2f4728c9ca1b2df70d3f06c8559dffb6d52950766740e7d8ee",
+      "sanitized": false
+    },
+    "analysis_csv/nvtx_phases.csv": {
+      "source_sha256": "405e4b85128c3581568ad6cba6132b2fade0eeb95b628fe27713069cdab816e2",
+      "public_sha256": "405e4b85128c3581568ad6cba6132b2fade0eeb95b628fe27713069cdab816e2",
+      "sanitized": false
+    },
+    "analysis_csv/optimizer_steps.csv": {
+      "source_sha256": "494d1256a5071a5dfdf4592487e05efb3bee1c8a67b1479f0ff33e9b78691546",
+      "public_sha256": "494d1256a5071a5dfdf4592487e05efb3bee1c8a67b1479f0ff33e9b78691546",
+      "sanitized": false
+    },
+    "analysis_csv/osrt_wait_calls.csv": {
+      "source_sha256": "bf5520f8367456fc7e919933c5eb974d42cf8d3587c2a2fb83ba58708047ff04",
+      "public_sha256": "bf5520f8367456fc7e919933c5eb974d42cf8d3587c2a2fb83ba58708047ff04",
+      "sanitized": false
+    },
+    "analysis_csv/top_kernels.csv": {
+      "source_sha256": "438f297ced53ef5e3cd774481c8acbc99d610a3a533bd323c00642959d7f6e12",
+      "public_sha256": "438f297ced53ef5e3cd774481c8acbc99d610a3a533bd323c00642959d7f6e12",
+      "sanitized": false
+    },
+    "config.resolved.yaml": {
+      "source_sha256": "eedbb3594daeba922acefd484301f1a30aa3d6e0d3d77440e8fb94f572961bb2",
+      "public_sha256": "eedbb3594daeba922acefd484301f1a30aa3d6e0d3d77440e8fb94f572961bb2",
+      "sanitized": false
+    },
+    "manifest.json": {
+      "source_sha256": "f93010530c13b10616035239e024b29101bd38165d09ea745e66f9fb289e4732",
+      "public_sha256": "f93010530c13b10616035239e024b29101bd38165d09ea745e66f9fb289e4732",
+      "sanitized": false
+    },
+    "steps.json": {
+      "source_sha256": "206fde56587c304dd789de1428a139ca5ee217d4e47107f961bfcac87b28b438",
+      "public_sha256": "206fde56587c304dd789de1428a139ca5ee217d4e47107f961bfcac87b28b438",
+      "sanitized": false
+    },
+    "summary.json": {
+      "source_sha256": "3ff85c24adb04ebe5faa5e72a239ad49921417f6e3ceb2f3fbe3c6e4a3e2810d",
+      "public_sha256": "3ff85c24adb04ebe5faa5e72a239ad49921417f6e3ceb2f3fbe3c6e4a3e2810d",
+      "sanitized": false
+    },
+    "training/config.yaml": {
+      "source_sha256": "9198431de728ad19b3f405d30057a1d1456d77eeca5128d914b41b324daf3c1b",
+      "public_sha256": "9198431de728ad19b3f405d30057a1d1456d77eeca5128d914b41b324daf3c1b",
+      "sanitized": false
+    },
+    "training/stage2_data.json": {
+      "source_sha256": "735b05c021824f7a8a7b5ff74abc9774344599454d827da8c5e6b8225f478c82",
+      "public_sha256": "735b05c021824f7a8a7b5ff74abc9774344599454d827da8c5e6b8225f478c82",
+      "sanitized": false
+    },
+    "training/stage2_final.json": {
+      "source_sha256": "15e2b8308ad02a009d4c7447b0a0d23f723dd42422ebf7dd796846fe036f695a",
+      "public_sha256": "15e2b8308ad02a009d4c7447b0a0d23f723dd42422ebf7dd796846fe036f695a",
+      "sanitized": false
+    },
+    "training/stage2_runtime.json": {
+      "source_sha256": "da1bb48ac9833cec9cd5476f3ed2e0e71eee2243f9c8cd303ca1221d434a51be",
+      "public_sha256": "da1bb48ac9833cec9cd5476f3ed2e0e71eee2243f9c8cd303ca1221d434a51be",
+      "sanitized": false
+    }
+  }
+}

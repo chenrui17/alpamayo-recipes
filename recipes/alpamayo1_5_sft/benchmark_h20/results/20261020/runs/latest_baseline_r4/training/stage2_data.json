@@ -1,0 +1,17 @@
+{
+  "repeat_data": true,
+  "preload": false,
+  "drop_raw": false,
+  "requested": {
+    "repeat_data": true,
+    "preload": false,
+    "drop_raw": false
+  },
+  "unique_samples": 20,
+  "effective_samples": 160,
+  "repeat_factor": 8,
+  "preprocessing_seconds": 0.0,
+  "cache_tensor_bytes": 0,
+  "cache_estimated_bytes": 0,
+  "preload_max_bytes": null
+}
