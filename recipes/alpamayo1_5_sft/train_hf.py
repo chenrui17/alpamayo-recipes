@@ -14,6 +14,8 @@
 # limitations under the License.
 
 import os
+import json
+from pathlib import Path
 import hydra
 import hydra.utils as hyu
 import torch
@@ -32,6 +34,12 @@ from alpamayo1_5_sft.performance.apply_optimizations import (
 )
 from alpamayo1_5_sft.performance.collate_cache import collate_fn_from_model_config_cached
 from alpamayo1_5_sft.performance.perf_utils import perf_plain
+from alpamayo1_5_sft.performance.stage2_optimizations import apply_stage2_optimizations
+from alpamayo1_5_sft.performance.stage2_data import apply_stage2_training_data
+from alpamayo1_5_sft.performance.stage2_trajectory import (
+    apply_trajectory_factor_cache,
+    trajectory_factor_cache_stats,
+)
 
 from alpamayo.common import config_utils
 from alpamayo.common import wandb_utils
@@ -58,10 +66,32 @@ def train(cfg: DictConfig) -> None:
 
     model = hyu.instantiate(cfg.model, _convert_="partial")
     apply_model_optimizations(model, {"optimizations": perf})
+    stage2_applied = apply_stage2_optimizations(model)
+    stage2_applied["trajectory"] = apply_trajectory_factor_cache(model)
+    if os.environ.get("APPLY_NVTX", "0") == "1":
+        from alpamayo1_5_sft.benchmark_h20.nvtx import instrument_stage2
+
+        instrument_stage2(model)
+    if int(os.environ.get("RANK", "0")) == 0:
+        runtime_path = Path(cfg.paths.output_dir) / "stage2_runtime.json"
+        runtime_path.parent.mkdir(parents=True, exist_ok=True)
+        runtime_path.write_text(json.dumps({
+            "optimizations": stage2_applied,
+            "cuda_matmul_allow_tf32": torch.backends.cuda.matmul.allow_tf32,
+            "cudnn_allow_tf32": torch.backends.cudnn.allow_tf32,
+            "cudnn_benchmark": torch.backends.cudnn.benchmark,
+            "trainable_parameters": sum(p.numel() for p in model.parameters() if p.requires_grad),
+            "frozen_vlm": not any(p.requires_grad for p in model.vlm.parameters()),
+        }, indent=2) + "\n")
 
     train_dataset = hyu.instantiate(
         cfg.data.train_dataset, _convert_="partial", model_config=model.config
     )
+    train_dataset, stage2_data_report = apply_stage2_training_data(train_dataset)
+    if int(os.environ.get("RANK", "0")) == 0:
+        data_report_path = Path(cfg.paths.output_dir) / "stage2_data.json"
+        data_report_path.parent.mkdir(parents=True, exist_ok=True)
+        data_report_path.write_text(json.dumps(stage2_data_report, indent=2) + "\n")
     eval_dataset = hyu.instantiate(
         cfg.data.val_dataset, _convert_="partial", model_config=model.config
     )
@@ -105,6 +135,15 @@ def train(cfg: DictConfig) -> None:
         )
 
     trainer.train()
+    if trainer.is_world_process_zero():
+        final_runtime = {
+            "trajectory_cache": trajectory_factor_cache_stats(model),
+            "vlm_prefix": getattr(model, "_stage2_prefix_report", None),
+            "vlm_prefix_totals": getattr(model, "_stage2_prefix_totals", None),
+        }
+        (Path(cfg.paths.output_dir) / "stage2_final.json").write_text(
+            json.dumps(final_runtime, indent=2) + "\n"
+        )
     if torch.distributed.is_initialized():
         torch.distributed.destroy_process_group()
 

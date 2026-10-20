@@ -20,6 +20,8 @@ import einops
 import torch
 
 from alpamayo1_5_sft.models.sft_base_model import ReasoningVLAOutput, load_alpamayo1_vlm
+from alpamayo1_5_sft.performance.stage2_optimizations import stage2_flag
+from alpamayo1_5_sft.performance.stage2_prefix import maybe_trim_future_prefix
 from alpamayo_r1.models.base_model import IGNORE_INDEX
 from alpamayo_r1.models.alpamayo_r1 import AlpamayoR1
 from alpamayo_r1.config import AlpamayoR1Config
@@ -144,10 +146,34 @@ class TrainableAlpamayoR1(AlpamayoR1):
         }
         input_ids = self.fuse_traj_tokens(input_ids, traj_data)
 
-        # 2. get labels
-        labels = input_ids.clone()
-        if labels_mask is not None:
-            labels = torch.where(labels_mask, labels, IGNORE_INDEX)
+        # Stage 2 consumes only the frozen VLM's KV states. Its logits and CE are
+        # discarded, so optionally compute the head for just one token and no CE.
+        # Keep the original call unchanged for joint VLM training and by default.
+        skip_vlm_head = not self.cotrain_vlm and stage2_flag("APPLY_VLM_SKIP_HEAD")
+        labels = None
+        vlm_kwargs = {}
+        if skip_vlm_head:
+            vlm_kwargs["logits_to_keep"] = 1
+        else:
+            labels = input_ids.clone()
+            if labels_mask is not None:
+                labels = torch.where(labels_mask, labels, IGNORE_INDEX)
+
+        vlm_input_ids, vlm_inputs, prefix_report = maybe_trim_future_prefix(
+            self, input_ids, tokenized_data
+        )
+        self._stage2_prefix_report = prefix_report
+        if prefix_report["requested"]:
+            totals = getattr(self, "_stage2_prefix_totals", None)
+            if totals is None:
+                totals = {"calls": 0, "applied_calls": 0, "trimmed_tokens": 0, "fallbacks": {}}
+                self._stage2_prefix_totals = totals
+            totals["calls"] += 1
+            totals["applied_calls"] += int(prefix_report["applied"])
+            totals["trimmed_tokens"] += prefix_report["trimmed_tokens"]
+            if prefix_report["fallback_reason"]:
+                reason = prefix_report["fallback_reason"]
+                totals["fallbacks"][reason] = totals["fallbacks"].get(reason, 0) + 1
 
         # 3. vlm forward pass
         if self.cotrain_vlm:
@@ -157,15 +183,22 @@ class TrainableAlpamayoR1(AlpamayoR1):
 
         with context:
             vlm_outputs = self.vlm(
-                input_ids=input_ids,
+                input_ids=vlm_input_ids,
                 labels=labels,
                 use_cache=True,
-                **tokenized_data,
+                **vlm_kwargs,
+                **vlm_inputs,
             )
 
-        future_start_token_id = self.config.traj_token_ids["future_start"]
-        last_traj_future_start_idx = (input_ids == future_start_token_id).nonzero(as_tuple=False)
-        last_traj_future_start_idx = last_traj_future_start_idx[-1, 1] + 1
+        if prefix_report["applied"]:
+            # Already validated by the B=1 prefix helper before the VLM launch.
+            # Reuse its Python length: passing a CUDA scalar into every cache
+            # layer's crop causes repeated implicit device-to-host syncs.
+            last_traj_future_start_idx = prefix_report["tokens_after"]
+        else:
+            future_start_token_id = self.config.traj_token_ids["future_start"]
+            last_traj_future_start_idx = (input_ids == future_start_token_id).nonzero(as_tuple=False)
+            last_traj_future_start_idx = last_traj_future_start_idx[-1, 1] + 1
 
         future_traj_data = self._process_traj_future_training(traj_data)
         # [B, n_token_per_future_traj, hidden_size]
