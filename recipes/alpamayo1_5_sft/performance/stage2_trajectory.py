@@ -50,19 +50,10 @@ def _static_configuration(action_space: Any, role: str) -> tuple[Any, ...]:
     # Bounds/velocity/curvature settings do not enter either cached factor.
     # Hydra deliberately retains bounds as ListConfig in real HF checkpoints;
     # neither that container nor unrelated configuration should reject a valid
-    # theta/acceleration system. Affine metadata is conservative invalidation.
-    fields = []
-    for name in _FACTOR_ATTRIBUTES[role]:
-        value = getattr(action_space, name)
-        fields.append((name, value))
-    for name in ("accel_mean", "accel_std", "curvature_mean", "curvature_std"):
-        value = getattr(action_space, name)
-        try:
-            version = value._version
-        except RuntimeError:  # Inference-mode tensors have no version counter.
-            version = None
-        fields.append((name, id(value), version, str(value.dtype), str(value.device)))
-    return tuple(fields)
+    # theta/acceleration system. Output affine buffers also do not enter either
+    # matrix: DDP broadcasts them each forward, incrementing their versions even
+    # when their values are unchanged. Normalization reads the live buffers below.
+    return tuple((name, getattr(action_space, name)) for name in _FACTOR_ATTRIBUTES[role])
 
 
 def _cache_key(action_space: Any, role: str, y: Any, torch: Any) -> tuple[Any, ...]:

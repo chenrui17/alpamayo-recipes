@@ -227,6 +227,26 @@ class RealTrajectoryCacheTests(unittest.TestCase):
         self.assertEqual(stats["fallback_reasons"]["theta"], {reason: 1})
         self.assertEqual(stats["last_input"]["theta"]["eligibility_failure"], reason)
 
+    def test_output_buffer_broadcasts_preserve_hits_and_live_normalization(self):
+        torch = self.torch
+        original, cached = self._action(), self._action()
+        model = SimpleNamespace(action_space=cached)
+        self._apply(model)
+        inputs = self._inputs(speed=0.61, yaw_rate=0.8)
+        cached.traj_to_action(*inputs)
+        for step in range(3):
+            # DDP broadcasts mutate buffer versions on every forward. Also
+            # exercise changed output scaling: it must read the live buffers.
+            for name in ("accel_mean", "accel_std", "curvature_mean", "curvature_std"):
+                target = getattr(cached, name)
+                value = getattr(original, name) + (0.01 if step == 2 else 0.0)
+                getattr(original, name).copy_(value)
+                target.copy_(value)
+            torch.testing.assert_close(cached.traj_to_action(*inputs), original.traj_to_action(*inputs), rtol=1e-6, atol=1e-7)
+        stats = trajectory.trajectory_factor_cache_stats(model)["instances"][0]
+        self.assertEqual(stats["misses"], {"theta": 1, "accel": 1})
+        self.assertEqual(stats["hits"], {"theta": 3, "accel": 3})
+
     def test_amp_context_is_part_of_key_even_with_same_float32_input(self):
         torch = self.torch
         action = self._action()
