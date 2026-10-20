@@ -52,7 +52,7 @@ python -m alpamayo1_5_sft.benchmark_h20.run \
   --config-path pkg://alpamayo1_5_sft/configs \
   --config-name sft_stage2_nav \
   --nproc-per-node 8 --global-samples-per-step 8 \
-  --override model.checkpoint_path=/path/to/checkpoint \
+  --override model.pretrained_model_name_or_path=/path/to/checkpoint \
   --override data.train_dataset.local_dir=/path/to/pai \
   --override data.train_dataset.annotations_path=/path/to/navigation.json \
   --override data.val_dataset.local_dir=/path/to/pai \
@@ -68,8 +68,9 @@ runner does not choose optimization variants. It sets only max steps, logging
 frequency (default 1), output directories, and callback measurement settings.
 `--global-samples-per-step` must reflect microbatch × accumulation × world size.
 An optional `--global-tokens-per-step` must reflect the actual workload definition.
-Child environment overrides use repeated `--env NAME=VALUE`; override values are
-not written into the manifest. The resolved Hydra config itself is saved in full.
+Child environment overrides use repeated `--env NAME=VALUE`. The manifest records
+an allowlist of benchmark switches and runtime settings; other override values
+are omitted. The resolved Hydra config itself is saved in full.
 
 Each launch creates a fresh run directory and refuses an existing `--run-id`.
 Artifacts include the exact subprocess command, resolved Hydra configuration and
@@ -105,3 +106,31 @@ python -m unittest alpamayo1_5_sft.benchmark_h20.test_harness -v
 
 The contract tests use fake Torch/Trainer implementations and need no GPU,
 PyTorch, Transformers, Hydra, or Nsight installation.
+
+## Real-input checks
+
+In the training environment, run the numerical checker on an existing local
+checkpoint and one real navigation sample. It creates no optimizer and compares
+all trainable gradients against the same loaded baseline weights. Prefix and
+trajectory are isolated before Liger is patched; `combined` is checked last.
+Trajectory checks warm both fixed factors and require actual reuse in the
+measured forward. The report states explicit BF16 error tolerances.
+
+```bash
+python -m alpamayo1_5_sft.benchmark_h20.check_correctness \
+  --checkpoint "$CHECKPOINT" --data "$DATA" --annotations "$ANNOTATIONS" \
+  --chunk-ids "$CHUNK_IDS" --variants skiphead prefix trajectory liger combined \
+  --output /work/results/correctness-new.json
+
+python -m alpamayo1_5_sft.benchmark_h20.check_data \
+  --checkpoint "$CHECKPOINT" --data "$DATA" --annotations "$ANNOTATIONS" \
+  --chunk-ids "$CHUNK_IDS" --expected-unique-samples 20 \
+  --output /work/results/data-equivalence-new.json
+```
+
+The second command hides GPUs and loads configuration only. It compares all
+filtered real samples, ordinary/cached collation, exact model-input tensors,
+read determinism and cache-return isolation. It permits equivalent sequence
+metadata containers (Hydra ListConfig versus a plain list). CPU preload is
+appropriate only for deterministic preprocessing and has an explicit memory
+budget; it should not freeze random augmentation in a general training run.

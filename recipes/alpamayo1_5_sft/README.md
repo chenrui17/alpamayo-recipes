@@ -9,6 +9,10 @@ Alpamayo 1.5 extends Alpamayo 1 with two new capabilities trained as Stage-1 (VL
 
 Both tasks use the Stage-1 training entry point with different VLA processor configs and datasets. Navigation-conditioned trajectory fine-tuning can then continue into Stage 2 for the trajectory diffusion expert.
 
+For measured Stage-2 throughput on eight H20 GPUs, opt-in optimizations, numerical
+checks and steps 5–8 Nsight captures, see the [H20 benchmark report](benchmark_h20/H20_STAGE2_20261020.md)
+and [reproducible benchmark tools](benchmark_h20/README.md).
+
 ## Training Pipeline
 
 Training uses a two-stage pipeline for convergence and stability:

@@ -82,7 +82,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--global-samples-per-step", type=float)
     parser.add_argument("--global-tokens-per-step", type=float)
     parser.add_argument("--override", action="append", default=[], help="One exact Hydra override, repeatable")
-    parser.add_argument("--env", action="append", default=[], metavar="NAME=VALUE", help="Child environment override, repeatable; values are not snapshotted")
+    parser.add_argument("--env", action="append", default=[], metavar="NAME=VALUE", help="Child environment override, repeatable; only allowlisted benchmark values are snapshotted")
     parser.add_argument("--nsys", default="nsys", help="Nsight Systems executable used only in profile mode")
     parser.add_argument("--nsys-option", action="append", default=[], help="Extra nsys profile option, e.g. --nsys-option=--sample=none")
     args = parser.parse_args(argv)

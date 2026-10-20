@@ -15,7 +15,10 @@ order baseline -> skiphead -> prefix -> trajectory -> Liger, omitting optional
 variants unless requested. The default remains baseline, skiphead and Liger.
 Each named candidate is compared independently against baseline with skip-head
 enabled; prefix and trajectory switches are disabled again for later candidates.
-Liger runs last because its patch cannot be undone in the loaded model.
+Liger runs after the isolated candidates because its patch cannot be undone.
+An optional final ``combined`` variant enables skip-head, prefix, factor reuse
+and Liger together. Trajectory variants warm the factors, then check cache hits
+with loss and gradients against baseline after resetting the RNGs.
 No optimizer is created or stepped.
 Python, NumPy and CPU/CUDA torch RNGs are reset before each forward/backward.
 Baseline gradients are retained in CPU float32 (roughly 9 GB for a 2.3B expert).
@@ -28,6 +31,7 @@ from __future__ import annotations
 
 import argparse
 import gc
+import hashlib
 import importlib.metadata
 import json
 import math
@@ -53,15 +57,15 @@ SWITCHES = (
 
 def variant_switches(name: str, liger_swiglu: bool) -> dict[str, str]:
     """Describe isolated candidate composition without importing model dependencies."""
-    if name not in {"baseline", "skiphead", "prefix", "trajectory", "liger"}:
+    if name not in {"baseline", "skiphead", "prefix", "trajectory", "liger", "combined"}:
         raise ValueError(f"Unknown correctness variant: {name}")
     values = {switch: "0" for switch in SWITCHES}
     values["APPLY_REPEAT_DATA"] = "1"
     values["APPLY_PRELOAD_MAX_BYTES"] = str(4 * 1024**3)
     values["APPLY_VLM_SKIP_HEAD"] = "0" if name == "baseline" else "1"
-    values["APPLY_VLM_PREFIX_ONLY"] = str(int(name == "prefix"))
-    values["APPLY_TRAJECTORY_FACTOR_CACHE"] = str(int(name == "trajectory"))
-    values["APPLY_LIGER_KERNEL"] = str(int(name == "liger"))
+    values["APPLY_VLM_PREFIX_ONLY"] = str(int(name in {"prefix", "combined"}))
+    values["APPLY_TRAJECTORY_FACTOR_CACHE"] = str(int(name in {"trajectory", "combined"}))
+    values["APPLY_LIGER_KERNEL"] = str(int(name in {"liger", "combined"}))
     values["APPLY_LIGER_SWIGLU"] = str(int(liger_swiglu))
     return values
 
@@ -88,9 +92,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument(
-        "--variants", choices=("skiphead", "prefix", "trajectory", "liger"), nargs="+",
+        "--variants", choices=("skiphead", "prefix", "trajectory", "liger", "combined"), nargs="+",
         default=["skiphead", "liger"],
-        help="Independent baseline comparisons, ordered skiphead/prefix/trajectory/Liger",
+        help="Baseline comparisons, ordered skiphead/prefix/trajectory/Liger/combined",
     )
     parser.add_argument("--liger-swiglu", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--tf32", action=argparse.BooleanOptionalAction, default=None, help="Omit to use the recipe performance setting")
@@ -379,15 +383,23 @@ def run(args: argparse.Namespace, report: dict[str, Any]) -> bool:
     report["versions"] = versions
     git = subprocess.run(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True, capture_output=True, check=False)
     report["recipe_commit"] = git.stdout.strip() if git.returncode == 0 else None
+    patch = subprocess.run(["git", "-C", str(repo), "diff", "HEAD", "--"], capture_output=True, check=False)
+    report["recipe_tracked_patch_sha256"] = hashlib.sha256(patch.stdout).hexdigest() if patch.returncode == 0 else None
+    report["source_files"] = {
+        str(path.relative_to(repo)): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in sorted((repo / "recipes/alpamayo1_5_sft/performance").glob("*.py"))
+    }
+    for relative in ("recipes/alpamayo1_5_sft/models/sft_alpamayo_r1.py", "recipes/alpamayo1_5_sft/benchmark_h20/check_correctness.py"):
+        report["source_files"][relative] = hashlib.sha256((repo / relative).read_bytes()).hexdigest()
     del sample, dataset, collate
     gc.collect()
     write_json(args.output, report)
 
     names = ["baseline"] + [
-        name for name in ("skiphead", "prefix", "trajectory", "liger") if name in args.variants
+        name for name in ("skiphead", "prefix", "trajectory", "liger", "combined") if name in args.variants
     ]
     trajectory_apply = trajectory_stats = None
-    if "trajectory" in names:
+    if any(name in names for name in ("trajectory", "combined")):
         from alpamayo1_5_sft.performance.stage2_trajectory import (
             apply_trajectory_factor_cache,
             trajectory_factor_cache_stats,
@@ -398,7 +410,7 @@ def run(args: argparse.Namespace, report: dict[str, Any]) -> bool:
     report["variant_order"] = names
     report["variant_comparison"] = (
         "Each candidate independently compared with baseline on identical weights/input/RNG; "
-        "all non-baseline candidates include skip-head; Liger is patched last"
+        "all non-baseline candidates include skip-head; combined enables all candidates after Liger"
     )
     reference_grads = None
     reference_loss = None
@@ -408,6 +420,15 @@ def run(args: argparse.Namespace, report: dict[str, Any]) -> bool:
         os.environ.update(switches)
         applied = apply_stage2_optimizations(model)
         trajectory_applied = trajectory_apply(model) if trajectory_apply else None
+        trajectory_cold_loss = None
+        if name in {"trajectory", "combined"}:
+            # Validate the actual reuse path, not just the cold factor build.
+            # No optimizer is stepped; the formal comparison resets all RNGs.
+            seed_all(args.seed, torch, np)
+            with torch.no_grad(), torch.autocast(device_type="cuda", dtype=torch.bfloat16):
+                warmup = model(**clone_to(cpu_batch, device, torch))
+            trajectory_cold_loss = float(warmup.loss.detach().float().cpu())
+            del warmup
         trajectory_before = trajectory_stats(model) if trajectory_stats else None
         # A stale report must not make a missing prefix integration look active.
         model._stage2_prefix_report = None
@@ -431,11 +452,16 @@ def run(args: argparse.Namespace, report: dict[str, Any]) -> bool:
         prefix_report = getattr(model, "_stage2_prefix_report", None)
         trajectory_after = trajectory_stats(model) if trajectory_stats else None
         activation_errors = []
-        if name == "prefix" and not (prefix_report and prefix_report.get("applied")):
+        if name in {"prefix", "combined"} and not (prefix_report and prefix_report.get("applied")):
             activation_errors.append("Requested prefix candidate did not trim this real sample")
-        if name == "trajectory":
+        if name in {"trajectory", "combined"}:
             if trajectory_operations(trajectory_after) <= trajectory_operations(trajectory_before):
                 activation_errors.append("Requested trajectory candidate performed no factor lookups")
+            for role in ("theta", "accel"):
+                before_hits = sum(i.get("hits", {}).get(role, 0) for i in (trajectory_before or {}).get("instances", []))
+                after_hits = sum(i.get("hits", {}).get(role, 0) for i in (trajectory_after or {}).get("instances", []))
+                if after_hits <= before_hits:
+                    activation_errors.append(f"Requested trajectory candidate did not reuse a cached {role} factor")
             if not any(
                 instance.get("entries", 0) > 0
                 for instance in (trajectory_after or {}).get("instances", [])
@@ -450,6 +476,8 @@ def run(args: argparse.Namespace, report: dict[str, Any]) -> bool:
         loss_difference = abs(loss_value - reference_loss)
         loss_limit = args.loss_atol + args.loss_rtol * abs(reference_loss)
         loss_ok = math.isfinite(loss_value) and math.isfinite(reference_loss) and loss_difference <= loss_limit
+        if trajectory_cold_loss is not None:
+            loss_ok = loss_ok and math.isfinite(trajectory_cold_loss) and abs(trajectory_cold_loss - reference_loss) <= loss_limit
         gradients_ok = gradients["all_present_gradients_finite"] and gradients["missing_pattern_matches_baseline"]
         gradients_ok = gradients_ok and (args.allow_missing_gradients or not gradients["missing_gradient_names"])
         if name != "baseline":
@@ -467,6 +495,7 @@ def run(args: argparse.Namespace, report: dict[str, Any]) -> bool:
             "trajectory_factor_cache_applied": trajectory_applied,
             "trajectory_factor_cache_before": trajectory_before,
             "trajectory_factor_cache_after": trajectory_after,
+            "trajectory_cold_loss": trajectory_cold_loss,
             "loss": finite_number(loss_value), "loss_finite": math.isfinite(loss_value),
             "loss_abs_difference": finite_number(loss_difference),
             "loss_abs_limit": finite_number(loss_limit), "loss_within_tolerance": loss_ok,
